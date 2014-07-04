@@ -264,7 +264,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 640px;
+  max-width: 800px;
   padding: 20px 10px;
   margin: 0 auto;
 }
@@ -366,7 +366,22 @@ Full-Width Styles
   background: #212121;
 }
 
+.footer_list {
+  margin: 0px;
+  padding: 0px;
+  display: inline;
+}
 
+.footer_li {
+  margin:  0 10px 0 0;
+  padding: 0 10px 0 0;
+  display: inline;
+  border-right: 1px solid #F7F7F7;
+}
+
+.inline {
+  display: inline;
+}
 
 /*******************************************************************************
 Small Device Styles
