@@ -365,7 +365,7 @@ Full-Width Styles
 #footer_wrap {
   background: #212121;
   color: #f2f2f2;
-  font: normal 13px/13px Arial,sans-serif;
+  font-size: 13px;
 }
 
 .footer_list {
@@ -375,10 +375,10 @@ Full-Width Styles
 }
 
 .footer_li {
-  margin:  0 10px 0 0;
-  padding: 0 10px 0 0;
+  margin:  0 0 0 10px;
+  padding: 0 0 0 10px;
   display: inline;
-  border-right: 1px solid #F7F7F7;
+  border-left: 1px solid #F7F7F7;
 }
 
 .inline {
