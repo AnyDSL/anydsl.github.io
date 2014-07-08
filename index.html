@@ -34,20 +34,20 @@
       <div id="main_content" class="inner">
 <p>
     AnyDSL is a framework for the rapid development of domain-specific languages (DSLs). 
-    AnyDSL's main ingredient is AnyDSL's intermediate representation <a class="anchor" href="https://anydsl.github.io/thorin">THORIN</a>.
-    In contrast to other intermediate representations, THORIN features certain abstractions which allow to maintain domain-specific types and control-flow. 
+    AnyDSL's main ingredient is AnyDSL's intermediate representation <a class="anchor" href="https://anydsl.github.io/thorin">Thorin</a>.
+    In contrast to other intermediate representations, Thorin features certain abstractions which allow to maintain domain-specific types and control-flow. 
     On these grounds, a DSL compiler gains two major advantages: 
 </p>
 <ul>
     <li>
         The domain expert can focus on the semantics of the DSL. 
         The DSL's code generator can leave low-level details like exact iteration order of looping constructs or detailed memory layout of data types open. 
-        Nevertheless, the code generator can emit THORIN code which acts as interchange format.
+        Nevertheless, the code generator can emit Thorin code which acts as interchange format.
     </li>
     <li>
         The expert of a certain target machine just has to specify the required details once. 
-        These details are linked like a library to the abstract THORIN code. 
-        THORIN's analyses and transformations will then optimize the resulting THORIN code in a way such that the resulting THORIN code appears to be written by an expert of that target machine.
+        These details are linked like a library to the abstract Thorin code. 
+        Thorin's analyses and transformations will then optimize the resulting Thorin code in a way such that the resulting Thorin code appears to be written by an expert of that target machine.
     </li>
 </ul>
 <p>
