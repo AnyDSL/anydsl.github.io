@@ -32,38 +32,33 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <div id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-
+<p>
+    AnyDSL is a framework for the rapid development of domain-specific languages (DSLs). 
+    AnyDSL's main ingredient is AnyDSL's intermediate representation <a class="anchor" href="https://anydsl.github.io/thorin">THORIN</a>.
+    In contrast to other intermediate representations, THORIN features certain abstractions which allow to maintain domain-specific types and control-flow. 
+    On these grounds, a DSL compiler gains two major advantages: 
+</p>
+<ul>
+    <li>
+        The domain expert can focus on the semantics of the DSL. 
+        The DSL's code generator can leave low-level details like exact iteration order of looping constructs or detailed memory layout of data types open. 
+        Nevertheless, the code generator can emit THORIN code which acts as interchange format.
+    </li>
+    <li>
+        The expert of a certain target machine just has to specify the required details once. 
+        These details are linked like a library to the abstract THORIN code. 
+        THORIN's analyses and transformations will then optimize the resulting THORIN code in a way such that the resulting THORIN code appears to be written by an expert of that target machine.
+    </li>
+</ul>
+<p>
+    As creating a front-end for some language is a complex and time-consuming endeavor, we offer <a class="anchor" href="https://anydsl.github.io/impala">Impala</a>. 
+    This is an imperative language which features as a basis well-known imperative constructs.  
+    A DSL developer can hijack Impala such that desired domain-specific types and constructs are available in Impala simply by <em>declaring</em> them. 
+    The DSL developer just reuses Impala's infrastructure (lexer, parser, semantic analyses and code generator). 
+    He does not need to develop his own front-end. 
+    Even more important: 
+    The decision how to implement domain-specific details is postponed to the expert of the target machine.
+</p>
       </div>
     </div>
 
