@@ -313,6 +313,25 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
+#menu {
+  /*position: right;*/
+  /*width: 210px;*/
+  /*z-index: 10;*/
+  /*bottom: -40px;*/
+  /*right: 0;*/
+  /*height: 70px;*/
+}
+
+.nav_link {
+  color: #fff;
+  display: block;
+  float: left;
+  width: 90px;
+  height:70px;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
 #downloads {
   position: absolute;
   width: 210px;
