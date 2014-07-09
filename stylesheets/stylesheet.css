@@ -322,11 +322,11 @@ Full-Width Styles
     background: linear-gradient(top, #373737, #212121);
     border-radius: 6px;
     border: 1px solid #e5e5e5;
-    left: -120px;
+    left: -180px;
     margin: 5px;
     padding: 5px;
     position: absolute;
-    width: 90px;
+    width: 150px;
 }
 
 .submenu li {
