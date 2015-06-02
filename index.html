@@ -5,143 +5,53 @@
         <meta http-equiv="X-UA-Compatible" content="chrome=1" />
         <meta name="description" content="AnyDSL: A Framework for Rapid Development of Domain-Specific Languages"/>
         <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+        <script type="text/javascript" src="javascripts/main.js"></script>
+        <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+        <script type="text/javascript"> 
+            $(function(){
+                var page = parse("page");
+                $("#main_content_wrap").load("tpl/" + page + ".html");
+                
+                if(page != "main") {
+                    $.getJSON("tpl/" + page + ".json", function( data ) {
+                        $("#forkme_banner").attr("href", data["repo"]);
+                        $("#project_title").html(data["title"]);
+                        $("#project_tagline").html(data["tagline"]);
+                        
+                        $('meta[name="description"]').attr('content', data["title"] + ": " + data["meta"]);
+                        
+                        if("downloads" in data) {
+                            var str = '<section id="downloads">';
+                            $.each(data["downloads"], function(index, value) {
+                                str += '<a class="' + value["class"] + '" href="' + value["url"] + '">' + value["text"] + '</a>';
+                            });
+                            str += "</section>";
+                            
+                            $("#header").append(str);
+                        }
+                    });
+                }
+            });
+        </script>
         <title>AnyDSL</title>
     </head>
     <body>
         <div id="header_wrap" class="outer">
-            <header class="inner">
+            <header id="header" class="inner">
                 <a id="forkme_banner" href="https://github.com/AnyDSL">View on GitHub</a>
                 <h1 id="project_title">AnyDSL</h1>
                 <h2 id="project_tagline">A Framework for Rapid Development of Domain-Specific Languages</h2>
                 <div id="menu">
-                    <a class="nav_link" href="https://anydsl.github.io">AnyDSL</a>
-                    <a class="nav_link" href="https://anydsl.github.io/thorin">Thorin</a>
-                    <a class="nav_link" href="https://anydsl.github.io/impala">Impala</a>
+                    <a class="nav_link" href="index.html">AnyDSL</a>
+                    <a class="nav_link" href="index.html?page=thorin">Thorin</a>
+                    <a class="nav_link" href="index.html?page=impala">Impala</a>
                     <a class="nav_link" href="https://anydsl.github.io#publications">Publications</a>
                     <a class="nav_link" href="https://github.com/AnyDSL/anydsl/wiki">Wiki</a>
                 </div>
             </header>
         </div>
         <div id="main_content_wrap" class="outer">
-            <div id="main_content" class="inner">
-                <h2 id="overview">Overview</h2>
-
-                <p>
-                    AnyDSL is a framework for the rapid development of domain-specific languages (DSLs).
-                    AnyDSL's main ingredient is AnyDSL's intermediate representation <a class="anchor" href="https://anydsl.github.io/thorin">Thorin</a>.
-                    In contrast to other intermediate representations, Thorin features certain abstractions which allow to maintain domain-specific types and control-flow.
-                    On these grounds, a DSL compiler gains two major advantages:
-                </p>
-                <ul>
-                    <li>
-                        The domain expert can focus on the semantics of the DSL.
-                        The DSL's code generator can leave low-level details like exact iteration order of looping constructs or detailed memory layout of data types open.
-                        Nevertheless, the code generator can emit Thorin code which acts as interchange format.
-                    </li>
-                    <li>
-                        The expert of a certain target machine just has to specify the required details once.
-                        These details are linked like a library to the abstract Thorin code.
-                        Thorin's analyses and transformations will then optimize the resulting Thorin code in a way such that the resulting Thorin code appears to be written by an expert of that target machine.
-                    </li>
-                </ul>
-                <p>
-                    As creating a front-end for some language is a complex and time-consuming endeavor, we offer <a class="anchor" href="https://anydsl.github.io/impala">Impala</a>.
-                    This is an imperative language which features as a basis well-known imperative constructs.
-                    A DSL developer can hijack Impala such that desired domain-specific types and constructs are available in Impala simply by <em>declaring</em> them.
-                    The DSL developer just reuses Impala's infrastructure (lexer, parser, semantic analysis, and code generator).
-                    He does not need to develop his own front-end.
-                    Even more important:
-                    The decision how to implement domain-specific details is postponed to the expert of the target machine.
-                </p>
-
-                <h2 id="vision">Vision</h2>
-
-                <p>
-                    The core of AnyDSL is the ability to create (conceptual) abstractions over multiple levels of hierarchies, passing higher-order functions and thus their functionality through (multiple) of these levels, optionally warping them in suitable code and interface implementations, and finally optimize the resulting combined code at the lower levels where we know about the specific hardware architectures and its capabilities.
-                    In contrast to most common languages, any perceived overhead of these conceptual abstractions can be completely eliminated in AnyDSL.
-                </p>
-
-                <p>
-                A key feature of AnyDSL is that transformations of code from higher level of abstractions to lower levels is <em>not</em> done in a compiler, as typically done today.
-                    We do this because there are few people who understand compilers and can write code that reasons about and transforms other code, which is what is required to implement the knowledge of domain-specific aspects in a language.
-                </p>
-
-                <p>
-                    Instead, in AnyDSL abstractions are simply expressed as function interfaces (which every programmers is very familiar with) and the <em>transformation</em> of a higher level abstraction to a lower level abstraction is simply done by implementing the first in terms of the second &mdash; again something that any programmer knows how to do.
-                    So we make it possible to easily define new abstractions and provide various transformations to specific lower level interfaces (such as hardware itself).
-                </p>
-
-                <p>
-                    While this simple use of function interfaces seems trivial, there are a number of key features that greatly improve AnyDSL way beyond what one can do in any of the current languages:
-                    <ul>
-                        <li>
-                            We use a functional programming language with higher-order functions, similar to Apples Swift, Mozillas Rust, or any of the other modern languages.
-                            They provide all the advantages of functional programming, while providing a familiar environment for traditional programmers.
-                            Especially, higher-order functions allow for passing code between functional units and levels of abstraction, while AnyDSL eliminates any overhead of that.
-                        </li>
-                        <li>
-                            As part of the programming language we provide the developer with compiler tools that he can use to apply optimizations to code, including staging, aggressive specialization, vectorization, target code generation, and others to specific code.
-                            This enables us to completely eliminate any overhead.
-                        </li>
-                        <li>
-                            We have a single unified and high-level program representation where all of our code transformations take place.
-                            Because it is a high-level representation we still have all the information about types, control flow and other properties fully represented.
-                            It also allows us to better perform all the necessary code transformations and optimizations.
-                        </li>
-                        <li>
-                            New compiler optimizations (lambda mangling) allow us to perform advanced optimizations that eliminate any overhead that is typically associated with functional languages and generate code that is often even better optimized than straight C code.
-                            Through explicit vectorization, we can take advantage of SIMD computations.
-                        </li>
-                    </ul>
-                </p>
-
-                <p>
-                    This approach allows us to clearly separate the architecture independent algorithm code (at the higher layers) from the hardware dependent optimizations at the lower levels that are necessary for optimal
-                    performance.
-                </p>
-
-                <p>
-                    Since we can perform staging (executing code at various points such as during compilation) we can automatically switch between different implementations of certain features or different optimization strategies or parameters, again without introducing any overhead.
-                </p>
-
-                <p>
-                    This is particularly interesting in the context of programming for specialized hardware.
-                    Starting with special instructions or interfaces to fixed-function units, we can incrementally build higher and higher levels of abstractions on top of the hardware.
-                    At any time can we decide during (JIT) compilation how exactly the mapping between the higher level abstractions and the concrete hardware should look like.
-                    This should be specifically interesting during hardware/software co-design.
-                </p>
-
-
-                <h2 id="publications">Publications</h2>
-                <p>
-                    <em>Roland Leißa, Marcel Köster, and Sebastian Hack</em><br/>
-                    <strong><a href="http://www.cdl.uni-saarland.de/papers/lkh15_cgo.pdf">A Graph-Based Higher-Order Intermediate Representation.</a></strong><br/>
-                    In Proceedings of 2015 International Symposium on Code Generation and Optimization (CGO), 2015.
-                </p>
-                <p>
-                    <em>Richard Membarth, Philipp Slusallek, Marcel Köster, Roland Leißa and Sebastian Hack.</em><br/>
-                    <strong><a href="http://graphics.cg.uni-saarland.de/fileadmin/cguds/papers/2014/membarth_wolfhpc14/wolfhpc14.pdf">Target-Specific Refinement of Multigrid Codes.</a></strong><br/>
-                    In Proceedings of the 4th International Workshop on Domain-Specific Languages and High-Level Frameworks for High Performance Computing (WOLFHPC), pp. 52-57, New Orleans, LA, USA, November 17, 2014.
-                </p>
-                <p>
-                    <em>Marcel Köster, Roland Leißa, Sebastian Hack, Richard Membarth and Philipp Slusallek.</em><br/>
-                    <strong><a href="http://www.cdl.uni-saarland.de/papers/ppl14_web.pdf">Code Refinement of Stencil Codes.</a></strong><br/>
-                    In Parallel Processing Letters (PPL), 24 (3): 1–16, 2014.
-                </p>
-                <p>
-                    <em>Marcel Köster, Roland Leißa, Sebastian Hack, Richard Membarth and Philipp Slusallek.</em><br/>
-                    <strong><a href="http://www.cdl.uni-saarland.de/papers/klhms14.pdf">Platform-Specific Optimization and Mapping of Stencil Codes through Refinement.</a></strong><br/>
-                    In Proceedings of the 1st International Workshop on High-Performance Stencil Computations (HiStencils), 2014.
-                </p>
-
-                <h3>Overview Poster</h3>
-                <p>
-                    <a href="images/anydsl.pdf"><img width="800" src="images/anydsl.png" alt="High-Performance Domain-Specific Languages for GPU Computing"/></a><br/>
-                    <em>Richard Membarth, Philipp Slusallek, Marcel Köster, Roland Leißa and Sebastian Hack.</em><br/>
-                    <strong><a href="images/anydsl.pdf">High-Performance Domain-Specific Languages for GPU Computing.</a></strong><br/>
-                    Poster Presentation at the GPU Technology Conference (GTC), San Jose, CA, USA, March 24-27, 2014.
-                </p>
-            </div>
+            
         </div>
         <div id="footer_wrap" class="outer">
             <div class="inner">

@@ -1,0 +1,15 @@
+{
+    "title"     : "Thorin",
+    "meta"      : "The Higher-Order Intermediate Representation",
+    "tagline"   : "<strong>T</strong>he <strong>H</strong>igher-<strong>Or</strong>der <strong>In</strong>termediate Representation",
+    "repo"      : "https://github.com/AnyDSL/thorin",
+    "downloads" : [{
+        "class" : "zip_download_link",
+        "url"   : "https://github.com/AnyDSL/thorin/zipball/master",
+        "text"  : "Download this project as a .zip file"
+    }, {
+        "class" : "tar_download_link",
+        "url"   : "https://github.com/AnyDSL/thorin/tarball/master",
+        "text"  : "Download this project as a tar.gz file"   
+    }]
+}

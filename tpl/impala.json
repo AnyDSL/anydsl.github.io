@@ -1,0 +1,15 @@
+{
+    "title"   : "Impala",
+    "meta"    : "An imperative and functional programming language",
+    "tagline" : "An imperative and functional programming language",
+    "repo"    : "https://github.com/AnyDSL/impala",
+    "downloads" : [{
+        "class" : "zip_download_link",
+        "url"   : "https://github.com/AnyDSL/impala/zipball/master",
+        "text"  : "Download this project as a .zip file"
+    }, {
+        "class" : "tar_download_link",
+        "url"   : "https://github.com/AnyDSL/impala/tarball/master",
+        "text"  : "Download this project as a tar.gz file"   
+    }]
+}

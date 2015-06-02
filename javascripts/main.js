@@ -1,6 +1,5 @@
 function parse(val) {
-    var result = "Not found",
-        tmp = [];
+    var result = "main", tmp = [];
     var items = location.search.substr(1).split("&");
     for (var index = 0; index < items.length; index++) {
         tmp = items[index].split("=");
