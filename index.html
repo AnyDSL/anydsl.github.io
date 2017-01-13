@@ -12,7 +12,7 @@
                 var page = parse("page");
                 $("#main_content_wrap").load("tpl/" + page + ".html");
                 
-                if(page != "main") {
+                if(page == "impala" || page == "thorin") {
                     $.getJSON("tpl/" + page + ".json", function( data ) {
                         $("#forkme_banner").attr("href", data["repo"]);
                         $("#project_title").html(data["title"]);
@@ -45,7 +45,7 @@
                     <a class="nav_link" href="index.html">AnyDSL</a>
                     <a class="nav_link" href="index.html?page=thorin">Thorin</a>
                     <a class="nav_link" href="index.html?page=impala">Impala</a>
-                    <a class="nav_link" href="https://anydsl.github.io#publications">Publications</a>
+                    <a class="nav_link" href="index.html?page=publications">Publications</a>
                     <a class="nav_link" href="https://github.com/AnyDSL/anydsl/wiki">Wiki</a>
                 </div>
             </header>
