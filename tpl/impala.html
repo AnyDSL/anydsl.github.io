@@ -6,7 +6,7 @@
 
             <p>
             Below is a simple example showing how Impala can partially evaluate a dot product function and generate efficient specialized code.
-            More advanced examples can be found in the <a href="https://github.com/AnyDSL">AnyDSL</a> GitHub organization, and the doxygen documentation for Impala can be found <a href="doxygen/impala/">here</a>.
+            More advanced examples can be found in the <a href="https://github.com/AnyDSL">AnyDSL</a> GitHub organization.
 
 <div class="highlight"><pre><span></span><span class="k">fn</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="o">:</span><span class="w"> </span><span class="o">&amp;</span><span class="p">[</span><span class="kt">i32</span><span class="p">],</span><span class="w"> </span><span class="n">b</span><span class="o">:</span><span class="w"> </span><span class="o">&amp;</span><span class="p">[</span><span class="kt">i32</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="o">:</span><span class="w"> </span><span class="kt">i32</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
