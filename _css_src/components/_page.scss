@@ -1,0 +1,143 @@
+.page {
+  $component: &;
+  $drawer-width: 304px;
+  $drawer-right-margin: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  // The footer should always appear beneath the viewport, regardless of its
+  // size.
+  min-height: calc(100vh + #{$footer-height});
+
+  // The flex element expands to fill up the page vertically. This has the
+  // effect of pushing the footer below the fold.
+  &__flex-element {
+    flex: 1;
+  }
+
+  &__content {
+    @extend %page-element;
+    width: 100%;
+
+    display: flex;
+    margin-top: 78px + $toolbar-height;
+
+    &--dense {
+      margin-top: 56px + $toolbar-height;
+    }
+  }
+
+  &__article {
+    width: 100%;
+  }
+
+  &__drawer + &__article {
+    width: calc(100% - (#{$drawer-width} + #{$drawer-right-margin}))
+  }
+
+  &__drawer {
+    width: $drawer-width;
+    margin-top: -8px;
+    margin-right: $drawer-right-margin;
+  }
+
+  &--homepage,
+  &--root-homepage {
+    #{$component}__content {
+      margin-top: 80px;
+    }
+  }
+
+  &--unsupported-browser {
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+
+    background: $grey-900;
+    color: $white;
+
+    > h1 {
+      display: flex;
+      align-items: center;
+
+      font-family: Roboto Mono;
+      font-weight: 400;
+      font-size: 1.25rem;
+
+      height: 32px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      &::before {
+        content: '';
+        display: inline-block;
+
+        background-image: url('#{$rootpath}/images/mdc-logo.svg');
+        background-size: cover;
+
+        width: 32px;
+        height: 32px;
+        margin-right: 16px;
+      }
+    }
+
+    a {
+      @include link-styles {
+        color: $white;
+      }
+    }
+  }
+
+  @include media-small {
+    min-height: calc(100vh + #{$mobile-footer-height});
+
+    &__content {
+      margin-top: 32px + $toolbar-height;
+    }
+
+    &__drawer {
+      display: none;
+    }
+
+    &__drawer + &__article {
+      width: 100%;
+    }
+
+    &--homepage,
+    &--root-homepage {
+      #{$component}__content {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  @include breakpoint($max: $mobile-toolbar-max-width) {
+    &__content {
+      margin-top: 32px + $mobile-toolbar-height;
+    }
+  }
+}
+
+@mixin page-content-width($padding) {
+  max-width: $content-width + 2 * $padding;
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+%page-element {
+  @include page-content-width(16px);
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint($min: $media-medium-min, $max: $media-medium-max + (2 * 16px)) {
+    @include page-content-width(60px);
+  }
+}
+
+

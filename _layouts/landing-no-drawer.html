@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html class="mdc-typography">
+  {% include head.html %}
+  <body class="page page--landing-no-drawer page--{{ page.section }} page--platform-{{ page.site_platform }}">
+    {% include toolbar.html
+        title=page.site_title
+        short_title=page.site_short_title
+        is_root=false %}
+
+    <div class="page__content page__flex-element">
+      <article class="page__article article article--full-width">
+        {{ content }}
+      </article>
+    </div>
+
+    {% include footer.html %}
+    {% include frontend-templates.html %}
+    {% include scripts.html %}
+  </body>
+</html>

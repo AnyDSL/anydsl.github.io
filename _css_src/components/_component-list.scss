@@ -1,0 +1,79 @@
+.component-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: 72px;
+
+  @include media-small {
+    flex-direction: column;
+    margin-top: 32px;
+  }
+}
+
+.component-list-item {
+  width: 484px;
+  margin-bottom: 64px;
+  overflow-x: hidden;
+
+  &__link {
+    @include link-styles {
+      text-decoration: none;
+    }
+
+    display: inline-flex;
+
+    // This element is the component icon.
+    &::before {
+      content: '';
+      display: inline-block;
+
+      min-width: 72px;
+      height: 72px;
+
+      background-image: url('#{$rootpath}/images/component_icons/component.svg');
+      background-size: cover;
+
+      @include breakpoint($min: 720px, $max: 1280px) {
+        margin-right: vw-lerp($value: 24px 48px, $viewport-width: 720px 1280px);
+      }
+
+      @include media-small {
+        margin-right: 24px;
+      }
+
+      margin-right: 48px;
+    }
+  }
+
+  // Ugh...needed a little bit of extra specificity.
+  & &__title {
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__description {
+    font-family: Roboto;
+    line-height: 24px;
+  }
+
+  &:nth-child(odd) {
+    margin-right: 140px;
+  }
+
+  @include media-medium {
+    width: vw-lerp($value: 260px 484px, $viewport-width: 720px 1280px);
+
+    &:nth-child(odd) {
+      margin-right: vw-lerp($value: 60px 120px, $viewport-width: 720px 1280px);
+    }
+  }
+
+  @include media-small {
+    width: 100%;
+
+    &:nth-child(odd) {
+      margin-right: 80px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.step-list {
+  counter-reset: step;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.step-list-item {
+  margin-top: 32px;
+
+  &::before {
+    content: 'Step ' counter(step, decimal) '. ';
+    display: inline-block;
+    counter-increment: step;
+  }
+
+  > h3:first-child {
+    display: inline;
+  }
+
+  &::before,
+  > h3:first-child {
+    font-family: $ui-font-family;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}

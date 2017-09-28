@@ -1,0 +1,46 @@
+.icon-list {
+  @extend .mdc-list;
+  @extend .mdc-list--dense;
+
+  padding: 0;
+}
+
+.icon-list-item {
+  @extend .mdc-list-item;
+
+  padding-bottom: 0;
+
+  &::before {
+    display: inline-block;
+    content: '';
+
+    background-size: 24px;
+    min-width: 24px;
+    height: 24px;
+    margin-right: 20px;
+  }
+
+  &--code::before {
+    background-image: url('#{$rootpath}/images/icons/ic_code_24px.svg');
+  }
+
+  &--components::before {
+    background-image: url('#{$rootpath}/images/component_icons/component.svg');
+  }
+
+  &--guide::before {
+    background-image: url('#{$rootpath}/images/icons/ic_developer_guide_24px.svg');
+  }
+
+  &--github::before {
+    background-image: url('#{$rootpath}/images/icons/ic_github_24px.svg');
+  }
+
+  &--link::before {
+    background-image: url('#{$rootpath}/images/icons/ic_link_24px.svg');
+  }
+
+  &--spec::before {
+    background-image: url('#{$rootpath}/images/icons/ic_material_design_24px.svg');
+  }
+}

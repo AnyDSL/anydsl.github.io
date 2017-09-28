@@ -1,0 +1,7 @@
+<nav class="page__drawer mdc-permanent-drawer">
+  <ul class="drawer-list">
+    {% for nav_item in page.navigation %}
+      {% include drawer-nav-item.html nav_item=nav_item %}
+    {% endfor %}
+  </ul>
+</nav>

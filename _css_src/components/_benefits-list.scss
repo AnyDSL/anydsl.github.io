@@ -1,0 +1,84 @@
+.benefits-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+
+  @include media-small {
+    flex-wrap: wrap;
+  }
+}
+
+.benefits-list-item {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1 0 0;
+  margin-right: 24px;
+  max-width: 340px;
+
+  h3 {
+    @include mdc-typography(subheading2);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  p {
+    @include mdc-typography(body1);
+    line-height: 24px;
+    margin: 16px 0 0;
+  }
+
+  a {
+    @include link-styles {
+      color: $white;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: '';
+    align-self: flex-start;
+
+    width: 192px;
+    height: 192px;
+    margin-bottom: 24px;
+  }
+
+  // Add platform specific benefit images.
+  @each $homepage-modifier, $asset-prefix in $homepages {
+    .welcome--#{$homepage-modifier} & {
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i})::before {
+          background: center / contain url('#{$rootpath}/images/benefits/#{$asset-prefix}-#{$i}.svg');
+        }
+      }
+    }
+  }
+
+  @include media-small {
+    margin-bottom: 24px;
+    margin-right: 0;
+    max-width: none;
+    min-width: 100%;
+  }
+
+  @include breakpoint($min: 500px, $max: $media-small-max) {
+    flex: 0;
+    min-width: calc((100% - 24px) / 2);
+
+    &:nth-child(odd) {
+      margin-right: 24px;
+    }
+  }
+
+  @include breakpoint($max: 499px) {
+    &::before {
+      align-self: center;
+      margin-left: 12px;
+    }
+  }
+}

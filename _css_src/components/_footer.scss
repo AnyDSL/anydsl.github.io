@@ -1,0 +1,101 @@
+.footer {
+  // The minimum width at which the "Made with MDC web" link is visible.
+  $made-with-min-visible-width: 430px;
+
+  @include mdc-typography(body1);
+
+  background: $grey-50;
+  height: $footer-height;
+  margin-top: 144px;
+
+  &--dense {
+    margin-top: 86px;
+  }
+
+  &__content {
+    @extend %page-element;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-top: 32px;
+    padding-bottom: 24px;
+    height: 100%;
+  }
+
+  &__logo {
+    display: inline-block;
+    background: url('#{$rootpath}/images/google-logo.svg');
+    background-size: 72px;
+    opacity: .54;
+    width: 72px;
+    height: 24px;
+  }
+
+  &__links {
+    display: flex;
+    position: relative;
+    left: -8px;
+
+    list-style-type: none;
+    margin-left: 0;
+
+    > li {
+      margin-left: 24px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__link-container--right {
+    flex: 1;
+    text-align: right;
+  }
+
+  &__made-with-mobile {
+    display: none;
+  }
+
+  &__link {
+    @include link-styles {
+      font-family: 'Roboto';
+    }
+
+    color: $black-54;
+    padding: 8px 8px;
+    text-decoration: none;
+  }
+
+  @include media-small {
+    height: $mobile-footer-height;
+    margin-top: 120px;
+
+    &__content {
+      padding-bottom: 12px;
+      padding-top: 24px;
+    }
+
+    &__link {
+      @include link-styles {
+        font-size: .75rem;
+      }
+    }
+
+    &__made-with-desktop {
+      display: none;
+    }
+
+    &__made-with-mobile {
+      display: inline;
+    }
+  }
+
+  @include breakpoint($max: $made-with-min-visible-width) {
+    &__made-with-mobile {
+      display: none;
+    }
+  }
+}

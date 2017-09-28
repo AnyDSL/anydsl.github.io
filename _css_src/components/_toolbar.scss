@@ -1,0 +1,104 @@
+@import './toolbar-nav';
+@import './toolbar-platform-chooser';
+
+.mdc-toolbar {
+  $component: &;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: $toolbar-background;
+  color: $toolbar-text-color;
+  height: $toolbar-height;
+  z-index: 7; // Highest z-index used by CodeMirror + 1
+
+  &__title {
+    background: no-repeat left/32px url('#{$rootpath}/images/mdc-logo.svg');
+    font-family: $ui-font-family;
+    font-weight: 400;
+    height: 32px;
+    padding: 2px 0 5px 50px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    #{$component}--root & {
+      background-image: url('#{$rootpath}/images/material-logo.svg');
+    }
+
+    &--mini {
+      display: none;
+    }
+  }
+
+  &__title-link {
+    @include link-styles {
+      color: $toolbar-text-color;
+      text-decoration: none;
+    }
+  }
+
+  &__row {
+    @extend %page-element;
+    height: $toolbar-height;
+  }
+
+  &__platform-chooser {
+    align-self: center;
+  }
+
+  &__section:first-child  {
+    z-index: 2;
+  }
+
+  &--no-shadow {
+    box-shadow: none;
+  }
+
+  @include breakpoint($max: 940px) {
+    &__title {
+      &--full {
+        display: none;
+      }
+
+      &--mini {
+        display: block;
+      }
+    }
+  }
+
+  @include breakpoint($max: $mobile-toolbar-max-width) {
+    height: $mobile-toolbar-height;
+
+    &__title {
+      background-size: 24px;
+      padding-left: 40px;
+    }
+
+    &__title-link {
+      padding: 16px 0 0 16px;
+    }
+
+    // Regardless of alignment class, justify to the start.
+    &__section {
+      justify-content: flex-start;
+    }
+
+    &__row {
+      flex-direction: column;
+      height: $mobile-toolbar-height;
+      padding: 0;
+    }
+
+    &__platform-chooser {
+      margin-top: 16px;
+    }
+  }
+
+  @include breakpoint($max: 344px) {
+    &__platform-chooser {
+      display: none;
+    }
+  }
+}
+

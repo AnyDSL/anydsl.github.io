@@ -1,0 +1,52 @@
+// From: material-components-site-generator/jekyll-site-src/images/component_icons/
+$icon-ids:
+  'animation',
+  'bottom_navigation',
+  'bottom_sheet',
+  'button',
+  'card',
+  'chip',
+  'color',
+  'data_table',
+  'dialog',
+  'expansion_panel',
+  'feature_highlight',
+  'header',
+  'list',
+  'menu',
+  'progress_activity',
+  'progress_linear',
+  'radio_button',
+  'responsive_layout',
+  'ripple',
+  'selection_control',
+  'shadow',
+  'side_navigation',
+  'slider',
+  'stepper',
+  'subheader',
+  'switch',
+  'tabs',
+  'text_field',
+  'theme',
+  'toast',
+  'toolbar',
+  'tooltip',
+  'typography',
+  ;
+
+.page--components.page--detail .article h1::before {
+  content: '';
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 24px;
+  background: center/100% url('#{$rootpath}/images/component_icons/component.svg');
+}
+
+@each $icon-id in $icon-ids {
+  .page--components.page--detail .article.article--icon-#{$icon-id} h1::before,
+  .page--components .component-list-item--icon-#{$icon-id} > .component-list-item__link::before {
+    background-image: url('#{$rootpath}/images/component_icons/#{$icon-id}.svg');
+  }
+}

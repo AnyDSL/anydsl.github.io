@@ -1,0 +1,191 @@
+@import './welcome-link-list';
+
+.welcome {
+  $component: &;
+
+  background: $toolbar-background;
+  color: $toolbar-text-color;
+  padding-bottom: 60px;
+  overflow: auto;
+
+  &__content {
+    @extend %page-element;
+
+    display: flex;
+    flex-direction: row;
+
+    // This element is the hero graphic.
+    &::after {
+      content: '';
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-size: contain;
+      flex: 1;
+      margin: 140px 48px 0 48px;
+      min-width: 312px;
+    }
+
+    #{$component}--platform-android &::after {
+      background-image: url('#{$rootpath}/images/welcome/android.svg');
+    }
+
+    #{$component}--platform-ios &::after {
+      background-image: url('#{$rootpath}/images/welcome/ios.svg');
+    }
+
+    #{$component}--platform-web &::after {
+      background-image: url('#{$rootpath}/images/welcome/web.svg');
+    }
+
+    #{$component}--root & {
+      // The hero is shown on the left side of the root homepage.
+      flex-direction: row-reverse;
+
+      &::after {
+        background-position: top left;
+        background-image: url('#{$rootpath}/images/welcome/root.svg');
+        margin: 158px 48px 0 0;
+      }
+    }
+
+    @include breakpoint($min: 1000px, $max: 1280px) {
+      min-height: vw-lerp((410px 536px), (1000px 1280px));
+    }
+  }
+
+  &__text {
+    margin: 130px 0 0;
+    max-width: 412px;
+  }
+
+  &__title {
+    font-family: $ui-font-family;
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+    max-width: 412px;
+
+    .hidden-mark {
+      &::after {
+        color: $white-50;
+      }
+
+      // The second dot is hidden in the largest breakpoint, because we're
+      // fancy.
+      #{$component}--platform &:nth-child(2)::after {
+        visibility: hidden;
+
+        @include media-lt-large {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__blurb {
+    font-family: $ui-font-family;
+    font-size: 1.5em;
+    line-height: 2.5rem;
+    margin-top: 32px;
+  }
+
+  &__links {
+    margin-top: 48px;
+  }
+
+  &__benefits {
+    @extend %page-element;
+
+    margin-top: 160px;
+    margin-bottom: 128px;
+  }
+
+  // Shrink the text and hero a little as the screen width decreases.
+  @include media-medium {
+    &__content {
+      &::after {
+        margin: 130px 0 0 48px;
+      }
+    }
+
+    &--root &__content {
+      &::after {
+        margin: 130px 48px -40px 0;
+      }
+    }
+
+    &__text {
+      min-height: 200px;
+    }
+
+    &__title {
+      font-size: 2.125rem;
+      line-height: 2.625rem;
+    }
+
+    &__blurb {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin-top: 24px;
+    }
+  }
+
+  // Shrink the text a little MORE as the screen width decreases.
+  @include breakpoint($max: 960px) {
+    &__title {
+      font-size: 1.5rem;
+      line-height: 2.125rem;
+    }
+
+    &__blurb {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-top: 24px;
+    }
+
+    // The platform homepages have longer links, and need to be shrunk a little.
+    &--platform &__links {
+      margin-top: 32px;
+
+      a {
+        font-size: .75rem;
+      }
+    }
+  }
+
+  @include media-small {
+    $content-hmargin: vw-lerp((40px 0), (720px 320px));
+    padding-bottom: 0;
+
+    &__content,
+    &--root &__content {
+      flex-direction: column;
+      min-height: 0;
+
+      &::after {
+        flex: none;
+        background-position: top left;
+        margin: 44px $content-hmargin 0;
+        padding-top: 68%; // Proportional scaling.
+        min-width: 320px - (16px * 2);
+      }
+    }
+
+    &__links {
+      display: none;
+    }
+
+    &__title {
+      max-width: none;
+    }
+
+    &__text {
+      margin-top: 100px;
+      max-width: none;
+    }
+
+    &__benefits {
+
+      margin: 58px $content-hmargin 48px;
+    }
+  }
+}

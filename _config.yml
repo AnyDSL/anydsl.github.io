@@ -1,0 +1,18 @@
+# Global Jekyll configuration. More specific configuration is contained within
+# a site's .mdc-docs.yaml file, which are used to generate Jekyll scopes.
+
+analytics_id: UA-90255304-1
+link_to_site: false
+
+# Plugins
+gems: [jekyll-tidy]
+jekyll_tidy:
+  compress_html: false
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  # Don't use a highlighter. This will output raw code blocks that can be
+  # highlighted in javascript with CodeMirror.
+  syntax_highlighter: none
+  auto_ids: true
