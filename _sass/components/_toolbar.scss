@@ -21,6 +21,7 @@
     padding: 2px 0 5px 50px;
     text-transform: uppercase;
     white-space: nowrap;
+    margin-top: 20px;
 
     #{$component}--root & {
       background-image: url('#{$rootpath}/images/material-logo.svg');
