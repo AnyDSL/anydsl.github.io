@@ -1,0 +1,115 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@material/animation@^0.4.0",
+        "scope": "@material",
+        "escapedName": "@material%2fanimation",
+        "name": "@material/animation",
+        "rawSpec": "^0.4.0",
+        "spec": ">=0.4.0 <0.5.0",
+        "type": "range"
+      },
+      "C:\\Users\\stlemme\\Projects\\anydsl-projects\\jekyll-site-src\\node_modules\\@material\\drawer"
+    ]
+  ],
+  "_from": "@material/animation@>=0.4.0 <0.5.0",
+  "_id": "@material/animation@0.4.0",
+  "_inCache": true,
+  "_location": "/@material/animation",
+  "_nodeVersion": "6.9.2",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/animation-0.4.0.tgz_1505759733337_0.0894894995726645"
+  },
+  "_npmUser": {
+    "name": "amsheehan",
+    "email": "alex.m.sheehan@gmail.com"
+  },
+  "_npmVersion": "5.3.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@material/animation@^0.4.0",
+    "scope": "@material",
+    "escapedName": "@material%2fanimation",
+    "name": "@material/animation",
+    "rawSpec": "^0.4.0",
+    "spec": ">=0.4.0 <0.5.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/@material/drawer",
+    "/@material/elevation"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/animation/-/animation-0.4.0.tgz",
+  "_shasum": "a218239fba30b6bf5fab1d0e103b667de1d9b023",
+  "_shrinkwrap": null,
+  "_spec": "@material/animation@^0.4.0",
+  "_where": "C:\\Users\\stlemme\\Projects\\anydsl-projects\\jekyll-site-src\\node_modules\\@material\\drawer",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "dependencies": {},
+  "description": "Animation Variables and Mixins used by Material Components for the web",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-bSewG7MI9T0U2kEcIqfc1RBWmuqgbjUSImC2AJ5TTY4Ij9dQEA3ZER+fO/h2tTl4ujdRqToCrsAWXtcTjC6bwQ==",
+    "shasum": "a218239fba30b6bf5fab1d0e103b667de1d9b023",
+    "tarball": "https://registry.npmjs.org/@material/animation/-/animation-0.4.0.tgz"
+  },
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "animation"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "material-admin",
+      "email": "lynnjepsen+npm@google.com"
+    },
+    {
+      "name": "aprigogin",
+      "email": "andrey.prigogin@gmail.com"
+    },
+    {
+      "name": "kfranqueiro",
+      "email": "kenneth.franqueiro@gmail.com"
+    },
+    {
+      "name": "acdvorak",
+      "email": "acdvorak@gmail.com"
+    },
+    {
+      "name": "lynnjepsen",
+      "email": "lynnjepsen@google.com"
+    },
+    {
+      "name": "bwobrien",
+      "email": "obrien.test@gmail.com"
+    },
+    {
+      "name": "yeelan0319",
+      "email": "yiranmao@gmail.com"
+    },
+    {
+      "name": "amsheehan",
+      "email": "alex.m.sheehan@gmail.com"
+    },
+    {
+      "name": "traviskaufman",
+      "email": "travis.kaufman@gmail.com"
+    }
+  ],
+  "name": "@material/animation",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git"
+  },
+  "version": "0.4.0"
+}

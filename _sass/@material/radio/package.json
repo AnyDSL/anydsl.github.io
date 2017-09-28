@@ -1,0 +1,120 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@material/radio",
+        "scope": "@material",
+        "escapedName": "@material%2fradio",
+        "name": "@material/radio",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\stlemme\\Projects\\anydsl-projects\\jekyll-site-src"
+    ]
+  ],
+  "_from": "@material/radio@latest",
+  "_id": "@material/radio@0.2.14",
+  "_inCache": true,
+  "_location": "/@material/radio",
+  "_nodeVersion": "6.9.2",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/radio-0.2.14.tgz_1505759749307_0.6483518169261515"
+  },
+  "_npmUser": {
+    "name": "amsheehan",
+    "email": "alex.m.sheehan@gmail.com"
+  },
+  "_npmVersion": "5.3.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@material/radio",
+    "scope": "@material",
+    "escapedName": "@material%2fradio",
+    "name": "@material/radio",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/radio/-/radio-0.2.14.tgz",
+  "_shasum": "c6de54d676062bf90ed3ba8be9b88ec0d0284617",
+  "_shrinkwrap": null,
+  "_spec": "@material/radio",
+  "_where": "C:\\Users\\stlemme\\Projects\\anydsl-projects\\jekyll-site-src",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "dependencies": {
+    "@material/animation": "^0.4.0",
+    "@material/base": "^0.2.5",
+    "@material/ripple": "^0.8.7",
+    "@material/selection-control": "^0.1.2",
+    "@material/theme": "^0.3.1"
+  },
+  "description": "The Material Components for the web radio component",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-ZlA6HS2rWJ0jC3QU+HySr38yUBR/2Sz5LPUaxTQ3CmAzU5JLx84JwJ77wGglnh3U4MUFzqv8CYK4dTeoEsN8gA==",
+    "shasum": "c6de54d676062bf90ed3ba8be9b88ec0d0284617",
+    "tarball": "https://registry.npmjs.org/@material/radio/-/radio-0.2.14.tgz"
+  },
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "radio"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "material-admin",
+      "email": "lynnjepsen+npm@google.com"
+    },
+    {
+      "name": "aprigogin",
+      "email": "andrey.prigogin@gmail.com"
+    },
+    {
+      "name": "kfranqueiro",
+      "email": "kenneth.franqueiro@gmail.com"
+    },
+    {
+      "name": "acdvorak",
+      "email": "acdvorak@gmail.com"
+    },
+    {
+      "name": "lynnjepsen",
+      "email": "lynnjepsen@google.com"
+    },
+    {
+      "name": "bwobrien",
+      "email": "obrien.test@gmail.com"
+    },
+    {
+      "name": "yeelan0319",
+      "email": "yiranmao@gmail.com"
+    },
+    {
+      "name": "amsheehan",
+      "email": "alex.m.sheehan@gmail.com"
+    },
+    {
+      "name": "traviskaufman",
+      "email": "travis.kaufman@gmail.com"
+    }
+  ],
+  "name": "@material/radio",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git"
+  },
+  "version": "0.2.14"
+}

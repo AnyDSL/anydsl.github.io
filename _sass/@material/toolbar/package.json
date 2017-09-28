@@ -1,0 +1,122 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@material/toolbar",
+        "scope": "@material",
+        "escapedName": "@material%2ftoolbar",
+        "name": "@material/toolbar",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\stlemme\\Projects\\anydsl-projects\\jekyll-site-src"
+    ]
+  ],
+  "_from": "@material/toolbar@latest",
+  "_id": "@material/toolbar@0.4.10",
+  "_inCache": true,
+  "_location": "/@material/toolbar",
+  "_nodeVersion": "6.9.2",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/toolbar-0.4.10.tgz_1505920874816_0.6000444579403847"
+  },
+  "_npmUser": {
+    "name": "amsheehan",
+    "email": "alex.m.sheehan@gmail.com"
+  },
+  "_npmVersion": "5.4.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@material/toolbar",
+    "scope": "@material",
+    "escapedName": "@material%2ftoolbar",
+    "name": "@material/toolbar",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/toolbar/-/toolbar-0.4.10.tgz",
+  "_shasum": "ca04eb32550270f4203d6f1cfb2b4b4a0b15fe07",
+  "_shrinkwrap": null,
+  "_spec": "@material/toolbar",
+  "_where": "C:\\Users\\stlemme\\Projects\\anydsl-projects\\jekyll-site-src",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "dependencies": {
+    "@material/base": "^0.2.5",
+    "@material/elevation": "^0.1.12",
+    "@material/rtl": "^0.1.8",
+    "@material/theme": "^0.3.1",
+    "@material/typography": "^0.3.0"
+  },
+  "description": "The Material Components for the web toolbar component",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-bD96C5vTZY443hHAEnAROISM1mPZiX+dbRfsRq/u+iU96bk8rH2Q8cAfDGkTHMr58+pD0B9nZl2ui+mTOBgcsA==",
+    "shasum": "ca04eb32550270f4203d6f1cfb2b4b4a0b15fe07",
+    "tarball": "https://registry.npmjs.org/@material/toolbar/-/toolbar-0.4.10.tgz"
+  },
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "toolbar"
+  ],
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "material-admin",
+      "email": "lynnjepsen+npm@google.com"
+    },
+    {
+      "name": "aprigogin",
+      "email": "andrey.prigogin@gmail.com"
+    },
+    {
+      "name": "kfranqueiro",
+      "email": "kenneth.franqueiro@gmail.com"
+    },
+    {
+      "name": "acdvorak",
+      "email": "acdvorak@gmail.com"
+    },
+    {
+      "name": "lynnjepsen",
+      "email": "lynnjepsen@google.com"
+    },
+    {
+      "name": "bwobrien",
+      "email": "obrien.test@gmail.com"
+    },
+    {
+      "name": "yeelan0319",
+      "email": "yiranmao@gmail.com"
+    },
+    {
+      "name": "amsheehan",
+      "email": "alex.m.sheehan@gmail.com"
+    },
+    {
+      "name": "traviskaufman",
+      "email": "travis.kaufman@gmail.com"
+    }
+  ],
+  "name": "@material/toolbar",
+  "optionalDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git"
+  },
+  "version": "0.4.10"
+}

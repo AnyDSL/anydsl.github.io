@@ -1,0 +1,118 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@material/list",
+        "scope": "@material",
+        "escapedName": "@material%2flist",
+        "name": "@material/list",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\stlemme\\Projects\\anydsl-projects\\jekyll-site-src"
+    ]
+  ],
+  "_from": "@material/list@latest",
+  "_id": "@material/list@0.2.19",
+  "_inCache": true,
+  "_location": "/@material/list",
+  "_nodeVersion": "6.9.2",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/list-0.2.19.tgz_1505759746385_0.2502039782702923"
+  },
+  "_npmUser": {
+    "name": "amsheehan",
+    "email": "alex.m.sheehan@gmail.com"
+  },
+  "_npmVersion": "5.3.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@material/list",
+    "scope": "@material",
+    "escapedName": "@material%2flist",
+    "name": "@material/list",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/list/-/list-0.2.19.tgz",
+  "_shasum": "48452e4271e366c72f2c27d796816bba82c5515a",
+  "_shrinkwrap": null,
+  "_spec": "@material/list",
+  "_where": "C:\\Users\\stlemme\\Projects\\anydsl-projects\\jekyll-site-src",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "dependencies": {
+    "@material/ripple": "^0.8.7",
+    "@material/rtl": "^0.1.8",
+    "@material/theme": "^0.3.1",
+    "@material/typography": "^0.3.0"
+  },
+  "description": "The Material Components for the web list component",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-2WpnHHqyZNlVcryE6pXp6OgaFefSbTtEkbey7XdE5qENuf2jrr//4hOpDAduu40bgNK9Pz7Udzep4ovVJ8wFrw==",
+    "shasum": "48452e4271e366c72f2c27d796816bba82c5515a",
+    "tarball": "https://registry.npmjs.org/@material/list/-/list-0.2.19.tgz"
+  },
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "list"
+  ],
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "material-admin",
+      "email": "lynnjepsen+npm@google.com"
+    },
+    {
+      "name": "aprigogin",
+      "email": "andrey.prigogin@gmail.com"
+    },
+    {
+      "name": "kfranqueiro",
+      "email": "kenneth.franqueiro@gmail.com"
+    },
+    {
+      "name": "acdvorak",
+      "email": "acdvorak@gmail.com"
+    },
+    {
+      "name": "lynnjepsen",
+      "email": "lynnjepsen@google.com"
+    },
+    {
+      "name": "bwobrien",
+      "email": "obrien.test@gmail.com"
+    },
+    {
+      "name": "yeelan0319",
+      "email": "yiranmao@gmail.com"
+    },
+    {
+      "name": "amsheehan",
+      "email": "alex.m.sheehan@gmail.com"
+    },
+    {
+      "name": "traviskaufman",
+      "email": "travis.kaufman@gmail.com"
+    }
+  ],
+  "name": "@material/list",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git"
+  },
+  "version": "0.2.19"
+}
