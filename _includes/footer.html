@@ -1,19 +1,19 @@
-<footer class="footer
-    {% if include.is_dense == true %}footer--dense{% endif %}">
+<footer class="footer {% if include.is_dense == true %}footer--dense{% endif %}">
   <div class="footer__content">
-    <a class="footer__logo" href="https://www.google.com" target="_blank"></a>
+    <div class="footer__logos">
+      {% for logo in site.footer.logos %}
+      {% if logo.url %}<a href="{{ logo.url }}" target="_blank">{% endif %}
+        <img src="{{ logo.image | absolute_url }}">
+      {% if logo.url %}</a>{% endif %}
+      {% endfor %}
+    </div>
     <ul class="footer__links">
-      <li>
-        <a class="footer__link" href="http://www.google.com/intl/en/about/" target="_blank">About Google</a>
-      </li>
-      <li>
-        <a class="footer__link" href="https://www.google.com/intl/en/policies/terms/" target="_blank">Privacy &amp; Terms</a>
-      </li>
+      {% for link in site.footer.links %}
+      <li><a class="footer__link" href="{{ link.url | absolute_url }}" target="_blank">{{ link.title }}</a></li>
+      {% endfor %}
       <li class="footer__link-container footer__link-container--right">
-        <a class="footer__link" href="https://material.io/components/web">
-          <span class="footer__made-with-desktop">Made with Material Components for the web</span>
-          <span class="footer__made-with-mobile">Made with MDC Web</span>
-        </a>
+        <span class="footer__made-with-desktop">&copy; {{ site.time | date: '%Y' }} {{ site.copyright }}. All rights reserved.</span>
+        <span class="footer__made-with-mobile">&copy; {{ site.time | date: '%Y' }} {{ site.copyright }}</span>
       </li>
     </ul>
   </div>

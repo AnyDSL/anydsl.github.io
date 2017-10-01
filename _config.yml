@@ -1,4 +1,6 @@
+site_title: AnyDSL
 
+copyright: Saarland University
 
 
 markdown: kramdown
@@ -12,6 +14,21 @@ toolbar:
   - Thorin.md
   - Impala.md
   - Publications.md
+
+footer:
+  logos:
+    - image: images/uds_logo.svg
+      url: http://www.uni-saarland.de/
+    - image: images/dfki_logo_e.svg
+      url: http://www.dfki.de/
+  links:
+    - title: Compiler Design Lab
+      url: http://www.cdl.uni-saarland.de/
+    - title: Computer Graphics Lab
+      url: http://graphics.cg.uni-saarland.de/
+    - title: Agents and Simulated Reality
+      url: http://www.dfki.de/web/research/asr/
+
 
 repo_url: https://github.com/AnyDSL
 

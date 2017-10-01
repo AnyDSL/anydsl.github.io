@@ -24,13 +24,13 @@
     height: 100%;
   }
 
-  &__logo {
+  &__logos {
     display: inline-block;
-    background: url('#{$rootpath}/images/google-logo.svg');
-    background-size: 72px;
-    opacity: .54;
-    width: 72px;
-    height: 24px;
+
+    img {
+      height: 44px;
+      margin-right: 32px;
+    }
   }
 
   &__links {
