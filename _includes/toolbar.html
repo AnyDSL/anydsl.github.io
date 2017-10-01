@@ -1,9 +1,13 @@
-<header class="mdc-toolbar mdc-toolbar--fixed
-    {% if include.no_shadow %}mdc-toolbar--no-shadow{% endif %}
-    {% if include.is_root %}mdc-toolbar--root{% else %}mdc-toolbar--platform{% endif %}">
+{% if include.title_link %}
+  {% assign title_page = site.pages | where: 'path', include.title_link | first %}
+  {% assign title_link = title_page.url | absolute_url %}
+{% else %}
+  {% assign title_link = site.url %}
+{% endif %}
+<header class="mdc-toolbar mdc-toolbar--fixed {% if include.no_shadow %}mdc-toolbar--no-shadow{% endif %} mdc-toolbar--root">
   <div class="mdc-toolbar__row">
     <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-      <a class="mdc-toolbar__title-link" href="{{ include.title_link | default: site.rootpath + page.basepath }}">
+      <a class="mdc-toolbar__title-link" href="{{ title_link }}">
         <h1 class="mdc-toolbar__title mdc-toolbar__title--full">
           {{ include.title }}
         </h1>
@@ -11,11 +15,9 @@
           {{ include.short_title | default: include.title }}
         </h1>
       </a>
-
-      {% include toolbar-platform-chooser.html %}
     </section>
     <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
-      {% include toolbar-nav.html is_root=include.is_root %}
+      {% include toolbar-nav.html %}
     </section>
   </div>
 </header>

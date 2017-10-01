@@ -8,6 +8,13 @@ kramdown:
   syntax_highlighter: none
   auto_ids: true
 
+toolbar:
+  - Thorin.md
+  - Impala.md
+  - Publications.md
+
+repo_url: https://github.com/AnyDSL
+
 defaults:
   -
     scope:
@@ -15,3 +22,4 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+      site_title: AnyDSL
