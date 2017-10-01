@@ -2,6 +2,9 @@ site_title: AnyDSL
 
 copyright: Saarland University
 
+exclude:
+  - LICENSE
+  - README.md
 
 markdown: kramdown
 kramdown:
