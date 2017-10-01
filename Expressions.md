@@ -86,7 +86,6 @@ Operator | Description | Associativity
     This is such a subtle thing hardly anyone knows.
     Some C-compilers emit a warning if the programmer relies on this precedence (```-Wparentheses``` implied by ```-Wall``` in ```gcc```).
 * Assignments' associativity is left-to-right instead of right-to-left.
-
     So
     ```rust
     a += b += c
