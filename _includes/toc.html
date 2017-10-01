@@ -1,0 +1,23 @@
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href')), scroll_target = target.offset().top
+  var toolbar_height = $('.mdc-toolbar--fixed').height();
+  var margin = 10;
+  $(window).scrollTop(scroll_target - toolbar_height - margin);
+  return false
+})
+
+});
+</script>
+<hr/>
+<div class="article__toc">
+  <h2>Contents</h2>
+  <div id="toc"></div>
+</div>
+<hr/>

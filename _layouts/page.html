@@ -5,4 +5,7 @@ layout: default
 {% if page.excerpt %}
   <div class="page-excerpt">{{ page.excerpt }}</div>
 {% endif %}
+{% if page.show_toc %}
+  {% include toc.html %}
+{% endif %}
 {{ content }}

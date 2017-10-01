@@ -42,4 +42,5 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+      show_toc: true
       site_title: AnyDSL
