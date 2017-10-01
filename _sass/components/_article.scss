@@ -69,6 +69,14 @@
     padding-top: 8px;
   }
 
+  // links
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   // Data table
 
   table {
