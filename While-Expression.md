@@ -3,7 +3,7 @@ title: While Expression
 parent: Control-Related-Expressions.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 while_expr ::= 'while' expr_c block_expr
@@ -11,12 +11,12 @@ while_expr ::= 'while' expr_c block_expr
 
 Note that in contrast to most imperative languages like C/C++ or Java, a ```while```-construct is not a statement but an expression and, thus, yields a value.
 
-# Typing
+## Typing
 
 The condition ```expr_c``` of an ```while```-expression must be of type ```bool```.
 The body ```block_expr``` must be of type unit ```()``` or of type ```<no-return>```.
 
-# Semantics
+## Semantics
 
 If ```expr_c``` evaluates to ```true```, the body expression ```block_expr``` evaluates and the ```while```-expression is evalulated again.
 Additionally, impala implicitly declares two continuations which are usable inside ```block_expr```:
@@ -30,7 +30,7 @@ Additionally, impala implicitly declares two continuations which are usable insi
 
 These continuations are first-class citizens and can be passed to other functions.
 
-# Examples
+## Examples
 
 ```rust
 fn main(mut x: int) -> () {

@@ -3,17 +3,17 @@ title: Cast Expression
 parent: Misc.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 cast_expr ::=
 ```
 
-# Typing
+## Typing
 
-# Semantics
+## Semantics
 
-# Examples
+## Examples
 
 ```rust
 TODO

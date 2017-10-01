@@ -3,7 +3,7 @@ title: Prefix Expression
 parent: Operators.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 prefix_expr ::= op expr
@@ -12,11 +12,11 @@ op          ::= '+' | '-' | '~' | '&' | '&mut' | '*'
 
 Also see [operator precedence](https://github.com/AnyDSL/anydsl/wiki/Expressions#precedence).
 
-# Typing
+## Typing
 
-# Semantics
+## Semantics
 
-# Examples
+## Examples
 
 ```rust
 ```

@@ -3,18 +3,18 @@ title: Function Expression
 parent: Constructors.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 fn_expr ::= '|' param_list '|' expr
           | '||' expr
 ```
 
-# Typing
+## Typing
 
-# Semantics
+## Semantics
 
-# Examples
+## Examples
 
 ```rust
 TODO

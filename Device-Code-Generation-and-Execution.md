@@ -8,7 +8,7 @@ The runtime provides convenience functions that are required in order to execute
 - code generation and execution for different devices
 - intrinsics for different devices
 
-# Platforms
+## Platforms
 
 When building the runtime, it looks for the following platforms and builds the platform if it is found:
 
@@ -32,7 +32,7 @@ Calling runtime functions for a platform or device that is not present terminate
 
 Note: HSA platform is tested on a system using the [ROCm](https://github.com/RadeonOpenCompute/ROCm) 1.6 software stack provided by AMD and the llvm_40 branch of the [anydsl](https://github.com/AnyDSL/anydsl) meta project.
 
-# Memory Management
+## Memory Management
 
 Memory management functions work on ```Buffers``` that track the device & platform (```device```) and the allocated memory (```data```): 
 ```Rust
@@ -56,7 +56,7 @@ fn copy(src: Buffer, dst: Buffer, size: i32) -> ();
 fn copy_offset(src: Buffer, off_src: i32, dst: Buffer, off_dst: i32, size: i32) -> ();
 ```
 
-# Code Generation and Execution
+## Code Generation and Execution
 
 Code generation and execution for a platform is exposed via functions in Impala:
 0. Host CPU: by default all code will be generate for the host CPU
@@ -119,7 +119,7 @@ with acc.exec(grid, block) {
 acc.sync();
 ```
 
-# Device Intrinsics
+## Device Intrinsics
 
 The ```Intrinsics``` struct is provided to abstract over device-specific intrinsics, similar to the ```Accelerator``` struct:
 ```Rust
@@ -145,7 +145,7 @@ with acc.exec(grid, block) {
 ...
 ```
 
-# Address Spaces
+## Address Spaces
 
 Each GPU memory type has an address space associated, which needs to be annotated.
 In Impala, the following address spaces are supported:
@@ -180,12 +180,12 @@ with acc.exec(grid, block) {
 ...
 ```
 
-# Profiling
+## Profiling
 Profiling of kernels is disabled by default. To enable profiling, set the ```ANYDSL_PROFILE``` environment variable to ```FULL```:
 ```bash
 ANYDSL_PROFILE=FULL ./binary
 ```
 
-# Example
+## Example
 
 A simple example that shows how to generate code for different GPUs can be found in [Stincilla](https://github.com/AnyDSL/stincilla/blob/master/test/alloc_gpu.impala).

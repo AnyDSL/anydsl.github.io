@@ -3,7 +3,7 @@ title: Expression Statement
 parent: Statements.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 expr_stmnt     ::= expr;
@@ -19,17 +19,17 @@ stmt_like_expr ::= block_expr
 An expression statement is an expression followed by a semicolon.
 However, for some so-called *statement-like expressions* the semicolon can be elided.
 
-# Typing
+## Typing
 
 The ```expr``` or ```stmnt_like_expr``` may have any type except ```<no-return>```.
 
-# Semantics
+## Semantics
 
 The expression evaluates while its computed value is discarded.
 An expression statement is usually used in order to evaluate side-effects.
 Impala emits a warning if an expression does not have a side-effect.
 
-# Example
+## Example
 
 ```rust
 f();

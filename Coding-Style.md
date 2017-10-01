@@ -4,7 +4,7 @@ parent: index.md
 weight: 5
 ---
 
-# General Hints
+## General Hints
 
 * Avoid [copy & paste](http://en.wikipedia.org/wiki/Copy_and_paste_programming) *at all cost*. Do whatever is necessary to avoid it! The maintainer will ban 'copy & paste' code and will not integrate any patches containing 'copy & paste' code.
 * Small is beautiful. Try to reduce the code size whenever you can.
@@ -37,7 +37,7 @@ As a _rough_ rule of thumb create one .cpp/.h pair for each class. However, ther
 * Leave supporting structs/classes where they belong: In the file of their supported class.
 * Some class hierarchies are pooled into one header (like impala/ast.h) or split into several logical units (anydsl/primop.h, anydsl/memop.h, anydsl/literal.h). The reason for this is, that the number of files would just explode otherwise. Having dozens and dozens of 20 lines long files makes maintaining a pain.
 
-# General Formatting
+## General Formatting
 
 * We do not impose a stupid horizontal line width limit; feel free to break your line wherever you feel it is applicable. If in doubt, don't break the line. 100 or 120 chars per line are still considered fine.
 * Use spaces instead of tabs
@@ -54,9 +54,9 @@ set softtabstop=4
 set shiftwidth=4
 ```
 
-# Preprocessor
+## Preprocessor
 
-## Includes
+### Includes
 
 * include corresponding header in the case of a cpp file + new line (you can elide this step if the corresponding header file is not necessary for building the cpp file)
 * include all C/C++ headers + new line
@@ -84,7 +84,7 @@ Example (from `impala/parser.cpp`):
 #include "impala/type.h"
 ```
 
-## Misc
+### Misc
 
 * Add Guards for Header Files. Use the pattern `IMPALA_FOO_H` or `THORIN_FOO_H` for a file `impala/foo.h` or `thorin/foo.h`
 * Do *not* comment your `#else`, `#endif` with the matching `#ifdef`/`#ifndef` tag.
@@ -102,7 +102,7 @@ Example:
 * Favor forward declarations and implementations in the cpp file instead of additional includes
 * Favor templates and inline functions over macros. Unfortunately, macros are nevertheless often necessary.
 
-# Source Code Formatting
+## Source Code Formatting
 
 This is best shown by example:
 
@@ -167,7 +167,7 @@ int Foo::do_somthing_simple() { return ++i_; }
 }
 ```
 
-## General
+### General
 
 * Use Java-style braces except for constructors (due to the weird init-list syntax).
 * Make use of [const correctness](http://en.wikipedia.org/wiki/Const-correctness).
@@ -176,7 +176,7 @@ int Foo::do_somthing_simple() { return ++i_; }
 * Use C++11's [range-based for](http://en.cppreference.com/w/cpp/language/range-for).
 * Use C++11's `auto` if the type can be easily inferred as human or the exact underlying type is not that important (useful when dealing with containters and iterators).
 
-## Statements
+### Statements
 
 * Use spaces to separate while/if/for/switch from the head
 * Use spaces after the semicolon in a `for` head
@@ -194,18 +194,18 @@ switch (i_) {
 
 * If you need unorthodox control-flow (like [multi-level break](http://stackoverflow.com/questions/5670051/java-multi-level-break)) use `goto`. Introducing obscure boolean flags is harder to read, more code, less efficient, more error-prone and less robust than the goto variant.
 
-## Expressions
+### Expressions
 
 * If in doubt, use spaces between operators. However, sometimes you may want to group an expression in a certain way. Then, it's OK to elide spaces.
 * Do not fear to use `a ? b : c`. It can really make code shorter.
 
-## Types
+### Types
 
 * Use `void* p` and _not_ `void *p`. Same for references.
 * Use `size_t` when accessing arrays or std::vector
 * Name iterators `i` if possible; do not name them `it` or `iter` or whatever unless there exists already another variable called `i`.
 
-## Classes
+### Classes
 
 * `UseCamelCaseForClassNames`
 * `use_snake_case_for_method_names`

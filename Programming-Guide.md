@@ -1,15 +1,10 @@
 ---
 title: Programming Guide
 parent: Thorin.md
+excerpt: "This guide describes the most important classes and programming concepts in Thorin. Please also read Thorin's Language Reference Manual. This guide assumes that you are already familiar with Thorin."
 ---
 
-# Abstract
-
-This guide describes the most important classes and programming concepts in Thorin. 
-Please also read Thorin's [[Language Reference Manual]]. 
-This guide assumes that you are already familiar with Thorin.
-
-# A First Tutorial
+## A First Tutorial
 
 Before getting into detail, let us discuss how to manually construct a Thorin representation of the following program:
 
@@ -104,9 +99,9 @@ next->jump(main->param(1), {next->get_value(0, world.type_u32()}));
 
 Please refer to [Braun et al.](http://www.cdl.uni-saarland.de/papers/bbhlmz13cc.pdf) for details about this algorithm.
 
-# Basics
+## Basics
 
-## Casts
+### Casts
 
 Use the `as` method as static cast. 
 An assertion will be raised in the debug version if this cast is not possible during runtime. 
@@ -145,7 +140,7 @@ void foo(Def def) {
 ```
 
 
-## Array and ArrayRef
+### Array and ArrayRef
 
 An `Array` is just a fixed sized array allocated on the heap:
 
@@ -171,12 +166,12 @@ auto fn_type = world.fn_type(
                 {world.type_u32(), world.type_u32(), world.type_u64()}); 
 ```
 
-## Ranged-based `for`
+### Ranged-based `for`
 
 We highly encourage to use C++11's [range-based `for` loop](http://en.wikipedia.org/wiki/C%2B%2B11#Range-based_for_loop) whenever possible.
 Note that the aforementioned `Array` and `ArrayRef` classes work just fine with range-based `for`.
 
-# Definitions
+## Definitions
 
 As outlined in the Thorin [[Language Reference Manual]] there exists three possibilities to define values:
 
@@ -232,7 +227,7 @@ Any definitions which become dead and/or unreachable will be deleted after invok
 cleanup_world(w);
 ```
 
-# The World
+## The World
 
 The most important class in AnyDSL is the [World](http://anydsl.github.io/doxygen/thorin/classthorin_1_1_world.html) class. This class serves three main purposes:
 
@@ -244,13 +239,13 @@ The most important class in AnyDSL is the [World](http://anydsl.github.io/doxyge
   But these are completely independent of each other. 
   If you mix things across world instances your program is broken.
 
-# The C++ `const` qualifier and mutating objects
+## The C++ `const` qualifier and mutating objects
 
 Once created, primops, types and parameters are immutable. 
 They are internally stored in the `world`; parameters are handled by their `Lambda`. 
 For this reason you will always get `const` pointers to parameters and primops. 
 
-## Mutating Lambdas
+### Mutating Lambdas
 
 However as outlined above, lambdas are mutable. 
 To be on the safe side you will always get immutable objects. 
@@ -269,7 +264,7 @@ void foo(Def def) {
 }
 ```
 
-## Mutating Primops and Parameters
+### Mutating Primops and Parameters
 
 Primops and Parameters cannot really be mutated. 
 Instead, create a new thing and replace the old node with the new one:
@@ -293,7 +288,7 @@ Def updated = world.rebuild(add, new_ops);
 add->replace(update);
 ```
 
-# Primops and Local Optimizations
+## Primops and Local Optimizations
 
 When ever you construct a new primop, local optimizations are performed in order to simplify the program under construction. 
 For this reason, [World](http://anydsl.github.io/doxygen/thorin/classthorin_1_1_world.html)'s factory methods always return [Def](http://anydsl.github.io/doxygen/thorin/classthorin_1_1_def.html):

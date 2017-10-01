@@ -2,6 +2,7 @@
 title: Debugging
 parent: index.md
 weight: 4
+show_toc: false
 ---
 
 This page provides some tips how to debug Impala/Thorin.

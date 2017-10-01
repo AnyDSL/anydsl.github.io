@@ -3,7 +3,7 @@ title: Definite Array Expression
 parent: Constructors.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 definite_array_expr ::= '[' (expr ',')* ']'
@@ -12,17 +12,17 @@ definite_array_expr ::= '[' (expr ',')* ']'
 
 The last comma in the first case is optinal.
 
-# Typing
+## Typing
 
 1. The expression ```[e_1, ..., e_n]``` has type ```[T * n]``` if all ```e_i``` are of type ```T```.
 2. The expression ```[e, .. n]``` has type ```[T * n]``` if all ```e_i``` are of type ```T```. ```n``` must be a constant.
 
-# Semantics
+## Semantics
 
 1. All elements are evaluated from left to right and packed into a [[Definite Array]].
 2. The expression is evaluated and ```n```-times duplicated in order to be packed into a [[Definite Array]].
 
-# Examples
+## Examples
 
 ```rust
 let a = [1, 2, 3];

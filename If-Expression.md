@@ -3,7 +3,7 @@ title: If Expression
 parent: Control-Related-Expressions.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 if_expr ::= 'if' expr_c block_expr_t ['else' block_expr_f]
@@ -12,13 +12,13 @@ if_expr ::= 'if' expr_c block_expr_t ['else' block_expr_f]
 Note that in contrast to most imperative language like C/C++ or Java, an ```if```-construct is not a statement but an expression and, thus, yields a value.
 The ```else``` clause is optional.
 
-# Typing
+## Typing
 
 The condition ```expr_c``` of an ```if```-expression must be of type ```bool```.
 Both ```block_expr_then``` and ```block_expr_else``` must be of the same type or of type ```<no-return>```.
 If the optional ```else```-clause is elided, its type is unit: ```()```.
 
-# Semantics
+## Semantics
 
 If ```expr_c``` evaluates to ```true```, the whole expression evaluates to ```block_expr_t```.
 Otherwise, it evaluates to ```block_expr_f```.
@@ -26,7 +26,7 @@ Otherwise, it evaluates to ```block_expr_f```.
 Note that an ```if```-expression is lazy.
 This means, that ```block_expr_t``` or ```block_expr_f```, respectively, are evaluated after the whole ```if```-expression has been evaluated.
 
-# Examples
+## Examples
 
  ```rust
 fn main(x: i32) -> i32 {

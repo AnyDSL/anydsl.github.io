@@ -3,17 +3,17 @@ title: Map Expression
 parent: Misc.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 map expression
 ```
 
-# Typing
+## Typing
 
-# Semantics
+## Semantics
 
-# Examples
+## Examples
 
 ```rust
 ```

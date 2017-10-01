@@ -2,13 +2,10 @@
 title: Tutorial
 parent: Impala.md
 weight: 1
+excerpt: "Impala is an imperative language with functional flavoured constructs. This document is a user guide for the Impala language: it features a step by step introduction to Impala, with a lot of examples."
 ---
 
-# Impala User Guide
-
-Impala is an imperative language with functional flavoured constructs. This document is a user guide for the Impala language: it features a step by step introduction to Impala, with a lot of examples.
-
-# Basics
+## Basics
 
 Impala is a language that is designed to write DSLs. As such, it comes with no standard library. You can, however, interface Impala code with C/C++ code easily. The first thing you might want to write is a "Hello, world" program:
 
@@ -102,9 +99,9 @@ gcc hello.c hello.o -o hello
 A minimal runtime that provides functionality for allocating memory on different devices (CPU / GPU) is provided by the [runtime](https://github.com/AnyDSL/runtime). The runtime provides also functionality for [device code generation and execution](AnyDSL/anydsl/wiki/Device-Code-Generation-and-Execution).
 
 
-# Language Syntax
+## Language Syntax
 
-## Variables
+### Variables
 
 Variables are declated with **let**, and are immutable by default. Mutables variables are declared with **let mut**. Impala has a type inference system, but the variable can be explicitly typed to resolve ambiguities.
 
@@ -155,7 +152,7 @@ fn some_arrays() -> () {
 }
 ```
 
-## Functions
+### Functions
     
 Function declarations are introduced with the keyword **fn**. Declarations do not need to be global, you can declare a function inside another function.
 
@@ -229,7 +226,7 @@ fn apply_function(f: fn(int) -> int, i: int) -> int {
 > ```
 > That is, ```safe_division``` is a function that never returns and takes a function called `return` with one integer parameter as last argument.
 
-## Structures
+### Structures
 
 Records are present in Impala, and take the form of _structures_:
 
@@ -268,7 +265,7 @@ fn add_vectors(a: Vector, b: Vector) -> Vector {
 }
 ```
 
-## Pointers
+### Pointers
 
 Impala also features pointers that can be used to interface Impala code with C/C++ or to dynamically allocate memory. In this context, the **&** operator is used in two different places: in a type declaration, where it defines a pointer type, and in an address-taking expression, where it takes the address of some variable. The star operator (__*__) plays the same role as in C: it dereferences the pointer.
 
@@ -300,7 +297,7 @@ fn alloc_test() -> () {
 
 Memory allocated in that manner is only accessible through the host (i.e. not valid on a GPU). Using this feature requires to link against the [runtime](https://github.com/AnyDSL/runtime).
 
-## Control Structures
+### Control Structures
 
 Various imperative control flow structures are available in Impala: **for**, **while**, **if**/**else**. Here are some examples of how to use them:
 
@@ -351,7 +348,7 @@ fn sum() -> int {
 }
 ```
 
-## Casts
+### Casts
 
 Impala supports type conversions using the cast expression:
 
@@ -377,7 +374,7 @@ fn int_as_float(i: int) -> float {
 }
 ```
 
-## Inline Assembly
+### Inline Assembly
 
 It is possible to write inline assembly in Impala by using the **asm** statement.
 Consider the following example in LLVM-flavored x86 assembly:

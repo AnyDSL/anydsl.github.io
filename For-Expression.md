@@ -3,7 +3,7 @@ title: For Expression
 parent: Control-Related-Expressions.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 for_expr ::= 'for' param_list in map_expr block_expr
@@ -11,7 +11,7 @@ for_expr ::= 'for' param_list in map_expr block_expr
 
 Note that in contrast to most imperative languages like C/C++ or Java, a ```for```-construct is not a statement but an expression and, thus, yields a value.
 
-# Typing
+## Typing
 
 A ```for```-expression is syntactic sugar for:
 ```rust
@@ -39,11 +39,11 @@ Aditionally, Impala implicitly declares two continuations which are usable insid
 Since ```block_expr``` also calls the generator again, its type must be ```C```.
 The type of the whole ```for``` expression is ```B```.
 
-# Semantics
+## Semantics
 
 Since a ```for``` expression is just syntactic sugar, see [[Map Expression]].
 
-# Examples
+## Examples
 
 ```rust
 extern "C" {

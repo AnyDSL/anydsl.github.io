@@ -3,21 +3,21 @@ title: Item Statement
 parent: Statements.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 item_stmt ::= item ';'
 ```
 
-# Typing
+## Typing
 
 The ```item``` must type.
 
-# Semantics
+## Semantics
 
 See [[Block Expression]].
 
-# Examples
+## Examples
 
 ```rust
 TODO

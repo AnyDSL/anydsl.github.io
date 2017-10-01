@@ -3,7 +3,7 @@ title: Struct Expression
 parent: Constructors.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 struct_expr ::= ast_type_app_expr '{' (identifier ':' expr ',')* '}'
@@ -11,11 +11,11 @@ struct_expr ::= ast_type_app_expr '{' (identifier ':' expr ',')* '}'
 
 The last comma is optional.
 
-# Typing
+## Typing
 
-# Semantics
+## Semantics
 
-# Examples
+## Examples
 
 ```rust
 ```

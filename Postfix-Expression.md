@@ -3,7 +3,7 @@ title: Postfix Expression
 parent: Operators.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 postfix_expr ::= expr op
@@ -11,11 +11,11 @@ op           ::= '++' | '--'
 ```
 Also see [operator precedence](https://github.com/AnyDSL/anydsl/wiki/Expressions#precedence).
 
-# Typing
+## Typing
 
-# Semantics
+## Semantics
 
-# Examples
+## Examples
 
 ```rust
 ```

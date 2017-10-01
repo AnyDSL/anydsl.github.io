@@ -8,7 +8,7 @@ Impala is an expression-oriented language.
 This means, that [if](If Expression)-, [while](While Expression)- and [for](For Expression)-constructs are not [[Statements]] but [[Expressions]] that yield values.
 It is perfectly fine and even encouraged to nest expressions.
 
-# Syntax
+## Syntax
 
 ```
 expr ::= primary_expr
@@ -32,7 +32,7 @@ expr ::= primary_expr
        | type_application_expr
 ```
 
-# Precedence
+## Precedence
 
 Nesting of expressions is disambiguated according to this table:
 

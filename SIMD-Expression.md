@@ -3,7 +3,7 @@ title: SIMD Expression
 parent: Constructors.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 simd_expr ::= 'simd' '[' (expr ',')* ']'
@@ -11,16 +11,16 @@ simd_expr ::= 'simd' '[' (expr ',')* ']'
 
 The last comma is optional.
 
-# Typing
+## Typing
 
 The expression ```simd[e_1, ..., e_n]``` has type ```simd[n * T]``` if all ```e_i``` are of type ```T```. 
 ```T``` must be a scalar type.
 
-# Semantics
+## Semantics
 
 All elements are evaluated from left to right and packed into a SIMD value.
 
-# Examples
+## Examples
 
 ```rust
 fn mask_store(i: simd[bool * 4], src: simd[int * 4], dst: &mut simd[int * 4]) -> () {

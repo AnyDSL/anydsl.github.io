@@ -3,7 +3,7 @@ title: Assembly Statement
 parent: Statements.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 asm_stmt ::= 'asm'(string+                                                    ')' ';'
@@ -12,11 +12,11 @@ asm_stmt ::= 'asm'(string+                                                    ')
            | 'asm'(string+ ':' ('string',)*' :' ('string',)* ':' ('string',)* ')' ';'
 ```
 
-# Typing
+## Typing
 
-# Semantics
+## Semantics
 
-# Examples
+## Examples
 
 ``` rust
 extern "C" {

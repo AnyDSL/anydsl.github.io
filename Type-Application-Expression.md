@@ -3,17 +3,17 @@ title: Type Application Expression
 parent: Misc.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 type application expression
 ```
 
-# Typing
+## Typing
 
-# Semantics
+## Semantics
 
-# Examples
+## Examples
 
 ```rust
 ```

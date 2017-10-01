@@ -3,7 +3,7 @@ title: With Expression
 parent: Control-Related-Expressions.md
 ---
 
-# Syntax
+## Syntax
 
 ```
 'with' param_list 'in' map_expr block_expr
@@ -11,7 +11,7 @@ parent: Control-Related-Expressions.md
 
 Note that in contrast to most imperative languages like C/C++ or Java, a ```with```-construct is not a statement but an expression and, thus, yields a value.
 
-# Typing
+## Typing
 
 A ```with```-expression is syntactic sugar for:
 ```rust
@@ -33,11 +33,11 @@ Additionally, Impala implicitly declares the following continuation which is usa
 Since ```block_expr``` also exits the current [[Function Expression]],  its type must be ```B```, too.
 The type of the whole ```with``` expression is ```R``` - whatever is yielded by invoking ```f```.
 
-# Semantics
+## Semantics
 
 Since a ```with``` expression is just syntactic sugar, see [[Map Expression]].
 
-# Examples
+## Examples
 
 ```rust
 TODO

@@ -11,14 +11,14 @@ hex_digit  ::= digit | ['a'-'f''A'-'F']
 hex_digit  ::= hex_digit | '_'
 ```
 
-# Identifiers
+## Identifiers
 
 ```
 identifier ::= nondigit (nondigit | digit)*
 nondigit   ::= ['_''a'-'z''A'-'Z']
 ```
 
-## Keywords
+### Keywords
 
 Some identifiers are reserved *keywords* which have a special meaning in an Impala program:
 
@@ -39,7 +39,7 @@ See
 * [[Function Expression]]
 * [[While Expression]]
 
-# Punctators
+## Punctators
 
 This tokens have a special meaning depending on the context they occur in:
 ```
@@ -52,7 +52,7 @@ This tokens have a special meaning depending on the context they occur in:
 , # ##
 ```
 
-# Literals
+## Literals
 
 Note that you can use underscores to group your integer and float literals.
 
@@ -63,7 +63,7 @@ literal ::= int_literal
           | str_literal
 ```
 
-## Integer Literals
+### Integer Literals
 
 ```
 int_literal ::= digit digit_* int_suffix
@@ -80,7 +80,7 @@ int_suffix ::= /*empty*/
              | 'u' | 'u8' | 'u16' | 'u32' | 'u64'
 ```
 
-## Float Literals
+### Float Literals
 
 ```
 float_literal ::= digit digit_* '.' digit_* float_suffix
@@ -93,11 +93,11 @@ float_suffix  ::= /*empty*/
                 | 'h' | 'f' | 'f16' | 'f32' | 'f64'
 ```
 
-## Char Literals
+### Char Literals
 
-## String Literals
+### String Literals
 
-## Examples
+### Examples
 
 ```rust
 fn main() -> () {

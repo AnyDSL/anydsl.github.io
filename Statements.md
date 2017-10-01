@@ -2,13 +2,14 @@
 title: Statements
 parent: Impala.md
 weight: 4
+show_toc: false
 ---
 
 Impala only supports a few statements.
 Most constructs are [[Expressions]].
 Use a [[Block Expression]] in order to group a list of statements.
 
-# Syntax
+## Syntax
 
 ```
 stmnt ::== asm_stmt

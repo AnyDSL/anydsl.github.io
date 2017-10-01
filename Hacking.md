@@ -6,17 +6,17 @@ weight: 3
 
 Here, you'll find some information about hacking on and debugging AnyDSL.
 
-# Tools
+## Tools
 
-## yComp
+### yComp
 
 Install the [yComp](http://pp.ipd.kit.edu/firm/yComp) graph viewer to visualize Thorin graphs:
 ```bash
 ./scripts/install_ycomp.sh <install_dir>
 ```
-## Vim
+### Vim
 
-### Setting the ```make``` Variable
+#### Setting the ```make``` Variable
 
 If you like [Vim](http://www.vim.org/), you might also like:
 ```bash
@@ -29,7 +29,7 @@ if filereadable(".project.vim")
 endif
 ```
 
-### Syntax Highlighting
+#### Syntax Highlighting
 
 You might also like to symlink this into your ```~/.vim/``` directory:
 ```bash
@@ -38,19 +38,19 @@ ln -s anydsl/vim/syntax/* ~/.vim/syntax/.
 ```
 This enables syntax highlighting for Impala and Thorin.
 
-# Hacking
+## Hacking
 
-## Breakpoints
-
-TODO
-
-# Logging
+### Breakpoints
 
 TODO
 
-# Web Stuff
+## Logging
 
-## Wiki
+TODO
+
+## Web Stuff
+
+### Wiki
 
 Setup this wiki with a git hook to automatically generate a table of contents:
 ```bash
@@ -58,7 +58,7 @@ Setup this wiki with a git hook to automatically generate a table of contents:
 ```
 You need [doctoc](https://github.com/thlorenz/doctoc) installed for this magic to work.
 
-## Web Pages and Doxygen
+### Web Pages and Doxygen
 
 Setup web pages with:
 ```bash
