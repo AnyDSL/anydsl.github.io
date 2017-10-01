@@ -5,8 +5,11 @@ weight: 5
 ---
 
 Impala is an expression-oriented language.
-This means, that [if](If Expression)-, [while](While Expression)- and [for](For Expression)-constructs are not [[Statements]] but [[Expressions]] that yield values.
+This means, that [if-]({% link If-Expression.md %}), [while-]({% link While-Expression.md %}) and [for-constructs]({% link For-Expression.md %}) are not [Statements] but [Expressions] that yield values.
 It is perfectly fine and even encouraged to nest expressions.
+
+[Expressions]: {% link Expressions.md %}
+[Statements]: {% link Statements.md %}
 
 ## Syntax
 
@@ -38,23 +41,32 @@ Nesting of expressions is disambiguated according to this table:
 
 Operator | Description | Associativity 
 ---------|-------------|--------------
-`++` `--` <br/> `()` <br/> `[]` <br/> `.` | [[Postfix Expression]] (increment/decrement) <br/> [[Map Expression]] <br/> [[Type Application Expression]] <br/> [[Field Expression]] | left-to-right
-`++` `--` <br/> `+` `-` <br/> `!` <br/> `~` <br/> `*` <br/> `&` `&mut` <br/> `\|` `\|\|` | [[Prefix Expression]] (increment/decrement) <br/> [[Prefix Expression]] (unary plus/minus) <br/> [[Prefix Expression]] (logical/bitwise NOT) <br/> [[Prefix Expression]] (alloc) <br/> [[Prefix Expression]] (dereference) <br/> [[Prefix Expression]] (address-of/mutable address-of) <br/> [[Function Expression]] | right-to-left
-`as` | [[Cast Expression]] | left-to-right
-`*` `/` `%` | [[Infix Expression]] (multiplication/division/remainder) | left-to-right
-`+` `-` | [[Infix Expression]] (addition/subtraction) | left-to-right
-`<<` `>>` | [[Infix Expression]] (bitwise left/right shift) | left-to-right
- `&` | [[Infix Expression]] (bitwise AND) | left-to-right
- `^` | [[Infix Expression]] (bitwise XOR) | left-to-right
- `\|` | [[Infix Expression]] (bitwise  OR) | left-to-right
-`==` `!=` <br/> `<` `<=` `>` `>=` | [[Infix Expression]] (equal/not equal) <br/> [[Infix Expression]] (less/less equal/greater/greater equal) | left-to-right
-`&&` | [[Infix Expression]] (logical AND) | left-to-right
-`\|\|` | [[Infix Expression]] (logical  OR) | left-to-right
-`=` <br/> `*=` `/=` `%=`  <br/> `+=` `-=` <br/> `<<=` `>>=`  <br/> `&=` `^=` `\|=` | [[Infix Expression]] (assignment) <br/> [[Infix Expression]] (assign by sum/difference) <br/> [[Infix Expression]] (assign by product/quotient/remainder) <br/> [[Infix Expression]] (assign by bitwise left/right shift) <br/> [[Infix Expression]] (assign by bitwise AND/XOR/OR) | left-to-right
+`++` `--` <br/> `()` <br/> `[]` <br/> `.` | [Postfix Expression] (increment/decrement) <br/> [Map Expression] <br/> [Type Application Expression] <br/> [Field Expression] | left-to-right
+`++` `--` <br/> `+` `-` <br/> `!` <br/> `~` <br/> `*` <br/> `&` `&mut` <br/> `\|` `\|\|` | [Prefix Expression] (increment/decrement) <br/> [Prefix Expression] (unary plus/minus) <br/> [Prefix Expression] (logical/bitwise NOT) <br/> [Prefix Expression] (alloc) <br/> [Prefix Expression] (dereference) <br/> [Prefix Expression] (address-of/mutable address-of) <br/> [Function Expression] | right-to-left
+`as` | [Cast Expression] | left-to-right
+`*` `/` `%` | [Infix Expression] (multiplication/division/remainder) | left-to-right
+`+` `-` | [Infix Expression] (addition/subtraction) | left-to-right
+`<<` `>>` | [Infix Expression] (bitwise left/right shift) | left-to-right
+ `&` | [Infix Expression] (bitwise AND) | left-to-right
+ `^` | [Infix Expression] (bitwise XOR) | left-to-right
+ `\|` | [Infix Expression] (bitwise  OR) | left-to-right
+`==` `!=` <br/> `<` `<=` `>` `>=` | [Infix Expression] (equal/not equal) <br/> [Infix Expression] (less/less equal/greater/greater equal) | left-to-right
+`&&` | [Infix Expression] (logical AND) | left-to-right
+`\|\|` | [Infix Expression] (logical  OR) | left-to-right
+`=` <br/> `*=` `/=` `%=`  <br/> `+=` `-=` <br/> `<<=` `>>=`  <br/> `&=` `^=` `\|=` | [Infix Expression] (assignment) <br/> [Infix Expression] (assign by sum/difference) <br/> [Infix Expression] (assign by product/quotient/remainder) <br/> [Infix Expression] (assign by bitwise left/right shift) <br/> [Infix Expression] (assign by bitwise AND/XOR/OR) | left-to-right
+
+[Postfix Expression]: {% link Postfix-Expression.md %}
+[Map Expression]: {% link Map-Expression.md %}
+[Type Application Expression]: {% link Type-Application-Expression.md %}
+[Field Expression]: {% link Field-Expression.md %}
+[Prefix Expression]: {% link Prefix-Expression.md %}
+[Function Expression]: {% link Function-Expression.md %}
+[Cast Expression]: {% link Cast-Expression.md %}
+[Infix Expression]: {% link Infix-Expression.md %}
 
 ## Comparison with C
 
-* The [as](Cast Expression) binds strongest of all binary operators. 
+* The [as][Cast Expression] binds strongest of all binary operators. 
     This one does not exist in C.
 * `&`, `^` and `|` bind stronger than assignments. This is more intuitive.
 * All relations share the same precedence. This means
@@ -62,7 +74,7 @@ Operator | Description | Associativity
     ```rust
     a == b < c
     ```
-    binds in Impala like this because all [infix operators](Infix Expression) bind from left to right:
+    binds in Impala like this because all [infix operators][Infix Expression] bind from left to right:
     ```rust
     (a == b) < c
     ```

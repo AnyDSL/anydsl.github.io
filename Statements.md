@@ -6,8 +6,8 @@ show_toc: false
 ---
 
 Impala only supports a few statements.
-Most constructs are [[Expressions]].
-Use a [[Block Expression]] in order to group a list of statements.
+Most constructs are [Expressions]({% link Expressions.md %}).
+Use a [Block Expression]({% link Block-Expression.md %}) in order to group a list of statements.
 
 ## Syntax
 
