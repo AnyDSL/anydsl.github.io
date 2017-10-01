@@ -35,7 +35,7 @@ Note: HSA platform is tested on a system using the [ROCm](https://github.com/Rad
 ## Memory Management
 
 Memory management functions work on ```Buffers``` that track the device & platform (```device```) and the allocated memory (```data```): 
-```Rust
+```rust
 struct Buffer {
     device: i32,
     data: &[i8]
@@ -64,7 +64,7 @@ Code generation and execution for a platform is exposed via functions in Impala:
 2. OpenCL: ```opencl```
 3. HSA: ```amdgpu```
 The signature for the code generations backends is as follows:
-```Rust
+```rust
 backend(device, grid, block, fun);
 ```
 - device: the device of the corresponding platform
@@ -72,7 +72,7 @@ backend(device, grid, block, fun);
 - fun: function for which code will be generated
 
 A typical example will look like this:
-```Rust
+```rust
 let grid   = (1024, 1024, 1);
 let block  = (32, 1, 1);
 let device = 0;
@@ -81,40 +81,40 @@ synchronize_cuda(device);
 ```
 
 Using the ```with``` syntax results in a more pleasing syntax:
-```Rust
+```rust
 let grid   = (1024, 1024, 1);
 let block  = (32, 1, 1);
 let device = 0;
 with cuda(device, grid, block) {
- let idx = cuda_threadIdx_x();
- out(idx) = in(idx);
+    let idx = cuda_threadIdx_x();
+    out(idx) = in(idx);
 }
 synchronize_cuda(device);
 ```
 
 The ```Accelerator``` struct is provided to abstract over different compute devices: 
-```Rust
+```rust
 struct Accelerator {
-  exec  : fn((i32, i32, i32), (i32, i32, i32), fn() -> ()) -> (),
-  sync  : fn() -> (),
-  alloc : fn(i32) -> Buffer,
-  tidx  : fn() -> i32,
-  bidx  : fn() -> i32,
-  gidx  : fn() -> i32,
-  ...
+    exec  : fn((i32, i32, i32), (i32, i32, i32), fn() -> ()) -> (),
+    sync  : fn() -> (),
+    alloc : fn(i32) -> Buffer,
+    tidx  : fn() -> i32,
+    bidx  : fn() -> i32,
+    gidx  : fn() -> i32,
+    ...
 }
 ```
 
 Using one of the pre-defined accelerators allows to use the same code for different devices:
-```Rust
+```rust
 let device = 0;
 let acc    = cuda_accelerator(device);
 let grid   = (1024, 1024, 1);
 let block  = (32, 1, 1);
 
 with acc.exec(grid, block) {
- let idx = acc.tidx();
- out(idx) = in(idx);
+    let idx = acc.tidx();
+    out(idx) = in(idx);
 }
 acc.sync();
 ```
@@ -122,25 +122,25 @@ acc.sync();
 ## Device Intrinsics
 
 The ```Intrinsics``` struct is provided to abstract over device-specific intrinsics, similar to the ```Accelerator``` struct:
-```Rust
+```rust
 struct Intrinsics {
-  expf  : fn(f32) -> f32,
-  sinf  : fn(f32) -> f32,
-  cosf  : fn(f32) -> f32,
-  logf  : fn(f32) -> f32,
-  sqrtf : fn(f32) -> f32,
-  powf  : fn(f32, f32) -> f32,
-  ...
+    expf  : fn(f32) -> f32,
+    sinf  : fn(f32) -> f32,
+    cosf  : fn(f32) -> f32,
+    logf  : fn(f32) -> f32,
+    sqrtf : fn(f32) -> f32,
+    powf  : fn(f32, f32) -> f32,
+    ...
 }
 ```
 
 Using one of the pre-defined intrinsics allows to use the same code for different devices:
-```Rust
+```rust
 let math = cuda_intrinsics;
 ...
 with acc.exec(grid, block) {
- let idx = acc.tidx();
- out(idx) = math.sinf(in(idx));
+    let idx = acc.tidx();
+    out(idx) = math.sinf(in(idx));
 }
 ...
 ```
@@ -155,27 +155,27 @@ In Impala, the following address spaces are supported:
 
 Correct code will only be emitted in case the address space is valid.
 Read-only arrays in global GPU memory are of type ```&[1][T]``` and write-able arrays ```&mut[1][T]```. 
-```Rust
+```rust
 let arr = alloc_cuda(dev, size);
 let out = alloc_cuda(dev, size);
 ...
 with acc.exec(grid, block) {
-  let idx = acc.tidx();
-  let arr_ptr = bitcast[   &[1][f32]](arr.data);
-  let out_ptr = bitcast[&mut[1][f32]](out.data);
-  out_ptr(idx) = arr_ptr(idx);
+    let idx = acc.tidx();
+    let arr_ptr = bitcast[   &[1][f32]](arr.data);
+    let out_ptr = bitcast[&mut[1][f32]](out.data);
+    out_ptr(idx) = arr_ptr(idx);
 }
 ...
 ```
 The address space annotation is manual at the moment, but will be automated with the new upcoming type system.
 
 Memory of compile-time known size in shared (CUDA), local (OpenCL), or group (HSA) memory can be requested using ```reserve_shared```.
-```Rust
+```rust
 ...
 with acc.exec(grid, block) {
-  ...
-  let shared = reserve_shared[f32](32);
-  shared(acc.tidx()) = arr_ptr(idx);
+    ...
+    let shared = reserve_shared[f32](32);
+    shared(acc.tidx()) = arr_ptr(idx);
 }
 ...
 ```

@@ -28,7 +28,7 @@ This snippet of Impala code declares two functions:
 
 To actually run this impala code, you need a host program in C. This is how a typical C program would call the "hello" function from Impala:
 
-```C
+```c
 #include <stdio.h>
 
 void hello();
@@ -45,7 +45,7 @@ int main(int arc, char** argv) {
 
 Now, to compile and run this code, you can type in a console:
 
-```
+```shell
 impala hello.impala -emit-llvm
 llvm-as hello.ll
 clang hello.c hello.bc -o hello
@@ -53,7 +53,7 @@ clang hello.c hello.bc -o hello
 
 The equivalent C++ program requires ```hello``` and ```println``` to be declared as ```extern "C"``` to avoid C++ name mangling:
 
-```C++
+```cpp
 #include <stdio.h>
 
 extern "C" void hello();
@@ -71,7 +71,7 @@ int main(int arc, char** argv) {
 
 The compilation works as before:
 
-```
+```shell
 impala hello.impala -emit-llvm
 llvm-as hello.ll
 clang hello.cpp hello.bc -o hello
@@ -88,7 +88,7 @@ From this, llvm-as will generate:
 You can use either of these files to link the impala code with the C program using clang.
 
 In case you want to compile your C/C++ using gcc, you need to generate an object file from the .ll:
-```
+```shell
 impala hello.impala -emit-llvm
 llc -filetype=obj hello.ll
 gcc hello.c hello.o -o hello
