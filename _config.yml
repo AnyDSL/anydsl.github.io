@@ -12,6 +12,8 @@ kramdown:
 
 highlighter: rouge
 
+sass:
+  style: compressed
 
 toolbar:
   - Thorin.md
