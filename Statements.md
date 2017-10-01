@@ -1,10 +1,8 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Syntax](#syntax)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+---
+title: Statements
+parent: Impala.md
+weight: 4
+---
 
 Impala only supports a few statements.
 Most constructs are [[Expressions]].

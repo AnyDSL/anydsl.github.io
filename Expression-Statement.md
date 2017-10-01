@@ -1,13 +1,7 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Syntax](#syntax)
-- [Typing](#typing)
-- [Semantics](#semantics)
-- [Example](#example)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+---
+title: Expression Statement
+parent: Statements.md
+---
 
 # Syntax
 

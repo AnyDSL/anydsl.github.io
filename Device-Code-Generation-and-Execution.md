@@ -1,16 +1,7 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Platforms](#platforms)
-- [Memory Management](#memory-management)
-- [Code Generation and Execution](#code-generation-and-execution)
-- [Device Intrinsics](#device-intrinsics)
-- [Address Spaces](#address-spaces)
-- [Profiling](#profiling)
-- [Example](#example)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+---
+title: Device Code Generation and Execution
+parent: Runtime.md
+---
 
 The runtime provides convenience functions that are required in order to execute code on different devices:
 - allocate, copy, and release memory on a device

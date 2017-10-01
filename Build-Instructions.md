@@ -1,13 +1,8 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Quick Build](#quick-build)
-- [Verify your Installation](#verify-your-installation)
-- [Try out *hello world*](#try-out-hello-world)
-- [Troubleshooting](#troubleshooting)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+---
+title: Building Instructions
+parent: index.md
+weight: 1
+---
 
 # Quick Build
 

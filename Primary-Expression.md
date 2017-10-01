@@ -1,16 +1,8 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Primary Expression](#primary-expression)
-  - [Syntax](#syntax)
-  - [Typing](#typing)
-  - [Semantics](#semantics)
-  - [Example](#example)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Primary Expression
+---
+title: Primary Expression
+parent: Expressions.md
+weight: 1
+---
 
 ## Syntax
 

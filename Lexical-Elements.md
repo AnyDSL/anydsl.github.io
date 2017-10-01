@@ -1,21 +1,8 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Lexical Elements](#lexical-elements)
-- [Identifiers](#identifiers)
-  - [Keywords](#keywords)
-- [Punctators](#punctators)
-- [Literals](#literals)
-  - [Integer Literals](#integer-literals)
-  - [Float Literals](#float-literals)
-  - [Char Literals](#char-literals)
-  - [String Literals](#string-literals)
-  - [Examples](#examples)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Lexical Elements
+---
+title: Lexical Elements
+parent: Impala.md
+weight: 2
+---
 
 ```
 digit  ::= ['0'-'9']

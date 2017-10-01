@@ -1,21 +1,7 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Abstract](#abstract)
-- [A First Tutorial](#a-first-tutorial)
-- [Basics](#basics)
-  - [Casts](#casts)
-  - [Array and ArrayRef](#array-and-arrayref)
-  - [Ranged-based `for`](#ranged-based-for)
-- [Definitions](#definitions)
-- [The World](#the-world)
-- [The C++ `const` qualifier and mutating objects](#the-c-const-qualifier-and-mutating-objects)
-  - [Mutating Lambdas](#mutating-lambdas)
-  - [Mutating Primops and Parameters](#mutating-primops-and-parameters)
-- [Primops and Local Optimizations](#primops-and-local-optimizations)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+---
+title: Programming Guide
+parent: Thorin.md
+---
 
 # Abstract
 

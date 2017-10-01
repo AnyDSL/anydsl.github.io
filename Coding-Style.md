@@ -1,20 +1,8 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [General Hints](#general-hints)
-- [General Formatting](#general-formatting)
-- [Preprocessor](#preprocessor)
-  - [Includes](#includes)
-  - [Misc](#misc)
-- [Source Code Formatting](#source-code-formatting)
-  - [General](#general)
-  - [Statements](#statements)
-  - [Expressions](#expressions)
-  - [Types](#types)
-  - [Classes](#classes)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+---
+title: Coding Styles
+parent: index.md
+weight: 5
+---
 
 # General Hints
 

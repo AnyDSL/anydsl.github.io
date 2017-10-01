@@ -1,20 +1,8 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Tools](#tools)
-  - [yComp](#ycomp)
-  - [Vim](#vim)
-    - [Setting the ```make``` Variable](#setting-the-make-variable)
-    - [Syntax Highlighting](#syntax-highlighting)
-- [Hacking](#hacking)
-  - [Breakpoints](#breakpoints)
-- [Logging](#logging)
-- [Web Stuff](#web-stuff)
-  - [Wiki](#wiki)
-  - [Web Pages and Doxygen](#web-pages-and-doxygen)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+---
+title: Hacking
+parent: index.md
+weight: 3
+---
 
 Here, you'll find some information about hacking on and debugging AnyDSL.
 

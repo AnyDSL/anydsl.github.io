@@ -1,3 +1,9 @@
+---
+title: Debugging
+parent: index.md
+weight: 4
+---
+
 This page provides some tips how to debug Impala/Thorin.
 
 * change log level during debugging

@@ -1,60 +1,7 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Abstract](#abstract)
-- [Definitions](#definitions)
-- [Type System](#type-system)
-  - [Primitive Types](#primitive-types)
-    - [Integer Types](#integer-types)
-    - [Floating-point Types](#floating-point-types)
-    - [Compound Types](#compound-types)
-    - [Tuple Types](#tuple-types)
-    - [Struct Types](#struct-types)
-    - [Function Types](#function-types)
-  - [Memory-Related Types](#memory-related-types)
-    - [Frame type](#frame-type)
-    - [Memory monad type](#memory-monad-type)
-    - [Pointer type](#pointer-type)
-  - [Generics](#generics)
-- [Functions and Parameters](#functions-and-parameters)
-  - [Function Head](#function-head)
-  - [Function Body](#function-body)
-- [Primops](#primops)
-  - [Literals](#literals)
-    - [PrimLit](#primlit)
-    - [Bottom](#bottom)
-  - [Arithmetic Primops](#arithmetic-primops)
-    - [add](#add)
-    - [sub](#sub)
-    - [mul](#mul)
-    - [div](#div)
-    - [rem](#rem)
-    - [and](#and)
-    - [or](#or)
-    - [xor](#xor)
-    - [shl](#shl)
-    - [shr](#shr)
-  - [Comparisons](#comparisons)
-    - [ne](#ne)
-    - [gt](#gt)
-    - [ge](#ge)
-    - [lt](#lt)
-    - [le](#le)
-  - [Conversion Primops](#conversion-primops)
-    - [cast](#cast)
-    - [bitcast](#bitcast)
-  - [Aggregate-Related Primops](#aggregate-related-primops)
-    - [tuple](#tuple)
-    - [extract](#extract)
-    - [insert](#insert)
-  - [Memory-Related Primops](#memory-related-primops)
-    - [load](#load)
-    - [store](#store)
-    - [enter](#enter)
-    - [slot](#slot)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+---
+title: Language Reference Manual
+parent: Thorin.md
+---
 
 # Abstract
 

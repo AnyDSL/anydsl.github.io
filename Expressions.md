@@ -1,12 +1,8 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Syntax](#syntax)
-- [Precedence](#precedence)
-  - [Comparison with C](#comparison-with-c)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+---
+title: Expressions
+parent: Impala.md
+weight: 5
+---
 
 Impala is an expression-oriented language.
 This means, that [if](If Expression)-, [while](While Expression)- and [for](For Expression)-constructs are not [[Statements]] but [[Expressions]] that yield values.

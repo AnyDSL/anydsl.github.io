@@ -1,20 +1,8 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Impala User Guide](#impala-user-guide)
-- [Basics](#basics)
-  - [Runtime](#runtime)
-- [Language Syntax](#language-syntax)
-  - [Variables](#variables)
-  - [Functions](#functions)
-  - [Structures](#structures)
-  - [Pointers](#pointers)
-  - [Control Structures](#control-structures)
-  - [Casts](#casts)
-  - [Inline Assembly](#inline-assembly)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+---
+title: Tutorial
+parent: Impala.md
+weight: 1
+---
 
 # Impala User Guide
 
