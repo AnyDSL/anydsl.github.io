@@ -62,4 +62,8 @@ a {
     color: $black-87;
     font-family: $ui-font-family;
   }
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

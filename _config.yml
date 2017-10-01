@@ -41,5 +41,5 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "default"
+      layout: "page"
       site_title: AnyDSL
