@@ -2,6 +2,7 @@
 title: AnyDSL - A framework for rapid development of domain-specific libraries
 weight: -1
 menu: Home
+show_toc: false
 ---
 **AnyDSL is a framework for rapid development of domain-specific libraries.**
 
