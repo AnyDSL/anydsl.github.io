@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="602.926px" height="596.239px" viewBox="0 0 602.926 596.239" enable-background="new 0 0 602.926 596.239"
+	 xml:space="preserve">
+<g>
+	<g>
+		<path fill="#BAE3FA" d="M103.529,85.707c0,3.486-2.826,6.313-6.313,6.313H6.313C2.826,92.019,0,89.193,0,85.707V7.429
+			c0-3.486,2.826-6.313,6.313-6.313h90.903c3.487,0,6.313,2.827,6.313,6.313V85.707z"/>
+		<rect x="5.892" y="17.109" fill="none" width="88.378" height="64.811"/>
+		<text transform="matrix(1 0 0 1 9.9141 30.5552)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="18.9381">Computer</tspan><tspan x="16.249" y="22.726" font-family="'MyriadPro-Regular'" font-size="18.9381">Vision</tspan><tspan x="24.724" y="45.452" font-family="'MyriadPro-Regular'" font-size="18.9381">DSL</tspan></text>
+	</g>
+	<g>
+		<path fill="#BAE3FA" d="M217.157,85.707c0,3.486-2.826,6.313-6.313,6.313h-90.903c-3.486,0-6.313-2.826-6.313-6.313V7.429
+			c0-3.486,2.827-6.313,6.313-6.313h90.903c3.487,0,6.313,2.827,6.313,6.313V85.707z"/>
+		<rect x="122.046" y="28.472" fill="none" width="88.378" height="53.026"/>
+		<text transform="matrix(1 0 0 1 137.5254 41.9175)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="18.9381">Physics</tspan><tspan x="13.266" y="22.726" font-family="'MyriadPro-Regular'" font-size="18.9381">DSL</tspan></text>
+	</g>
+	<g>
+		<path fill="#BAE3FA" d="M330.786,85.707c0,3.486-2.826,6.313-6.312,6.313H233.57c-3.487,0-6.313-2.826-6.313-6.313V7.429
+			c0-3.486,2.826-6.313,6.313-6.313h90.903c3.486,0,6.312,2.827,6.312,6.313V85.707z"/>
+		<rect x="235.675" y="15.846" fill="none" width="88.377" height="68.178"/>
+		<text transform="matrix(1 0 0 1 265.7456 29.292)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="18.9381">Ray </tspan><tspan x="-15.254" y="22.726" font-family="'MyriadPro-Regular'" font-size="18.9381">Tracing</tspan><tspan x="-1.326" y="45.452" font-family="'MyriadPro-Regular'" font-size="18.9381">DSL</tspan></text>
+	</g>
+	<g>
+		<path fill="#BAE3FA" d="M444.415,85.707c0,3.486-2.827,6.313-6.313,6.313h-90.903c-3.486,0-6.313-2.826-6.313-6.313V7.429
+			c0-3.486,2.827-6.313,6.313-6.313h90.903c3.486,0,6.313,2.827,6.313,6.313V85.707z"/>
+		<rect x="348.041" y="19.634" fill="none" width="88.378" height="71.544"/>
+		<text transform="matrix(1 0 0 1 363.52 33.0796)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="18.9381">Parallel </tspan><tspan x="-4.848" y="22.726" font-family="'MyriadPro-Regular'" font-size="18.9381">Runtime</tspan><tspan x="13.266" y="45.452" font-family="'MyriadPro-Regular'" font-size="18.9381">DSL</tspan></text>
+	</g>
+	<g>
+		<path fill="#BAE3FA" d="M558.043,85.707c0,3.486-2.825,6.313-6.313,6.313h-90.903c-3.487,0-6.313-2.826-6.313-6.313V7.429
+			c0-3.486,2.825-6.313,6.313-6.313h90.903c3.487,0,6.313,2.827,6.313,6.313V85.707z"/>
+		<rect x="461.67" y="33.522" fill="none" width="88.377" height="27.776"/>
+		<text transform="matrix(1 0 0 1 498.4102 50.5532)" font-family="'MyriadPro-Regular'" font-size="23.9883">...</text>
+	</g>
+	<path fill="#009FE3" stroke="#FFFFFF" stroke-miterlimit="10" d="M558.885,232.161c0,3.486-2.826,6.313-6.313,6.313H7.155
+		c-3.486,0-6.313-2.827-6.313-6.313v-27.775c0-3.487,2.827-6.313,6.313-6.313h545.417c3.486,0,6.313,2.826,6.313,6.313V232.161z"/>
+	<g>
+		<path fill="#005B98" stroke="#FFFFFF" stroke-miterlimit="10" d="M558.885,140.272c0,2.869-2.756,5.195-6.16,5.195H20.574
+			c-3.402,0-6.16-2.326-6.16-5.195v-22.857c0-2.87,2.758-5.195,6.16-5.195h532.15c3.404,0,6.16,2.325,6.16,5.195V140.272z"/>
+		<path fill="#005B98" stroke="#FFFFFF" stroke-miterlimit="10" d="M554.046,135.182c0,3.124-2.767,5.655-6.183,5.655H13.757
+			c-3.412,0-6.182-2.531-6.182-5.655V110.3c0-3.124,2.77-5.655,6.182-5.655h534.106c3.416,0,6.183,2.531,6.183,5.655V135.182z"/>
+		<path fill="#005B98" stroke="#FFFFFF" stroke-miterlimit="10" d="M548.994,131.395c0,3.123-2.776,5.655-6.199,5.655H7.043
+			c-3.423,0-6.201-2.533-6.201-5.655v-24.882c0-3.123,2.778-5.656,6.201-5.656h535.752c3.423,0,6.199,2.533,6.199,5.656V131.395z"/>
+		<rect x="38.298" y="110.537" fill="none" width="430.104" height="23.567"/>
+		<text transform="matrix(1 0 0 1 119.7866 127.5679)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="23.9883">Layered DSL Specifications</text>
+	</g>
+	<g>
+		<path fill="#57C4F2" stroke="#FFFFFF" stroke-miterlimit="10" d="M558.885,185.447c0,3.486-2.826,6.313-6.313,6.313H7.155
+			c-3.486,0-6.313-2.827-6.313-6.313v-27.776c0-3.486,2.827-6.313,6.313-6.313h545.417c3.486,0,6.313,2.827,6.313,6.313V185.447z"/>
+		<rect x="50.923" y="161.039" fill="none" width="437.68" height="23.567"/>
+		<text transform="matrix(1 0 0 1 66.958 178.0698)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="23.9883">AnyDSL Unified Program Representation</text>
+	</g>
+	<g>
+		<rect x="55.974" y="207.752" fill="none" width="430.105" height="23.568"/>
+		<text transform="matrix(1 0 0 1 82.3374 224.7837)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="23.9883">AnyDSL Compiler Framework (Thorin) </text>
+	</g>
+	<g>
+		<path fill="#0075BF" stroke="#FFFFFF" stroke-miterlimit="10" d="M558.885,278.875c0,3.486-2.826,6.313-6.313,6.313H7.155
+			c-3.486,0-6.313-2.826-6.313-6.313V251.1c0-3.486,2.827-6.313,6.313-6.313h545.417c3.486,0,6.313,2.827,6.313,6.313V278.875z"/>
+		<rect x="59.761" y="254.467" fill="none" width="430.104" height="23.567"/>
+		<text transform="matrix(1 0 0 1 164.7207 271.498)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="23.9883">Various HW Back Ends </text>
+	</g>
+	
+		<line fill="none" stroke="#009FE3" stroke-width="3" stroke-miterlimit="10" x1="562.252" y1="145.467" x2="572.563" y2="145.467"/>
+	<line fill="none" stroke="#009FE3" stroke-width="3" stroke-miterlimit="10" x1="572.352" y1="73.502" x2="577.681" y2="73.502"/>
+	<line fill="none" stroke="#009FE3" stroke-width="3" stroke-miterlimit="10" x1="562.252" y1="1.538" x2="572.563" y2="1.538"/>
+	<g>
+		<line fill="none" stroke="#009FE3" stroke-width="3" stroke-miterlimit="10" x1="572.352" y1="0.958" x2="572.352" y2="146.046"/>
+		<g>
+			<path d="M585.728,114.125c-0.177-1.037-0.294-2.269-0.294-3.619c0-2.446,0.586-4.187,1.643-5.34
+				c1.077-1.193,2.603-1.878,4.734-1.878c2.151,0,3.912,0.685,5.125,1.897c1.232,1.252,1.897,3.286,1.897,5.849
+				c0,1.232-0.059,2.23-0.157,3.09H585.728z M597.386,112.424c0.059-0.431,0.078-1.057,0.078-1.722c0-3.658-2.034-5.614-5.595-5.614
+				c-3.11-0.02-5.086,1.741-5.086,5.34c0,0.881,0.078,1.546,0.176,1.996H597.386z"/>
+			<path d="M594.295,100.118c2.328-0.04,3.286-1.507,3.286-3.248c0-1.232-0.215-1.995-0.489-2.621l1.232-0.314
+				c0.275,0.607,0.607,1.664,0.607,3.17c0,2.914-1.937,4.655-4.793,4.655s-5.086-1.683-5.086-4.44c0-3.11,2.699-3.912,4.44-3.912
+				c0.352,0,0.606,0.02,0.802,0.059V100.118z M593.063,95.071c-1.075-0.02-2.777,0.451-2.777,2.387c0,1.761,1.584,2.504,2.777,2.641
+				V95.071z"/>
+			<path d="M589.248,90.609l5.301-1.858c0.881-0.313,1.663-0.567,2.446-0.763v-0.06c-0.783-0.215-1.565-0.489-2.446-0.801
+				l-5.301-1.839v-1.8l9.468,3.717v1.643l-9.468,3.599V90.609z"/>
+			<path d="M594.295,81.102c2.328-0.04,3.286-1.507,3.286-3.248c0-1.232-0.215-1.995-0.489-2.621l1.232-0.314
+				c0.275,0.607,0.607,1.664,0.607,3.17c0,2.914-1.937,4.655-4.793,4.655s-5.086-1.683-5.086-4.44c0-3.11,2.699-3.913,4.44-3.913
+				c0.352,0,0.606,0.02,0.802,0.058V81.102z M593.063,76.055c-1.075-0.02-2.777,0.451-2.777,2.387c0,1.761,1.584,2.503,2.777,2.641
+				V76.055z"/>
+			<path d="M584.827,72.258v-1.721h13.889v1.721H584.827z"/>
+			<path d="M593.903,59.073c3.502,0,5.028,2.445,5.028,4.715c0,2.542-1.878,4.537-4.871,4.537c-3.149,0-5.008-2.092-5.008-4.694
+				C589.053,60.912,591.027,59.073,593.903,59.073z M594.002,66.566c2.073,0,3.638-1.174,3.638-2.856
+				c0-1.644-1.544-2.875-3.678-2.875c-1.604,0-3.619,0.802-3.619,2.836C590.343,65.685,592.222,66.566,594.002,66.566z"/>
+			<path d="M592.339,56.9c-1.213,0-2.191,0.04-3.091,0.078v-1.526l1.624-0.097v-0.04c-1.155-0.684-1.819-1.819-1.819-3.365
+				c0-2.308,1.937-4.029,4.792-4.029c3.404,0,5.087,2.093,5.087,4.323c0,1.252-0.548,2.347-1.487,2.915v0.04h5.145V56.9H592.339z
+				 M594.861,55.199c0.256,0,0.49-0.02,0.705-0.079c1.193-0.313,2.015-1.35,2.015-2.582c0-1.819-1.485-2.876-3.657-2.876
+				c-1.878,0-3.502,0.998-3.502,2.817c0,1.173,0.821,2.289,2.112,2.601c0.216,0.06,0.47,0.118,0.685,0.118H594.861z"/>
+			<path d="M594.295,44.811c2.328-0.04,3.286-1.507,3.286-3.248c0-1.232-0.215-1.995-0.489-2.621l1.232-0.314
+				c0.275,0.607,0.607,1.664,0.607,3.17c0,2.914-1.937,4.655-4.793,4.655s-5.086-1.683-5.086-4.44c0-3.11,2.699-3.913,4.44-3.913
+				c0.352,0,0.606,0.02,0.802,0.059V44.811z M593.063,39.763c-1.075-0.02-2.777,0.451-2.777,2.387c0,1.761,1.584,2.504,2.777,2.641
+				V39.763z"/>
+			<path d="M592.202,35.966c-1.114,0-2.073,0.02-2.954,0.078v-1.505l1.878-0.079v-0.059c-1.271-0.43-2.073-1.487-2.073-2.641
+				c0-0.177,0.02-0.313,0.038-0.469h1.625c-0.04,0.176-0.04,0.351-0.04,0.586c0,1.213,0.9,2.073,2.191,2.308
+				c0.235,0.039,0.528,0.059,0.802,0.059h5.047v1.721H592.202z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<circle fill="#BAE3FA" cx="50.258" cy="444.924" r="43.619"/>
+		<rect x="5.008" y="436.831" fill="none" width="86.855" height="27.489"/>
+		<text transform="matrix(1 0 0 1 21.6655 450.2065)" font-family="'MyriadPro-Regular'" font-size="18.839">Impala</text>
+	</g>
+	<g>
+		<circle fill="#009FE3" stroke="#FFFFFF" stroke-miterlimit="10" cx="202.929" cy="444.925" r="43.618"/>
+		<rect x="159.257" y="436.831" fill="none" width="86.855" height="27.489"/>
+		<text transform="matrix(1 0 0 1 177.0928 450.2065)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="18.839">Thorin</text>
+	</g>
+	<g>
+		<circle fill="#0075BF" stroke="#FFFFFF" stroke-miterlimit="10" cx="202.929" cy="552.089" r="43.618"/>
+		<rect x="158.264" y="544.589" fill="none" width="86.854" height="27.49"/>
+		<text transform="matrix(1 0 0 1 162.0923 557.9653)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="18.839">Vectorizer</text>
+	</g>
+	<g>
+		<circle fill="#0075BF" stroke="#FFFFFF" stroke-miterlimit="10" cx="350.881" cy="444.924" r="43.618"/>
+		<rect x="307.175" y="436.831" fill="none" width="86.855" height="27.489"/>
+		<text transform="matrix(1 0 0 1 328.8818 450.2065)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="18.839">LLVM</text>
+	</g>
+	<g>
+		<circle fill="#0075BF" stroke="#FFFFFF" stroke-miterlimit="10" cx="350.881" cy="349.128" r="43.618"/>
+		<rect x="306.922" y="330.602" fill="none" width="86.854" height="49.565"/>
+		<text transform="matrix(1 0 0 1 326.7534 343.978)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="18.839">CUDA</tspan><tspan x="-8.11" y="22.606" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="18.839">OpenCL</tspan></text>
+	</g>
+	<g>
+		<circle fill="#0075BF" stroke="#FFFFFF" stroke-miterlimit="10" cx="507.07" cy="349.128" r="43.619"/>
+		<rect x="462.336" y="341.199" fill="none" width="86.854" height="27.488"/>
+		<text transform="matrix(1 0 0 1 468.9619 354.5747)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="18.839">AMDGPU</text>
+	</g>
+	<g>
+		<circle fill="#0075BF" stroke="#FFFFFF" stroke-miterlimit="10" cx="506.507" cy="444.925" r="43.618"/>
+		<rect x="462.922" y="426.823" fill="none" width="86.854" height="41.617"/>
+		<text transform="matrix(1 0 0 1 481.0391 440.1987)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="18.839">Native </tspan><tspan x="4.644" y="22.606" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="18.839">Code</tspan></text>
+	</g>
+	<g>
+		<circle fill="#0075BF" stroke="#FFFFFF" stroke-miterlimit="10" cx="506.507" cy="552.089" r="43.618"/>
+		<rect x="463.806" y="532.891" fill="none" width="86.854" height="43.556"/>
+		<text transform="matrix(1 0 0 1 482.9492 546.2671)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="18.839">NVVM</tspan><tspan x="-2.241" y="22.606" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="18.839">NVPTX</tspan></text>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#585857" stroke-width="3" stroke-miterlimit="10" x1="93.876" y1="444.924" x2="146.637" y2="444.924"/>
+			<g>
+				<path fill="#585857" d="M159.311,444.924c-5.964,2.213-13.363,5.988-17.949,9.987l3.612-9.987l-3.612-9.985
+					C145.948,438.938,153.347,442.713,159.311,444.924z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#585857" stroke-width="3" stroke-miterlimit="10" x1="244.588" y1="444.924" x2="294.367" y2="444.924"/>
+			<g>
+				<path fill="#585857" d="M307.041,444.924c-5.964,2.213-13.363,5.988-17.949,9.987l3.612-9.987l-3.612-9.985
+					C293.678,438.938,301.077,442.713,307.041,444.924z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#585857" stroke-width="3" stroke-miterlimit="10" x1="394.711" y1="444.924" x2="450.215" y2="444.924"/>
+			<g>
+				<path fill="#585857" d="M462.889,444.924c-5.964,2.213-13.363,5.988-17.949,9.987l3.612-9.987l-3.612-9.985
+					C449.525,438.938,456.925,442.713,462.889,444.924z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#585857" stroke-width="3" stroke-miterlimit="10" x1="238.703" y1="528.523" x2="309.778" y2="482.383"/>
+			<g>
+				<path fill="#585857" d="M320.409,475.483c-3.797,5.104-7.948,12.299-9.617,18.15l-2.408-10.344l-8.467-6.408
+					C305.941,477.738,314.203,476.875,320.409,475.483z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#585857" stroke-width="3" stroke-miterlimit="10" x1="379.746" y1="477.371" x2="458.273" y2="523.243"/>
+			<g>
+				<path fill="#585857" d="M469.217,529.635c-6.266-1.098-14.559-1.569-20.536-0.43l8.156-6.802l1.918-10.444
+					C460.697,517.726,465.183,524.718,469.217,529.635z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#585857" stroke-width="3" stroke-miterlimit="10" x1="231.334" y1="412.526" x2="297.767" y2="369.401"/>
+			<g>
+				<path fill="#585857" d="M308.397,362.5c-3.797,5.104-7.948,12.299-9.618,18.15l-2.408-10.344l-8.467-6.409
+					C293.93,364.755,302.191,363.893,308.397,362.5z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#585857" stroke-width="3" stroke-miterlimit="10" x1="380.869" y1="413.311" x2="454.051" y2="365.804"/>
+			<g>
+				<path fill="#585857" d="M464.682,358.904c-3.797,5.104-7.948,12.299-9.617,18.15l-2.408-10.344l-8.467-6.408
+					C450.214,361.159,458.476,360.296,464.682,358.904z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
