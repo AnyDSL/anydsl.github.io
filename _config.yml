@@ -5,10 +5,13 @@ copyright: Saarland University
 
 markdown: kramdown
 kramdown:
-  # Don't use a highlighter. This will output raw code blocks that can be
-  # highlighted in javascript with CodeMirror.
-  syntax_highlighter: none
+  input: GFM
   auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+highlighter: rouge
+
 
 toolbar:
   - Thorin.md

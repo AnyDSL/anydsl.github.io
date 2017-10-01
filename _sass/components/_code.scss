@@ -18,96 +18,13 @@ $code-lineheight: 20px;
   color: $code-text-color;
 }
 
-.CodeMirror {
-  height: auto;
-  margin: 24px 0;
-  background: $code-background-color;
-  border: none;
+.highlight {
 
   pre {
     @extend %code-text-style;
+    margin: 24px 0;
+    padding: 24px;
+    background: $code-background-color;
+    border: none;
   }
 }
-
-// Override the standard codemirror margins
-// when inside the multicode container
-.material-code-render .CodeMirror {
-  position: absolute;
-  visibility: hidden;
-  width: 100%;
-  margin: 0px;
-
-  &.active {
-    visibility: visible;
-  }
-}
-
-.page--platform-ios .CodeMirror-scroll {
-  max-height: 300px;
-}
-
-// The box containing code text inside the codemirror shell
-.CodeMirror-code {
-  // Margin above and below source code text, within scroll box.
-  margin: 12px 0;
-}
-
-// Padding between code lines and their line number
-pre.CodeMirror-line {
-  padding-left: 24px;
-}
-// Padding is already present in editors with line-numbers
-.material-code-render.line-numbers pre.CodeMirror-line {
-  padding-left: 0;
-}
-
-// Syntax highlight colors
-.CodeMirror {
-  .cm-keyword,
-  .cm-variable-3 {
-    color: $pink-900;
-  }
-  .cm-def,
-  .cm-userpath,
-  .cm-string,
-  .cm-atom {
-    color: $brown-400;
-  }
-  .cm-comment {
-    color: $brown-200;
-  }
-}
-
-.CodeMirror .hll {
-  .CodeMirror-linenumber.CodeMirror-gutter-elt,
-  .CodeMirror-line {
-    background-color: #eeeeee;
-  }
-}
-
-// Styles for the multi-code container
-.material-code-render {
-  position: relative;
-  margin: 24px 0 24px 0;
-
-  // Hide any headings that were used for annotating code
-  // in the github version of markdown.
-  h3,
-  h4 {
-    display: none;
-  }
-
-  .language {
-    padding: 8px 0 8px 14px;
-    border: 1px solid $code-divider-color;
-    font-family: Roboto;
-    font-weight: 400;
-    line-height: 24px;
-    color: $code-text-color;
-  }
-
-  .mdc-form-field {
-    margin-right: 24px;
-  }
-}
-
