@@ -7,7 +7,10 @@ excerpt: "Impala is an imperative language with functional flavoured constructs.
 
 ## Basics
 
-Impala is a language that is designed to write DSLs. As such, it comes with no standard library. You can, however, interface Impala code with C/C++ code easily. The first thing you might want to write is a "Hello, world" program:
+Impala is a language that is designed to write DSLs.
+As such, it comes with no standard library.
+You can, however, interface Impala code with C/C++ code easily.
+The first thing you might want to write is a "Hello, world" program:
 
 ```rust
 extern "C" {
@@ -22,11 +25,13 @@ fn hello() -> () {
 
 This snippet of Impala code declares two functions:
 
-  * _println_, which is declared as **extern "C"**, that is, not implemented in Impala but in C, in another source file. It has the signature **(&[u8]) -> ()**, which means it takes a pointer to an array of unsigned bytes, and returns nothing (void).
+  * _println_, which is declared as **extern "C"**, that is, not implemented in Impala but in C, in another source file.
+    It has the signature **(&[u8]) -> ()**, which means it takes a pointer to an array of unsigned bytes, and returns nothing (void).
+  * _hello_, which is declared **extern**, that is, callable from C, outside Impala.
+    It has the signature **() -> ()**, which means it takes no argument and returns nothing.
 
-  * _hello_, which is declared **extern**, that is, callable from C, outside Impala. It has the signature **() -> ()**, which means it takes no argument and returns nothing.
-
-To actually run this impala code, you need a host program in C. This is how a typical C program would call the "hello" function from Impala:
+To actually run this impala code, you need a host program in C.
+This is how a typical C program would call the "hello" function from Impala:
 
 ```c
 #include <stdio.h>
