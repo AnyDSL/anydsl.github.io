@@ -66,6 +66,12 @@
     font-style: italic;
   }
 
+  blockquote, q {
+    margin-left: 10px;
+    padding-left: 20px;
+    border-left: solid $black-05 2px;
+  }
+
   // Lists
 
   li > ul,
