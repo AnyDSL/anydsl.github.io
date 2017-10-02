@@ -51,9 +51,9 @@ int main(int arc, char** argv) {
 Now, to compile and run this code, you can type in a console:
 
 ```shell
-impala hello.impala -emit-llvm
-llvm-as hello.ll
-clang hello.c hello.bc -o hello
+$ impala hello.impala -emit-llvm
+$ llvm-as hello.ll
+$ clang hello.c hello.bc -o hello
 ```
 
 The equivalent C++ program requires ```hello``` and ```println``` to be declared as ```extern "C"``` to avoid C++ name mangling:
@@ -77,9 +77,9 @@ int main(int arc, char** argv) {
 The compilation works as before:
 
 ```shell
-impala hello.impala -emit-llvm
-llvm-as hello.ll
-clang hello.cpp hello.bc -o hello
+$ impala hello.impala -emit-llvm
+$ llvm-as hello.ll
+$ clang hello.cpp hello.bc -o hello
 ```
 
 The impala compiler will generate:
