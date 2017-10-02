@@ -54,6 +54,19 @@ papers:
    date: "2014"
    url: http://www.cdl.uni-saarland.de/papers/klhms14.pdf
 
+ - title: "RaTrace: Simple and Efficient Abstractions for BVH Ray Traversal Algorithms"
+   authors:
+    - Arsène Pérard-Gayot
+    - Martin Weier
+    - Richard Membarth
+    - Philipp Slusallek
+    - Roland Leißa
+    - Sebastian Hack
+   venue: "In Proceedings of 16th ACM SIGPLAN International Conference on Generative Programming: Concepts and Experiences (GPCE) , page 1-12.
+October 2017"
+   date: "2017-10"
+   url: https://graphics.cg.uni-saarland.de/fileadmin/cguds/papers/2017/perard_raytracer/gpce17-submission.pdf
+
 posters:
  - title: High-Performance Domain-Specific Languages for GPU Computing
    authors:
