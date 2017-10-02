@@ -94,9 +94,9 @@ You can use either of these files to link the impala code with the C program usi
 
 In case you want to compile your C/C++ using gcc, you need to generate an object file from the .ll:
 ```shell
-impala hello.impala -emit-llvm
-llc -filetype=obj hello.ll
-gcc hello.c hello.o -o hello
+$ impala hello.impala -emit-llvm
+$ llc -filetype=obj hello.ll
+$ gcc hello.c hello.o -o hello
 ```
 
 ## Runtime
