@@ -101,14 +101,17 @@ $ gcc hello.c hello.o -o hello
 
 ## Runtime
 
-A minimal runtime that provides functionality for allocating memory on different devices (CPU / GPU) is provided by the [runtime](https://github.com/AnyDSL/runtime). The runtime provides also functionality for [device code generation and execution](AnyDSL/anydsl/wiki/Device-Code-Generation-and-Execution).
+A minimal runtime that provides functionality for allocating memory on different devices (CPU / GPU) is provided by the [AnyDSL runtime](https://github.com/AnyDSL/runtime).
+The runtime provides also functionality for [device code generation and execution]({% link Device-Code-Generation-and-Execution.md %}).
 
 
 ## Language Syntax
 
 ### Variables
 
-Variables are declated with **let**, and are immutable by default. Mutables variables are declared with **let mut**. Impala has a type inference system, but the variable can be explicitly typed to resolve ambiguities.
+Variables are declated with **let**, and are immutable by default.
+Mutables variables are declared with **let mut**.
+Impala has a type inference system, but the variable can be explicitly typed to resolve ambiguities.
 
 ```rust
 fn main() -> () {
@@ -124,8 +127,6 @@ fn main() -> () {
 ```
 
 Built-in variables types are:
-
-
 
  |  Name     |                Type                      |   Size   |
  |-----------|------------------------------------------|----------|
@@ -159,7 +160,8 @@ fn some_arrays() -> () {
 
 ### Functions
     
-Function declarations are introduced with the keyword **fn**. Declarations do not need to be global, you can declare a function inside another function.
+Function declarations are introduced with the keyword **fn**.
+Declarations do not need to be global, you can declare a function inside another function.
 
 ```rust
 fn add_two(i: int) -> int {
@@ -174,9 +176,11 @@ fn add_two(i: int) -> int {
 }
 ```
 
-In Impala, the last expression of a block is the return value of that block. In the previous example, the function "add_two" returns "i + 2".
+In Impala, the last expression of a block is the return value of that block.
+In the previous example, the function "add_two" returns "i + 2".
 
-Anonymous functions (closures) can be declared with the **||** symbol. The arguments with their respective types must be mentioned between the **|**, and an arrow with the return type must follow.
+Anonymous functions (closures) can be declared with the **||** symbol.
+The arguments with their respective types must be mentioned between the **|**, and an arrow with the return type must follow.
 
 ```rust
 fn add_two(i: int) -> int {
@@ -191,7 +195,8 @@ fn add_two(i: int) -> int {
 }
 ```
 
-You can also use the keyword **return** to exit from the function early with a given value. For example, the following code is valid Impala code:
+You can also use the keyword **return** to exit from the function early with a given value.
+For example, the following code is valid Impala code:
 
 ```rust
 fn safe_division(i: int, j: int) -> int {
@@ -203,7 +208,8 @@ fn safe_division(i: int, j: int) -> int {
 }
 ```
 
-Since Impala has functional features, it is possible to pass functions around, as parameters or variables. See this example:
+Since Impala has functional features, it is possible to pass functions around, as parameters or variables.
+See this example:
 
 ```rust
 fn safe_division2(i: int, j: int) -> int {
@@ -272,7 +278,9 @@ fn add_vectors(a: Vector, b: Vector) -> Vector {
 
 ### Pointers
 
-Impala also features pointers that can be used to interface Impala code with C/C++ or to dynamically allocate memory. In this context, the **&** operator is used in two different places: in a type declaration, where it defines a pointer type, and in an address-taking expression, where it takes the address of some variable. The star operator (__*__) plays the same role as in C: it dereferences the pointer.
+Impala also features pointers that can be used to interface Impala code with C/C++ or to dynamically allocate memory.
+In this context, the **&** operator is used in two different places: in a type declaration, where it defines a pointer type, and in an address-taking expression, where it takes the address of some variable.
+The star operator (__*__) plays the same role as in C: it dereferences the pointer.
 
 ```rust
 fn main() -> () {
@@ -300,11 +308,13 @@ fn alloc_test() -> () {
 }
 ```
 
-Memory allocated in that manner is only accessible through the host (i.e. not valid on a GPU). Using this feature requires to link against the [runtime](https://github.com/AnyDSL/runtime).
+Memory allocated in that manner is only accessible through the host (i.e. not valid on a GPU).
+Using this feature requires to link against the [AnyDSL runtime](https://github.com/AnyDSL/runtime).
 
 ### Control Structures
 
-Various imperative control flow structures are available in Impala: **for**, **while**, **if**/**else**. Here are some examples of how to use them:
+Various imperative control flow structures are available in Impala: **for**, **while**, **if**/**else**.
+Here are some examples of how to use them:
 
 ```rust
 fn sign(a: int) -> int {
@@ -330,7 +340,9 @@ fn log(a: int) -> int {
 }
 ```
 
-Impala provides syntactic sugar for the **for** protocol. This allows to define custom iterating functions that can be used with the **for** construct: a user-defined iterating function which takes as last parameter the body of the for loop, can be expressed using the **for** construct. See this example:
+Impala provides syntactic sugar for the **for** protocol.
+This allows to define custom iterating functions that can be used with the **for** construct: a user-defined iterating function which takes as last parameter the body of the for loop, can be expressed using the **for** construct.
+See this example:
 
 ```rust
 fn range(mut a: int, b: int, body: fn(int) -> ()) -> () {
@@ -364,9 +376,11 @@ fn int_to_float(i: int) -> float {
 }
 ```
 
-Converting from floating point to integer truncates the value. Conversions can also happen from definite to indefinite array types.
+Converting from floating point to integer truncates the value.
+Conversions can also happen from definite to indefinite array types.
 
-The `bitcast` intrinsic allows to cast binary data of one type into another. Here is an example:
+The `bitcast` intrinsic allows to cast binary data of one type into another.
+Here is an example:
 
 ```rust
 extern "thorin" {
