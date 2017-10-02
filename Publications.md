@@ -4,7 +4,7 @@ weight: 10
 ---
 
 {% if site.data.publications.papers %}
-{% assign papers = site.data.publications.papers | sort: 'year' | reverse %}
+{% assign papers = site.data.publications.papers | sort: 'date' | reverse %}
 {% if papers.size > 0 %}
 ## Conference Papers
 
@@ -16,7 +16,7 @@ weight: 10
 {% endif %}
 
 {% if site.data.publications.posters %}
-{% assign posters = site.data.publications.posters | sort: 'year' | reverse %}
+{% assign posters = site.data.publications.posters | sort: 'date' | reverse %}
 {% if posters.size > 0 %}
 ## Posters
 
@@ -28,7 +28,7 @@ weight: 10
 {% endif %}
 
 {% if site.data.publications.misc %}
-{% assign misc = site.data.publications.misc | sort: 'year' | reverse %}
+{% assign misc = site.data.publications.misc | sort: 'date' | reverse %}
 {% if misc.size > 0 %}
 ## Misc.
 
