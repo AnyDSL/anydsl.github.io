@@ -5,9 +5,9 @@ This is the website of the AnyDSL project and based on jekyll
 ## Building
 
 ```bash
-git clone https://github.com/AnyDSL/anydsl.github.io
-cd anydsl.github.io
-jekyll serve
+$ git clone https://github.com/AnyDSL/anydsl.github.io
+$ cd anydsl.github.io
+$ jekyll serve
 ```
 
 ## Editing
