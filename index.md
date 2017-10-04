@@ -1,5 +1,5 @@
 ---
-title: AnyDSL - A framework for rapid development of domain-specific libraries
+title: AnyDSL - A Framework for rapid Development of domain-specific Libraries
 weight: -1
 menu: Home
 show_toc: false

@@ -4,7 +4,9 @@ weight: 5
 show_toc: false
 ---
 
-Impala is an imperative and functional programming language which targets the Thorin intermediate representation. Its syntax heavily borrows from Rust, with some noticeable changes: it allows user-directed partial evaluation of code, and continuation passing style constructs.
+Impala is an imperative and functional programming language which targets the Thorin intermediate representation.
+Its syntax heavily borrows from Rust, with some noticeable changes:
+It allows user-directed partial evaluation of code and continuation-passing style (CPS).
 
 ## Example of Impala's Partial Evaluation
 
