@@ -5,33 +5,26 @@ menu: Home
 show_toc: false
 ---
 
-The core of AnyDSL is the ability to create (conceptual) abstractions over multiple levels of hierarchies, passing higher-order functions and thus their functionality through (multiple) of these levels, optionally warping them in suitable code and interface implementations, and finally optimize the resulting combined code at the lower levels where we know about the specific hardware architectures and its capabilities.
-In contrast to most common languages, any perceived overhead of these conceptual abstractions can be completely eliminated in AnyDSL.
-
-## Motivation and Key Features
-
-- TODO
+AnyDSL is a framework for domain-specific libraries (DSLs).
+These are implemented in our language [Impala]({% link Impala.md %}).
+In order to achieve high-performance, Impala *partially evaluates* any abstractions these libraries might impose.
+Partial evaluation and other optimizations are performed on AnyDSL's intermediate representation [Thorin]({% link Thorin.md %}).
 
 ## AnyDSL Architecture
 
 ![AnyDSL Architecture](images/anydsl-architecture.svg)
 
-## AnyDSL's Language *Impala*
-
-As creating a front-end for some language is a complex and time-consuming endeavor, we offer Impala.
-This is an imperative language which features as a basis well-known imperative constructs.
-A DSL developer can hijack Impala such that desired domain-specific types and constructs are available in Impala simply by declaring them.
-The DSL developer just reuses Impala's infrastructure (lexer, parser, semantic analysis, and code generator).
-He does not need to develop his own front-end.
-Even more important:
-The decision how to implement domain-specific details is postponed to the expert of the target machine.
-
 ## Embedding of DSLs in Impala
 
-We realize a *separation of concerns* through code refinement using
+When developing a DSL, people from different areas come together:
+- The *application developer* who just wants to use the DSL,
+- the *DSL designer* who develops domain-specific abstractions, and
+- the machine expert who knows the target machine very well and how to massage the code in order to achieve good performance.
+
+AnyDSL allows a *separation of these concerns* using
 − Higher-order functions,
-− Partial evaluation and
-− Triggered code generation.
+− Partial evaluation and,
+− triggered code generation.
 
 ### Application Developer
 
@@ -42,7 +35,7 @@ fn main() {
 }
 ```
 
-### DSL Developer
+### DSL Designer
 
 ```rust
 fn gaussian_blur(field: Field) -> Field {
@@ -72,11 +65,12 @@ fn iterate(field: Field, body: fn(int, int) -> ()) -> () {
 }
 ```
 
-## Selected Results of some Usecases
+## Selected Results
 
 ### Stincilla
 
-*Stincilla* is a DSL for stencil codes. We used the Gaussian blur filter as example and compared against the implementations in OpenCV 3.0 as reference.
+*Stincilla* is a DSL for stencil codes.
+We used the Gaussian blur filter as example and compared against the implementations in OpenCV 3.0 as reference.
 Thereby, we achieved the following results:
 - Intel CPU: 40% faster
 - Intel GPU: 25% faster
