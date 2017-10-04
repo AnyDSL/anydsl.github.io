@@ -22,9 +22,9 @@ When developing a DSL, people from different areas come together:
 - the machine expert who knows the target machine very well and how to massage the code in order to achieve good performance.
 
 AnyDSL allows a *separation of these concerns* using
-− Higher-order functions,
-− Partial evaluation and,
-− triggered code generation.
+- Higher-order functions,
+- Partial evaluation and,
+- triggered code generation.
 
 ### Application Developer
 
