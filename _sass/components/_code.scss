@@ -18,9 +18,8 @@ $code-lineheight: 20px;
   color: $code-text-color;
 }
 
-.highlight {
-
-  pre {
+pre {
+  &.highlight {
     @extend %code-text-style;
     margin: 24px 0;
     padding: 24px;
