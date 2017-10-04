@@ -3,7 +3,8 @@ layout: null
 ---
 [
 {% assign removal = ',|.|:|;|(|)|"|[|]|{|}|+|=' | append: "|'|#|@|$|!|?|&|-|_|−|*|%|/|^|~|`|‘|’|“|”|<|>" | split: '|' | push: '|' | push: '\' %}
-{% for page in site.html_pages %}
+{% assign indexed_pages = site.html_pages | where_exp: 'page', 'page.search != "exclude"' %}
+{% for page in indexed_pages %}
 {% assign content = page.content | strip_html | downcase %}
 {% for char in removal %}
 {% assign content = content | replace: char, ' ' %}
