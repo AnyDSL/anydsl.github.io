@@ -18,4 +18,4 @@ This means that each value is represented as node a graph.
 
 To find out more about Thorin, please refer to:
 - [Programming Guide]({% link Programming-Guide.md %})
-- [Language Reference Manual]({% link Language-Reference-Manual.md.md %})
+- [Language Reference Manual]({% link Language-Reference-Manual.md %})
