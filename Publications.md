@@ -9,7 +9,7 @@ weight: 10
 ## Conference Papers
 
 {% for pub in papers %}
-{{ pub.authors | join: ', ' }} <br/> *[{{ pub.title }}]({{ pub.url }})* <br/> {% if pub.awarding %}**({{ pub.awarding }})** <br/>{% endif %} {{ pub.venue }}
+{{ pub.authors | array_to_sentence_string: 'and' }} <br/> *[{{ pub.title }}]({{ pub.url }})* <br/> {% if pub.awarding %}**({{ pub.awarding }})** <br/>{% endif %} {{ pub.venue }}
 
 {% endfor %}
 {% endif %}
@@ -21,7 +21,7 @@ weight: 10
 ## Posters
 
 {% for pub in posters %}
-{{ pub.authors | join: ', ' }} <br/> *[{{ pub.title }}]({{ pub.url }})* <br/> {% if pub.awarding %}**({{ pub.awarding }})** <br/>{% endif %} {{ pub.venue }}
+{{ pub.authors | array_to_sentence_string: 'and' }} <br/> *[{{ pub.title }}]({{ pub.url }})* <br/> {% if pub.awarding %}**({{ pub.awarding }})** <br/>{% endif %} {{ pub.venue }}
 
 {% endfor %}
 {% endif %}
@@ -33,7 +33,7 @@ weight: 10
 ## Misc.
 
 {% for pub in misc %}
-{{ pub.authors | join: ', ' }} <br/> *[{{ pub.title }}]({{ pub.url }})* <br/> {% if pub.awarding %}**({{ pub.awarding }})** <br/>{% endif %} {{ pub.venue }}
+{{ pub.authors | array_to_sentence_string: 'and' }} <br/> *[{{ pub.title }}]({{ pub.url }})* <br/> {% if pub.awarding %}**({{ pub.awarding }})** <br/>{% endif %} {{ pub.venue }}
 
 {% endfor %}
 {% endif %}
