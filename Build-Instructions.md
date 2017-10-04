@@ -7,10 +7,10 @@ weight: 1
 ## Quick Build
 
 ```bash
-git clone git@github.com:AnyDSL/anydsl.git
-cd anydsl
-cp config.sh.template config.sh
-./setup.sh
+~$ git clone git@github.com:AnyDSL/anydsl.git
+~$ cd anydsl
+~/anydsl$ cp config.sh.template config.sh
+~/anydsl$ ./setup.sh
 ```
 You may also want to fine-tune ```config.sh```.
 In particular, if you don't have a GitHub account with a working [SSH key](https://help.github.com/articles/generating-ssh-keys), set ```: ${HTTPS:=true}```.
@@ -20,8 +20,8 @@ This will clone all repositories via https.
 
 As pointed out by the build script, ensure that ```impala``` and your build of ```clang``` is in your path:
 ```bash
-which impala
-which clang
+~/anydsl$ which impala
+~/anydsl$ which clang
 ```
 
 ## Try out *hello world*
@@ -30,12 +30,12 @@ Invoking ```impala --help``` shows available options.
 As impala currently does not ship with a standard library, ```impala``` emits LLVM files. 
 We link via ```clang``` small C-wrappers to communicate with the outside world and to build the final executable. So let's compile ```hello_world.impala```:
 ```bash
-cd impala/test
-clang infrastructure/lib.c -O2 -c                 # compile wrappers
-impala --emit-llvm -O2 codegen/hello_world.impala # produce hello_world.bc
+~/anydsl$ cd impala/test
+~/anydsl/impala/test$ clang infrastructure/lib.c -O2 -c                 # compile wrappers
+~/anydsl/impala/test$ impala --emit-llvm -O2 codegen/hello_world.impala # produce hello_world.bc
 # link wrapper and hello_world.ll to executable
-clang hello_world.ll lib.o       
-./a.out
+~/anydsl/impala/test$ clang hello_world.ll lib.o       
+~/anydsl/impala/test$ ./a.out
 ```
 
 ## Troubleshooting
