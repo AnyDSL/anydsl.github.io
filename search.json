@@ -1,0 +1,18 @@
+---
+layout: null
+---
+[
+{% assign removal = ',|.|:|;|(|)|"|[|]|{|}|+|=' | append: "|'|#|@|$|!|?|&|-|_|−|*|%|/|^|~|`|‘|’|“|”|<|>" | split: '|' | push: '|' | push: '\' %}
+{% for page in site.html_pages %}
+{% assign content = page.content | strip_html | downcase %}
+{% for char in removal %}
+{% assign content = content | replace: char, ' ' %}
+{% endfor %}
+{% assign token = content | normalize_whitespace | split: ' ' | uniq | sort %}
+  {
+    "title" : "{{ page.title | escape }}",
+    "token" : {{ token | join: ' ' | jsonify }},
+    "url"   : "{{ page.url | absolute_url }}"
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

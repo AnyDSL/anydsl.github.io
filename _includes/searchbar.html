@@ -1,0 +1,15 @@
+<div class="search-container">
+    <input type="text" class="mdc-textfield search-container__input" placeholder="Search here">
+    <ul class="drawer-list search-container__results"></ul>
+</div>
+<script src="{{ 'js/simple-jekyll-search.min.js' | absolute_url }}" type="text/javascript"></script>
+<script src="{{ 'js/search-box.js' | absolute_url }}" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var searchInput = $('.search-container__input');
+        var resultsOutput = $('.search-container__results');
+        var searchIndex = "{{ 'search.json' | absolute_url }}";
+
+        initSearchBox(searchInput, resultsOutput, searchIndex);
+    });
+</script>

@@ -35,4 +35,14 @@
       }
     }
   }
+
+  &__item {
+    &--highlight {
+      background: $accent-color;
+
+      .drawer-list__link {
+        color: $white;
+      }
+    }
+  }
 }

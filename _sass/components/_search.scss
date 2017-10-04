@@ -1,0 +1,23 @@
+.search-container {
+
+  &__input {
+    width: 80%;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-family: $ui-font-family;
+    border: none;
+    line-height: 1.5rem;
+    background: $black-05;
+
+    &:focus {
+      width: 100%;
+      outline: none;
+    }
+  }
+
+  &__results {
+    background: $black-05;
+  }
+
+}

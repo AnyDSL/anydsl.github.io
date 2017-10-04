@@ -1,5 +1,6 @@
-{% assign sorted_pages = site.html_pages | sort: 'weight' %}
 <nav class="page__drawer mdc-permanent-drawer">
+  {% include searchbar.html %}
+  {% assign sorted_pages = site.html_pages | sort: 'weight' %}
   <ul class="drawer-list">
     {% for nav_item in sorted_pages %}
       {% unless nav_item.parent %}
