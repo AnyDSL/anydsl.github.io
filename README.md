@@ -10,6 +10,13 @@ $ cd anydsl.github.io
 $ jekyll serve
 ```
 
+Or using the docker image of jekyll
+
+```shell
+$ cd anydsl.github.io
+$ docker run --rm -it -p 4000:4000 -v $(pwd):/srv/jekyll jekyll/jekyll jekyll serve
+```
+
 ## Editing
 
 Please add your content as markdown pages with jekyll frontmatter
