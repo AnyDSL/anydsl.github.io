@@ -39,21 +39,21 @@ expr ::= primary_expr
 
 Nesting of expressions is disambiguated according to this table:
 
-Operator | Description | Associativity 
+Operator | Description | Associativity
 ---------|-------------|--------------
 `++` `--` <br/> `()` <br/> `[]` <br/> `.` | [Postfix Expression] (increment/decrement) <br/> [Map Expression] <br/> [Type Application Expression] <br/> [Field Expression] | left-to-right
-`++` `--` <br/> `+` `-` <br/> `!` <br/> `~` <br/> `*` <br/> `&` `&mut` <br/> `\|` `\|\|` | [Prefix Expression] (increment/decrement) <br/> [Prefix Expression] (unary plus/minus) <br/> [Prefix Expression] (logical/bitwise NOT) <br/> [Prefix Expression] (alloc) <br/> [Prefix Expression] (dereference) <br/> [Prefix Expression] (address-of/mutable address-of) <br/> [Function Expression] | right-to-left
+`++` `--` <br/> `+` `-` <br/> `!` <br/> `~` <br/> `*` <br/> `&` `&mut` <br/> `|` `||` | [Prefix Expression] (increment/decrement) <br/> [Prefix Expression] (unary plus/minus) <br/> [Prefix Expression] (logical/bitwise NOT) <br/> [Prefix Expression] (alloc) <br/> [Prefix Expression] (dereference) <br/> [Prefix Expression] (address-of/mutable address-of) <br/> [Function Expression] | right-to-left
 `as` | [Cast Expression] | left-to-right
 `*` `/` `%` | [Infix Expression] (multiplication/division/remainder) | left-to-right
 `+` `-` | [Infix Expression] (addition/subtraction) | left-to-right
 `<<` `>>` | [Infix Expression] (bitwise left/right shift) | left-to-right
  `&` | [Infix Expression] (bitwise AND) | left-to-right
  `^` | [Infix Expression] (bitwise XOR) | left-to-right
- `\|` | [Infix Expression] (bitwise  OR) | left-to-right
+ `|` | [Infix Expression] (bitwise  OR) | left-to-right
 `==` `!=` <br/> `<` `<=` `>` `>=` | [Infix Expression] (equal/not equal) <br/> [Infix Expression] (less/less equal/greater/greater equal) | left-to-right
 `&&` | [Infix Expression] (logical AND) | left-to-right
-`\|\|` | [Infix Expression] (logical  OR) | left-to-right
-`=` <br/> `*=` `/=` `%=`  <br/> `+=` `-=` <br/> `<<=` `>>=`  <br/> `&=` `^=` `\|=` | [Infix Expression] (assignment) <br/> [Infix Expression] (assign by sum/difference) <br/> [Infix Expression] (assign by product/quotient/remainder) <br/> [Infix Expression] (assign by bitwise left/right shift) <br/> [Infix Expression] (assign by bitwise AND/XOR/OR) | left-to-right
+`||` | [Infix Expression] (logical  OR) | left-to-right
+`=` <br/> `*=` `/=` `%=`  <br/> `+=` `-=` <br/> `<<=` `>>=`  <br/> `&=` `^=` `|=` | [Infix Expression] (assignment) <br/> [Infix Expression] (assign by sum/difference) <br/> [Infix Expression] (assign by product/quotient/remainder) <br/> [Infix Expression] (assign by bitwise left/right shift) <br/> [Infix Expression] (assign by bitwise AND/XOR/OR) | left-to-right
 
 [Postfix Expression]: {% link Postfix-Expression.md %}
 [Map Expression]: {% link Map-Expression.md %}
@@ -66,11 +66,11 @@ Operator | Description | Associativity
 
 ## Comparison with C
 
-* The [as][Cast Expression] binds strongest of all binary operators. 
+* The [as][Cast Expression] binds strongest of all binary operators.
     This one does not exist in C.
 * `&`, `^` and `|` bind stronger than assignments. This is more intuitive.
 * All relations share the same precedence. This means
-    
+
     ```rust
     a == b < c
     ```
@@ -82,7 +82,7 @@ Operator | Description | Associativity
     ```rust
     a == (b < c)
     ```
-    Rationale: 
+    Rationale:
     This is such a subtle thing hardly anyone knows.
     Some C-compilers emit a warning if the programmer relies on this precedence (```-Wparentheses``` implied by ```-Wall``` in ```gcc```).
 * Assignments' associativity is left-to-right instead of right-to-left.
@@ -98,7 +98,7 @@ Operator | Description | Associativity
     ```rust
     a += (b += c)
     ```
-    Rationale: 
+    Rationale:
     This makes all binary operator consistently left-to-right associative.
     However, the expression doesn't type anyway because all assignments yield unit ```()```.
     So there is not much point for complaints.
