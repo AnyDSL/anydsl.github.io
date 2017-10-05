@@ -1,6 +1,7 @@
 ---
 title: Publications
 weight: 10
+parent: index.md
 ---
 
 {% if site.data.publications.papers %}
