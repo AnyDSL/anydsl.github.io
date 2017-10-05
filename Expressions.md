@@ -42,7 +42,7 @@ Nesting of expressions is disambiguated according to this table:
 Operator | Description | Associativity
 ---------|-------------|--------------
 `++` `--` <br/> `()` <br/> `[]` <br/> `.` | [Postfix Expression] (increment/decrement) <br/> [Map Expression] <br/> [Type Application Expression] <br/> [Field Expression] | left-to-right
-`++` `--` <br/> `+` `-` <br/> `!` <br/> `~` <br/> `*` <br/> `&` `&mut` <br/> `|` `||` | [Prefix Expression] (increment/decrement) <br/> [Prefix Expression] (unary plus/minus) <br/> [Prefix Expression] (logical/bitwise NOT) <br/> [Prefix Expression] (alloc) <br/> [Prefix Expression] (dereference) <br/> [Prefix Expression] (address-of/mutable address-of) <br/> [Function Expression] | right-to-left
+`++` `--` <br/> `+` `-` <br/> `!` <br/> `~` <br/> `*` <br/> `&` `&mut` <br/> `|/*....*/|` | [Prefix Expression] (increment/decrement) <br/> [Prefix Expression] (unary plus/minus) <br/> [Prefix Expression] (logical/bitwise NOT) <br/> [Prefix Expression] (alloc) <br/> [Prefix Expression] (dereference) <br/> [Prefix Expression] (address-of/mutable address-of) <br/> [Function Expression] | right-to-left
 `as` | [Cast Expression] | left-to-right
 `*` `/` `%` | [Infix Expression] (multiplication/division/remainder) | left-to-right
 `+` `-` | [Infix Expression] (addition/subtraction) | left-to-right
