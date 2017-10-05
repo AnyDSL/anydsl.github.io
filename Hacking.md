@@ -1,6 +1,6 @@
 ---
 title: Hacking
-parent: index.md
+parent: Developers-Corner.md
 weight: 3
 ---
 

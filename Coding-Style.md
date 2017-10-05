@@ -1,6 +1,6 @@
 ---
 title: Coding Styles
-parent: index.md
+parent: Developers-Corner.md
 weight: 5
 ---
 

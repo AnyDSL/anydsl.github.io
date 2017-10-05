@@ -1,6 +1,6 @@
 ---
 title: Debugging
-parent: index.md
+parent: Developers-Corner.md
 weight: 4
 show_toc: false
 ---
@@ -15,7 +15,7 @@ This page provides some tips how to debug Impala/Thorin.
     ```gdb
     call scope.thorin()
     call scope.write_thorin("my_file_scope.thorin")
-    
+
     call world.thorin()
     call world.write_thorin("my_file_world.thorin")
     ```
