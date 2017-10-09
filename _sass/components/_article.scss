@@ -82,6 +82,8 @@
   // links
 
   a {
+    color: $accent-color;
+
     &:hover {
       text-decoration: underline;
     }
@@ -202,6 +204,10 @@
   &__toc {
     h2 {
       margin-top: 28px;
+    }
+
+    a {
+      color: inherit;
     }
   }
 }
