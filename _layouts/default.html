@@ -8,6 +8,7 @@
         title_link=page.site_title_link %}
 
     <div class="page__content page__flex-element">
+      {% include edit.html %}
       {% include drawer.html %}
       <article class="page__article article {% if page.icon_id %}article--icon-{{ page.icon_id }}{% endif %}">
         {{ content }}

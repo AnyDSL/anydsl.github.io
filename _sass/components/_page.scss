@@ -32,6 +32,13 @@
     width: 100%;
   }
 
+  &__fixed-fab {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1;
+  }
+
   &__drawer + &__article {
     width: calc(100% - (#{$drawer-width} + #{$drawer-right-margin}))
   }
