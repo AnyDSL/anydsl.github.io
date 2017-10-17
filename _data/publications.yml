@@ -62,9 +62,8 @@ papers:
     - Philipp Slusallek
     - Roland Leißa
     - Sebastian Hack
-   venue: "In Proceedings of 16th ACM SIGPLAN International Conference on Generative Programming: Concepts and Experiences (GPCE) , page 1-12.
-October 2017"
-   date: "2017-10"
+   venue: "In Proceedings of the 16th International Conference on Generative Programming: Concepts & Experiences (GPCE), pp. 157-168, Vancouver, BC, Canada, October 23-24 2017."
+   date: "2017-10-24"
    url: https://graphics.cg.uni-saarland.de/fileadmin/cguds/papers/2017/perard_raytracer/gpce17-submission.pdf
 
 posters:
