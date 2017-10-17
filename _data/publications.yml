@@ -16,7 +16,7 @@ papers:
     - Roland Leißa
     - Marcel Köster
     - Sebastian Hack
-   venue: "In Proceedings of 2015 International Symposium on Code Generation and Optimization (CGO), pp. 202-212, San Francisco, CA, USA, February 7-11, 2015."
+   venue: "In Proceedings of the 2015 International Symposium on Code Generation and Optimization (CGO), pp. 202-212, San Francisco, CA, USA, February 7-11, 2015."
    awarding: "2nd prize: Artifact Evaluation for CGO/PPoPP'15"
    date: "2015-02-07"
    url: http://compilers.cs.uni-saarland.de/papers/lkh15_cgo.pdf
