@@ -1,5 +1,5 @@
 ---
-title: AnyDSL - A Framework for rapid Development of domain-specific Libraries
+title: AnyDSL - A Framework for Rapid Development of Domain-Specific Libraries
 weight: -1
 menu: Home
 show_toc: false
@@ -67,7 +67,7 @@ fn iterate(field: Field, body: fn(int, int) -> ()) -> () {
 
 ## Selected Results
 
-### Stincilla
+### Stincilla: https://github.com/anydsl/stincilla
 
 *Stincilla* is a DSL for stencil codes.
 We used the Gaussian blur filter as example and compared against the implementations in OpenCV 3.0 as reference.
@@ -78,7 +78,7 @@ Thereby, we achieved the following results:
 - NVIDIA GPU: 45% faster
 - Up to 10x shorter code
 
-### RaTrace
+### RaTrace: https://github.com/anydsl/traversal
 
 *RaTrace* is a DSL for ray traversal.
 - 17% faster on NVIDIA GTX 970 (reference: Aila et al.)
