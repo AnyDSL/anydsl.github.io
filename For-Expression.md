@@ -29,7 +29,7 @@ Aditionally, Impala implicitly declares two continuations which are usable insid
 
 1. ```continue``` of type ```fn(C) -> !```
 
-   Invoking this continuation re-enters the generator because this causes the current [[Function Expression]] to return with a value of type ```C```.
+   Invoking this continuation re-enters the generator because this causes the current [Function Expression] to return with a value of type ```C```.
 2. ```break``` of type ```fn(B) -> !```
 
    This is the return-continuation of the call to the generator ```f```.
@@ -41,7 +41,7 @@ The type of the whole ```for``` expression is ```B```.
 
 ## Semantics
 
-Since a ```for``` expression is just syntactic sugar, see [[Map Expression]].
+Since a ```for``` expression is just syntactic sugar, see [Map Expression].
 
 ## Examples
 
@@ -82,3 +82,7 @@ fn main(x: i32) -> () {
     print_int(sum); // 29
 }
 ```
+
+[Function Expression]: Function-Expression.md
+[Map Expression]: Map-Expression.md
+
