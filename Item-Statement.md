@@ -15,7 +15,7 @@ The ```item``` must type.
 
 ## Semantics
 
-See [[Block Expression]].
+See [Block Expression](Block-Expression.md).
 
 ## Examples
 
