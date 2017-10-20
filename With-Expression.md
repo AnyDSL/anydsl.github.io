@@ -28,17 +28,21 @@ Additionally, Impala implicitly declares the following continuation which is usa
 * ```break``` of type ```fn(B) -> !```
 
    This is the return-continuation of the call to ```f```.
-   Thus, invoking this continuation returns from the current [[Function Expression]] with a value of type ```B```.
+   Thus, invoking this continuation returns from the current [Function Expression] with a value of type ```B```.
 
-Since ```block_expr``` also exits the current [[Function Expression]],  its type must be ```B```, too.
+Since ```block_expr``` also exits the current [Function Expression],  its type must be ```B```, too.
 The type of the whole ```with``` expression is ```R``` - whatever is yielded by invoking ```f```.
 
 ## Semantics
 
-Since a ```with``` expression is just syntactic sugar, see [[Map Expression]].
+Since a ```with``` expression is just syntactic sugar, see [Map Expression].
 
 ## Examples
 
 ```rust
 TODO
 ```
+
+[Function Expression]: Function-Expression.md
+[Map Expression]: Map-Expression.md
+
