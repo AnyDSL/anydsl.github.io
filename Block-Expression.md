@@ -10,7 +10,7 @@ block_expr ::=  '{' statement* [ expr ] '}'
              | '@{' statement* [ expr ] '}'
 ```
 A block expression consists of zero or more statements enclosed with a pair of braces.
-Optionally, a block expression may end with an [[Expression|Expressions]].
+Optionally, a block expression may end with an [Expression](Expressions.md).
 Additionally, a block expression may start with ```@```.
 
 ## Typing
@@ -21,7 +21,7 @@ If ```expr``` is elidid the type is unit: ```()```.
 
 ## Semantics
 
-All [item statements](Item Statement) within a block exrpression's statement list are bound.
+All [item statements](Item-Statement.md) within a block exrpression's statement list are bound.
 This is similar to a ```letrec``` in functional languages.
 Then, all statements consecutively evaluate.
 Finally, the closing ```expr``` (if present) evaluates.
