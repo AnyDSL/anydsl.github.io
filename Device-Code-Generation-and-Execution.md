@@ -76,7 +76,7 @@ A typical example will look like this:
 let grid   = (1024, 1024, 1);
 let block  = (32, 1, 1);
 let device = 0;
-cuda(device, grid, block, || { ... out(idx) = in(idx); };
+cuda(device, grid, block, || { ... out(idx) = in(idx); });
 synchronize_cuda(device);
 ```
 
@@ -95,13 +95,17 @@ synchronize_cuda(device);
 The ```Accelerator``` struct is provided to abstract over different compute devices: 
 ```rust
 struct Accelerator {
-    exec  : fn((i32, i32, i32), (i32, i32, i32), fn() -> ()) -> (),
-    sync  : fn() -> (),
-    alloc : fn(i32) -> Buffer,
-    tidx  : fn() -> i32,
-    bidx  : fn() -> i32,
-    gidx  : fn() -> i32,
-    ...
+    exec          : fn((i32, i32, i32), // grid
+                       (i32, i32, i32), // block
+                       fn((fn() -> i32, fn() -> i32, fn() -> i32), // tid
+                          (fn() -> i32, fn() -> i32, fn() -> i32), // bid
+                          (fn() -> i32, fn() -> i32, fn() -> i32), // bdim
+                          (fn() -> i32, fn() -> i32, fn() -> i32), // gdim
+                          (fn() -> i32, fn() -> i32, fn() -> i32)) -> ()) -> (), // gid
+    sync          : fn() -> (),
+    alloc         : fn(i32) -> Buffer,
+    alloc_unified : fn(i32) -> Buffer,
+    barrier       : fn() -> ()
 }
 ```
 
@@ -109,11 +113,12 @@ Using one of the pre-defined accelerators allows to use the same code for differ
 ```rust
 let device = 0;
 let acc    = cuda_accelerator(device);
-let grid   = (1024, 1024, 1);
+let grid   = (1024, 1, 1);
 let block  = (32, 1, 1);
 
-with acc.exec(grid, block) {
-    let idx = acc.tidx();
+for tid, bid, bdim, gdim, gid in acc.exec(grid, block) {
+    let (gidx, _, _) = gid;
+    let idx = gidx();
     out(idx) = in(idx);
 }
 acc.sync();
@@ -138,8 +143,9 @@ Using one of the pre-defined intrinsics allows to use the same code for differen
 ```rust
 let math = cuda_intrinsics;
 ...
-with acc.exec(grid, block) {
-    let idx = acc.tidx();
+for tid, bid, bdim, gdim, gid in acc.exec(grid, block) {
+    let (gidx, _, _) = gid;
+    let idx = gidx();
     out(idx) = math.sinf(in(idx));
 }
 ...
@@ -159,8 +165,9 @@ Read-only arrays in global GPU memory are of type ```&[1][T]``` and write-able a
 let arr = alloc_cuda(dev, size);
 let out = alloc_cuda(dev, size);
 ...
-with acc.exec(grid, block) {
-    let idx = acc.tidx();
+for tid, bid, bdim, gdim, gid in acc.exec(grid, block) {
+    let (gidx, _, _) = gid;
+    let idx = gidx();
     let arr_ptr = bitcast[   &[1][f32]](arr.data);
     let out_ptr = bitcast[&mut[1][f32]](out.data);
     out_ptr(idx) = arr_ptr(idx);
@@ -172,10 +179,10 @@ The address space annotation is manual at the moment, but will be automated with
 Memory of compile-time known size in shared (CUDA), local (OpenCL), or group (HSA) memory can be requested using ```reserve_shared```.
 ```rust
 ...
-with acc.exec(grid, block) {
+for tid, bid, bdim, gdim, gid in acc.exec(grid, block) {
     ...
     let shared = reserve_shared[f32](32);
-    shared(acc.tidx()) = arr_ptr(idx);
+    shared(tidx) = arr_ptr(idx);
 }
 ...
 ```
