@@ -1,6 +1,6 @@
 ---
 title: Interacting with C
-parent: CInterface.md
+parent: Impala.md
 weight: 1
 excerpt: "This document describes how to interface a C program to Impala and vice-versa."
 ---
