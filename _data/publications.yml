@@ -1,4 +1,16 @@
 papers:
+ - title: "A Data Layout Transformation for Vectorizing Compilers"
+   authors:
+    - Arsène Pérard-Gayot
+    - Richard Membarth
+    - Philipp Slusallek
+    - Simon Moll
+    - Roland Leißa
+    - Sebastian Hack
+   venue: "In Proceedings of the 2018 Workshop on Programming Models for SIMD/Vector Processing (WPMVP), pp. 7:1-7:8, Vösendorf / Vienna, Austria, February 24, 2018."
+   date: "2018-02-24"
+   url: https://graphics.cg.uni-saarland.de/papers/perard-2018-wpmvp.pdf
+
  - title: "RaTrace: Simple and Efficient Abstractions for BVH Ray Traversal Algorithms"
    authors:
     - Arsène Pérard-Gayot
