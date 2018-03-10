@@ -1,6 +1,7 @@
 ---
 title: Device Code Generation and Execution
 parent: Runtime.md
+excerpt: "Describes how device code generation and execution works in Impala."
 ---
 
 The runtime provides convenience functions that are required in order to execute code on different devices:

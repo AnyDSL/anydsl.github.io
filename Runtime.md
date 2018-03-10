@@ -1,7 +1,9 @@
 ---
 title: AnyDSL Runtime
 weight: 6
+excerpt: "Basic concepts of the AnyDSL runtime."
 show_toc: false
 ---
 
-this page is about the AnyDSL Runtime
+- [Device Code Generation and Execution]({% link Device-Code-Generation-and-Execution.md %})
+- [Just-In-Time Compilation]({% link Just-In-Time-Compilation.md %})
