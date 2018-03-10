@@ -1,4 +1,16 @@
 papers:
+ - title: "RaTrace: Simple and Efficient Abstractions for BVH Ray Traversal Algorithms"
+   authors:
+    - Arsène Pérard-Gayot
+    - Martin Weier
+    - Richard Membarth
+    - Philipp Slusallek
+    - Roland Leißa
+    - Sebastian Hack
+   venue: "In Proceedings of the 16th International Conference on Generative Programming: Concepts & Experiences (GPCE), pp. 157-168, Vancouver, BC, Canada, October 23-24 2017."
+   date: "2017-10-24"
+   url: https://graphics.cg.uni-saarland.de/papers/perard-2017-gpce.pdf
+
  - title: Shallow Embedding of DSLs via Online Partial Evaluation
    authors:
     - Roland Leißa
@@ -53,18 +65,6 @@ papers:
    venue: "In Proceedings of the 1st International Workshop on High-Performance Stencil Computations (HiStencils), 2014."
    date: "2014"
    url: http://www.cdl.uni-saarland.de/papers/klhms14.pdf
-
- - title: "RaTrace: Simple and Efficient Abstractions for BVH Ray Traversal Algorithms"
-   authors:
-    - Arsène Pérard-Gayot
-    - Martin Weier
-    - Richard Membarth
-    - Philipp Slusallek
-    - Roland Leißa
-    - Sebastian Hack
-   venue: "In Proceedings of the 16th International Conference on Generative Programming: Concepts & Experiences (GPCE), pp. 157-168, Vancouver, BC, Canada, October 23-24 2017."
-   date: "2017-10-24"
-   url: https://graphics.cg.uni-saarland.de/papers/perard-2017-gpce.pdf
 
 posters:
  - title: High-Performance Domain-Specific Languages for GPU Computing
