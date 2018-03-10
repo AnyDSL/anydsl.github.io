@@ -30,7 +30,7 @@ papers:
     - Sebastian Hack
    venue: "In Proceedings of the 4th International Workshop on Domain-Specific Languages and High-Level Frameworks for High Performance Computing (WOLFHPC), pp. 52-57, New Orleans, LA, USA, November 17, 2014."
    date: "2014-11-17"
-   url: http://graphics.cg.uni-saarland.de/fileadmin/cguds/papers/2014/membarth_wolfhpc14/wolfhpc14.pdf
+   url: https://graphics.cg.uni-saarland.de/papers/membarth-2014-wolfhpc.pdf
 
  - title: Code Refinement of Stencil Codes
    authors:
@@ -64,7 +64,7 @@ papers:
     - Sebastian Hack
    venue: "In Proceedings of the 16th International Conference on Generative Programming: Concepts & Experiences (GPCE), pp. 157-168, Vancouver, BC, Canada, October 23-24 2017."
    date: "2017-10-24"
-   url: https://graphics.cg.uni-saarland.de/fileadmin/cguds/papers/2017/perard_raytracer/gpce17-submission.pdf
+   url: https://graphics.cg.uni-saarland.de/papers/perard-2017-gpce.pdf
 
 posters:
  - title: High-Performance Domain-Specific Languages for GPU Computing
