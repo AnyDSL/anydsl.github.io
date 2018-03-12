@@ -24,7 +24,7 @@ The following example shows how a simple function is jit-compiled and executed u
 int main(int argc, char** argv) {
     int opt = 3;
     std::string str = "extern fn get_value() -> int { 42 }";
-    if (auto ptr = anydsl_compile(str.str(), str.size(), "get_value", opt)) {
+    if (auto ptr = anydsl_compile(str.c_str(), str.size(), "get_value", opt)) {
         auto fn = reinterpret_cast<int (*)()>(ptr);
         std::cout << "value: " << fn() << std::endl;
         return 0;
@@ -38,3 +38,5 @@ External functions defined by the AnyDSL runtime are supported, custom external 
 anydsl_link("libcustom.so");
 anydsl_compile(...);
 ```
+
+```anydsl_link()``` and ```anydsl_compile()``` are provided by the AnyDSL runtime library, which needs to be linked when compiling.
