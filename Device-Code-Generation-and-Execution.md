@@ -39,8 +39,9 @@ Note: HSA platform is tested on a system using the [ROCm](https://github.com/Rad
 Memory management functions work on ```Buffers``` that track the device & platform (```device```) and the allocated memory (```data```): 
 ```rust
 struct Buffer {
-    device: i32,
-    data: &[i8]
+    data : &[i8],
+    size : i64,
+    device : i32
 }
 ```
 
@@ -54,7 +55,7 @@ fn alloc_hsa(dev: i32, size: i32) -> Buffer;
 
 fn release(buf: Buffer) -> ();
 
-fn copy(src: Buffer, dst: Buffer, size: i32) -> ();
+fn copy(src: Buffer, dst: Buffer) -> ();
 fn copy_offset(src: Buffer, off_src: i32, dst: Buffer, off_dst: i32, size: i32) -> ();
 ```
 
