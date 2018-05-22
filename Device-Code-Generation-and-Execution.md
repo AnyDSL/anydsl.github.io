@@ -31,6 +31,7 @@ For example, properly configured system with a NVIDIA GPU A will result in the f
 
 Calling runtime functions for a platform or device that is not present terminates the program.
 
+Note: The CUDA platform expects [NVVM](https://docs.nvidia.com/cuda/nvvm-ir-spec/index.html) IR version 1.5, which is LLVM 5.0 based.
 Note: HSA platform is tested on a system using the [ROCm](https://github.com/RadeonOpenCompute/ROCm) 1.8 software stack provided by AMD.
 
 ## Memory Management
