@@ -36,7 +36,7 @@ Note: HSA platform is tested on a system using the [ROCm](https://github.com/Rad
 
 ## Memory Management
 
-Memory management functions work on ```Buffers``` that track the device & platform (```device```) and the allocated memory (```data```): 
+Memory management functions work on ```Buffers``` that track the device & platform (```device```) and the allocated memory (```data```):
 ```rust
 struct Buffer {
     data : &[i8],
@@ -45,7 +45,7 @@ struct Buffer {
 }
 ```
 
-Convenience functions are provided to allocate, copy, and release memory. These work on Buffers and the platform will be implicitly injected and derived when needed. 
+Convenience functions are provided to allocate, copy, and release memory. These work on Buffers and the platform will be implicitly injected and derived when needed.
 
 ```rust
 fn alloc_cpu(size: i32) -> Buffer;
@@ -95,7 +95,7 @@ with cuda(device, grid, block) {
 synchronize_cuda(device);
 ```
 
-The ```Accelerator``` struct is provided to abstract over different compute devices: 
+The ```Accelerator``` struct is provided to abstract over different compute devices:
 ```rust
 struct Accelerator {
     exec          : fn((i32, i32, i32), // grid
@@ -163,7 +163,7 @@ In Impala, the following address spaces are supported:
 - 3 -> shared memory
 
 Correct code will only be emitted in case the address space is valid.
-Read-only arrays in global GPU memory are of type ```&[1][T]``` and write-able arrays ```&mut[1][T]```. 
+Read-only arrays in global GPU memory are of type ```&[1][T]``` and write-able arrays ```&mut[1][T]```.
 ```rust
 let arr = alloc_cuda(dev, size);
 let out = alloc_cuda(dev, size);
@@ -191,6 +191,7 @@ for tid, bid, bdim, gdim, gid in acc.exec(grid, block) {
 ```
 
 ## Profiling
+
 Profiling of kernels is disabled by default. To enable profiling, set the ```ANYDSL_PROFILE``` environment variable to ```FULL```:
 ```bash
 ANYDSL_PROFILE=FULL ./binary
@@ -199,3 +200,11 @@ ANYDSL_PROFILE=FULL ./binary
 ## Example
 
 A simple example that shows how to generate code for different GPUs can be found in [Stincilla](https://github.com/AnyDSL/stincilla/blob/master/test/alloc_gpu.impala).
+
+## Cross Compilation
+
+For cross compilation, the target triple and target cpu can be set via the environment variables ```ANYDSL_TARGET_TRIPLE``` and ```ANYDSL_TARGET_CPU```:
+```
+ANYDSL_TARGET_TRIPLE=aarch64-unknown-linux-gnu
+ANYDSL_TARGET_CPU=cortex-a53
+```
