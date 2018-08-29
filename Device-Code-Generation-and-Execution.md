@@ -31,8 +31,7 @@ For example, properly configured system with a NVIDIA GPU A will result in the f
 
 Calling runtime functions for a platform or device that is not present terminates the program.
 
-Note: The CUDA platform expects [NVVM](https://docs.nvidia.com/cuda/nvvm-ir-spec/index.html) IR version 1.5, which is LLVM 5.0 based.
-Note: HSA platform is tested on a system using the [ROCm](https://github.com/RadeonOpenCompute/ROCm) 1.8 software stack provided by AMD.
+Note: HSA platform is tested on a system using the [ROCm](https://github.com/RadeonOpenCompute/ROCm) 1.8.2 software stack provided by AMD.
 
 ## Memory Management
 
@@ -213,6 +212,18 @@ Profiling of kernels is disabled by default. To enable profiling, set the ```ANY
 ```bash
 ANYDSL_PROFILE=FULL ./binary
 ```
+
+## NVVM Code Generation Optimization
+When generating target code using the ```nvvm``` backend, we emit NVVM IR.
+Target ptx code will be generated from the NVVM IR at runtime using the llvm nvptx code generator.
+nvptx code generation optimizations can be specified by the ```ANYDSL_LLVM_ARGS``` environment variable:
+```bash
+ANYDSL_LLVM_ARGS="-nvptx-sched4reg -nvptx-fma-level=2 -nvptx-prec-divf32=0 -nvptx-prec-sqrtf32=0 -nvptx-f32ftz=1"
+```
+
+As an alternative to the nvptx code generator, we offer target ptx code generation via NVIDIA's libnvvm interface.
+To make use of this backend, the nvvm file needs to be in bitcode format as required by the CUDA installation.
+For the current [NVVM](https://docs.nvidia.com/cuda/nvvm-ir-spec/index.html) IR version 1.5, this means LLVM 5.0 based bitcode.
 
 ## Example
 
