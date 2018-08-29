@@ -100,15 +100,35 @@ The ```Accelerator``` struct is provided to abstract over different compute devi
 struct Accelerator {
     exec          : fn((i32, i32, i32), // grid
                        (i32, i32, i32), // block
-                       fn((fn() -> i32, fn() -> i32, fn() -> i32), // tid
-                          (fn() -> i32, fn() -> i32, fn() -> i32), // bid
-                          (fn() -> i32, fn() -> i32, fn() -> i32), // bdim
-                          (fn() -> i32, fn() -> i32, fn() -> i32), // gdim
-                          (fn() -> i32, fn() -> i32, fn() -> i32)) -> ()) -> (), // gid
+                       fn(WorkItem) -> ()) -> (),
     sync          : fn() -> (),
     alloc         : fn(i32) -> Buffer,
     alloc_unified : fn(i32) -> Buffer,
     barrier       : fn() -> ()
+}
+```
+
+It uses the ```WorkItem``` struct to provide functions for thread index or block index retrieval:
+```rust
+struct WorkItem {
+    tidx  : fn() -> i32,
+    tidy  : fn() -> i32,
+    tidz  : fn() -> i32,
+    bidx  : fn() -> i32,
+    bidy  : fn() -> i32,
+    bidz  : fn() -> i32,
+    gidx  : fn() -> i32,
+    gidy  : fn() -> i32,
+    gidz  : fn() -> i32,
+    bdimx : fn() -> i32,
+    bdimy : fn() -> i32,
+    bdimz : fn() -> i32,
+    gdimx : fn() -> i32,
+    gdimy : fn() -> i32,
+    gdimz : fn() -> i32,
+    nblkx : fn() -> i32,
+    nblky : fn() -> i32,
+    nblkz : fn() -> i32
 }
 ```
 
@@ -119,9 +139,8 @@ let acc    = cuda_accelerator(device);
 let grid   = (1024, 1, 1);
 let block  = (32, 1, 1);
 
-for tid, bid, bdim, gdim, gid in acc.exec(grid, block) {
-    let (gidx, _, _) = gid;
-    let idx = gidx();
+for work_item in acc.exec(grid, block) {
+    let idx = work_item.gidx();
     out(idx) = in(idx);
 }
 acc.sync();
@@ -146,9 +165,8 @@ Using one of the pre-defined intrinsics allows to use the same code for differen
 ```rust
 let math = cuda_intrinsics;
 ...
-for tid, bid, bdim, gdim, gid in acc.exec(grid, block) {
-    let (gidx, _, _) = gid;
-    let idx = gidx();
+for work_item in acc.exec(grid, block) {
+    let idx = work_item.gidx();
     out(idx) = math.sinf(in(idx));
 }
 ...
@@ -168,9 +186,8 @@ Read-only arrays in global GPU memory are of type ```&[1][T]``` and write-able a
 let arr = alloc_cuda(dev, size);
 let out = alloc_cuda(dev, size);
 ...
-for tid, bid, bdim, gdim, gid in acc.exec(grid, block) {
-    let (gidx, _, _) = gid;
-    let idx = gidx();
+for work_item in acc.exec(grid, block) {
+    let idx = work_item.gidx();
     let arr_ptr = bitcast[   &[1][f32]](arr.data);
     let out_ptr = bitcast[&mut[1][f32]](out.data);
     out_ptr(idx) = arr_ptr(idx);
@@ -182,7 +199,7 @@ The address space annotation is manual at the moment, but will be automated with
 Memory of compile-time known size in shared (CUDA), local (OpenCL), or group (HSA) memory can be requested using ```reserve_shared```.
 ```rust
 ...
-for tid, bid, bdim, gdim, gid in acc.exec(grid, block) {
+for work_item in acc.exec(grid, block) {
     ...
     let shared = reserve_shared[f32](32);
     shared(tidx) = arr_ptr(idx);
