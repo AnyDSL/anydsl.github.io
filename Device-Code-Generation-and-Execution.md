@@ -31,7 +31,7 @@ For example, properly configured system with a NVIDIA GPU A will result in the f
 
 Calling runtime functions for a platform or device that is not present terminates the program.
 
-Note: HSA platform is tested on a system using the [ROCm](https://github.com/RadeonOpenCompute/ROCm) 1.8.2 software stack provided by AMD.
+Note: HSA platform is tested on a system using the [ROCm](https://github.com/RadeonOpenCompute/ROCm) 1.9.0 software stack provided by AMD.
 
 ## Memory Management
 
