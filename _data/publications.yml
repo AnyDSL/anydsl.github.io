@@ -1,4 +1,18 @@
 papers:
+ - title: "AnyDSL: A Partial Evaluation Framework for Programming High-Performance Libraries"
+   authors:
+    - Roland Leißa
+    - Klaas Boesche
+    - Sebastian Hack
+    - Arsène Pérard-Gayot
+    - Richard Membarth
+    - Philipp Slusallek
+    - André Müller
+    - Bertil Schmidt
+   venue: "In Proceedings of the ACM on Programming Languages (PACMPL), 2(OOPSLA): 119:1-119:30, 2018."
+   date: "2018-11-07"
+   url: http://compilers.cs.uni-saarland.de/papers/anydsl.pdf
+
  - title: "A Data Layout Transformation for Vectorizing Compilers"
    authors:
     - Arsène Pérard-Gayot
