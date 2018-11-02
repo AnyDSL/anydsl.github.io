@@ -8,7 +8,7 @@ parent: Thorin.md
 Thorin is an intermediate representation based on continuation-passing style (CPS). 
 For an introduction to CPS please refer to [Wikipedia](http://en.wikipedia.org/wiki/Continuation_passing_style). 
 This article also suggests [further reading](http://en.wikipedia.org/wiki/Continuation_passing_style#References) about CPS.
-Please refer to [A Graph-Based Higher-Order Intermediate Representation](http://www.cdl.uni-saarland.de/papers/lkh15_cgo.pdf) for a more scientific introduction to Thorin.
+Please refer to [A Graph-Based Higher-Order Intermediate Representation](http://compilers.cs.uni-saarland.de/papers/lkh15_cgo.pdf) for a more scientific introduction to Thorin.
 
 ## Definitions
 

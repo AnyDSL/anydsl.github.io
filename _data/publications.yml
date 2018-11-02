@@ -79,7 +79,7 @@ papers:
     - Philipp Slusallek
    venue: "In Parallel Processing Letters (PPL), 24 (3): 1–16, 2014."
    date: "2014"
-   url: http://www.cdl.uni-saarland.de/papers/ppl14_web.pdf
+   url: http://compilers.cs.uni-saarland.de/papers/ppl14_web.pdf
 
  - title: Platform-Specific Optimization and Mapping of Stencil Codes through Refinement
    authors:
@@ -90,7 +90,7 @@ papers:
     - Philipp Slusallek
    venue: "In Proceedings of the 1st International Workshop on High-Performance Stencil Computations (HiStencils), 2014."
    date: "2014"
-   url: http://www.cdl.uni-saarland.de/papers/klhms14.pdf
+   url: http://compilers.cs.uni-saarland.de/papers/klhms14.pdf
 
 posters:
  - title: High-Performance Domain-Specific Languages for GPU Computing

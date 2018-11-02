@@ -97,7 +97,7 @@ next->seal();
 next->jump(main->param(1), {next->get_value(0, world.type_u32()}));
 ```
 
-Please refer to [Braun et al.](http://www.cdl.uni-saarland.de/papers/bbhlmz13cc.pdf) for details about this algorithm.
+Please refer to [Braun et al.](http://compilers.cs.uni-saarland.de/papers/bbhlmz13cc.pdf) for details about this algorithm.
 
 ## Basics
 
