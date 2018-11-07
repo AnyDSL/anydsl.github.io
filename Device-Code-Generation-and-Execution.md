@@ -236,3 +236,8 @@ For cross compilation, the target triple and target cpu can be set via the envir
 ANYDSL_TARGET_TRIPLE=aarch64-unknown-linux-gnu
 ANYDSL_TARGET_CPU=cortex-a53
 ```
+In addition, individual target features can be enabled/disabled by specifying the environment variable ```ANYDSL_TARGET_FEATURES```:
+```
+ANYDSL_TARGET_FEATURES="+armv8-a,+crc,+crypto,+dsp,+fp-armv8,+hwdiv,+hwdiv-arm,+neon,-thumb-mode"
+```
+Target features are only considered if the target triple and target cpu are also specified.
