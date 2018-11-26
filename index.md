@@ -65,6 +65,12 @@ fn iterate(field: Field, body: fn(int, int) -> ()) -> () {
 }
 ```
 
+## Talk
+
+<div class="article__video article__video--16by9">
+<iframe src="https://www.youtube.com/embed/pIJga3ioFBs" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ## Selected Results
 
 ### Stincilla: [https://github.com/anydsl/stincilla](https://github.com/anydsl/stincilla)
