@@ -10,6 +10,10 @@ These are implemented in our language [Impala]({% link Impala.md %}).
 In order to achieve high-performance, Impala *partially evaluates* any abstractions these libraries might impose.
 Partial evaluation and other optimizations are performed on AnyDSL's intermediate representation [Thorin]({% link Thorin.md %}).
 
+## Support
+
+You can ask for support in our [Rocket.Chat](https://open.rocket.chat/channel/anydsl) channel.
+
 ## AnyDSL Architecture
 
 ![AnyDSL Architecture](images/anydsl-architecture.svg)
