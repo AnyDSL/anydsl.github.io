@@ -31,7 +31,7 @@ For example, properly configured system with a NVIDIA GPU A will result in the f
 
 Calling runtime functions for a platform or device that is not present terminates the program.
 
-Note: HSA platform is tested on a system using the [ROCm](https://github.com/RadeonOpenCompute/ROCm) 2.0 software stack provided by AMD.
+Note: HSA platform is tested on a system using the [ROCm](https://github.com/RadeonOpenCompute/ROCm) 2.1 software stack provided by AMD.
 
 ## Memory Management
 
@@ -225,9 +225,19 @@ As an alternative to the nvptx code generator, we offer target ptx code generati
 To make use of this backend, the nvvm file needs to be in bitcode format as required by the CUDA installation.
 For the current [NVVM](https://docs.nvidia.com/cuda/nvvm-ir-spec/index.html) IR version 1.5, this means LLVM 5.0 based bitcode.
 
+
+## AMDGPU Code Generation Optimization
+When generating target code using the ```amdgpu``` backend, we emit AMDGPU IR.
+Target gcn code will be generated from the AMDGPU IR at runtime using the llvm gcn code generator.
+gcn code generation optimizations can be specified by the ```ANYDSL_LLVM_ARGS``` environment variable:
+```bash
+ANYDSL_LLVM_ARGS="-amdgpu-sroa -amdgpu-load-store-vectorizer -amdgpu-scalarize-global-loads -amdgpu-internalize-symbols -amdgpu-early-inline-all -amdgpu-sdwa-peephole -amdgpu-dpp-combine -enable-amdgpu-aa -amdgpu-late-structurize=0 -amdgpu-function-calls -amdgpu-simplify-libcall -amdgpu-ir-lower-kernel-arguments -amdgpu-atomic-optimizations -amdgpu-mode-register"
+```
+
 ## Example
 
 A simple example that shows how to generate code for different GPUs can be found in [Stincilla](https://github.com/AnyDSL/stincilla/blob/master/test/alloc_gpu.impala).
+
 
 ## Cross Compilation
 
