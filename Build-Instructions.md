@@ -13,8 +13,6 @@ weight: 1
 ~/anydsl$ ./setup.sh
 ```
 You may also want to fine-tune ```config.sh```.
-In particular, if you don't have a GitHub account with a working [SSH key](https://help.github.com/articles/generating-ssh-keys), set ```: ${HTTPS:=true}```.
-This will clone all repositories via https.
 
 ## Verify your Installation
 
