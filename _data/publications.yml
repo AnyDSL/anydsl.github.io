@@ -1,4 +1,15 @@
 papers:
+ - title: "Rodent: Generating Renderers without Writing a Generator"
+   authors:
+    - Arsène Pérard-Gayot
+    - Richard Membarth
+    - Roland Leißa
+    - Sebastian Hack
+    - Philipp Slusallek
+   venue: "In ACM Transactions on Graphics (TOG), 38(4): 1:1-1:12, 2019."
+   date: "2019-07-28"
+   url: https://graphics.cg.uni-saarland.de/papers/perard-2019-siggraph-rodent.pdf
+
  - title: "AnyDSL: A Partial Evaluation Framework for Programming High-Performance Libraries"
    authors:
     - Roland Leißa
