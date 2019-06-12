@@ -21,13 +21,13 @@ You can ask for support in our [Rocket.Chat channel](https://open.rocket.chat/ch
 ## Embedding of DSLs in Impala
 
 When developing a DSL, people from different areas come together:
-- The *application developer* who just wants to use the DSL,
+- the *application developer* who just wants to use the DSL,
 - the *DSL designer* who develops domain-specific abstractions, and
 - the machine expert who knows the target machine very well and how to massage the code in order to achieve good performance.
 
 AnyDSL allows a *separation of these concerns* using
-- Higher-order functions,
-- Partial evaluation and,
+- higher-order functions,
+- partial evaluation and,
 - triggered code generation.
 
 ### Application Developer
