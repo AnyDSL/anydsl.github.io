@@ -84,6 +84,7 @@ Compared with state-of-the-art renderer, we obtain the following speedups:
 - Embree (Intel): up to 23% faster
 - OptiX (NVIDIA): up to 31% faster (megakernel)
 - OptiX (NVIDIA): up to 42% faster (wavefront)
+
 Rodent supports also ARM CPUs and AMD GPUs.
 
 ### Stincilla: [https://github.com/anydsl/stincilla](https://github.com/anydsl/stincilla)
