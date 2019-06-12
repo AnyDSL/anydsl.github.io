@@ -77,6 +77,15 @@ fn iterate(field: Field, body: fn(int, int) -> ()) -> () {
 
 ## Selected Results
 
+### Rodent: [https://github.com/anydsl/rodent](https://github.com/anydsl/rodent)
+*Rodent* is a BVH traversal library and renderer implemented using the AnyDSL compiler framework.
+Rodent is a renderer-generating library that converts 3D scenes into optimized/specialized code the scene on CPUs and GPUs.
+Compared with state-of-the-art renderer, we obtain the following speedups:
+- Embree (Intel): up to 23% faster
+- OptiX (NVIDIA): up to 31% faster (megakernel)
+- OptiX (NVIDIA): up to 42% faster (wavefront)
+Rodent supports also ARM CPUs and AMD GPUs.
+
 ### Stincilla: [https://github.com/anydsl/stincilla](https://github.com/anydsl/stincilla)
 
 *Stincilla* is a DSL for stencil codes.
