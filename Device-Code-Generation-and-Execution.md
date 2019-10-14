@@ -73,6 +73,9 @@ backend(device, grid, block, fun);
 - grid & block: blocking of the problem into sub-problems
 - fun: function for which code will be generated
 
+Note that the grid configuration is provided as in OpenCL.
+That is, it defines the total number of threads to be launched, which needs to be a multiple of the block size.
+
 A typical example will look like this:
 ```rust
 let grid   = (1024, 1024, 1);
