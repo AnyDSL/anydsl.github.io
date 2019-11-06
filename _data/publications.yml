@@ -21,6 +21,7 @@ papers:
     - André Müller
     - Bertil Schmidt
    venue: "Proceedings of the ACM on Programming Languages (PACMPL), 2(OOPSLA): 119:1-119:30, 2018."
+   awarding: HiPEAC 2018 Paper Award
    date: "2018-11-07"
    url: http://compilers.cs.uni-saarland.de/papers/anydsl.pdf
 
