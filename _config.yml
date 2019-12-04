@@ -26,23 +26,23 @@ toolbar:
 footer:
   logos:
     - image: images/uds_logo.svg
-      url: http://www.uni-saarland.de/
+      url: http://www.uni-saarland.de
     - image: images/dfki_logo_e.svg
-      url: http://www.dfki.de/
+      url: http://www.dfki.de
   links:
     - title: Compiler Design Lab
-      url: http://compilers.cs.uni-saarland.de/
+      url: http://compilers.cs.uni-saarland.de
     - title: Computer Graphics Lab
-      url: http://graphics.cg.uni-saarland.de/
+      url: http://graphics.cg.uni-saarland.de
     - title: Agents and Simulated Reality
-      url: https://www.dfki.de/web/research/research-departments-and-groups/agents-and-simulated-reality/?L=1
+      url: https://www.dfki.de/en/web/research/research-departments-and-groups/agents-and-simulated-reality
     - title: Imprint
-      url: https://www.uni-saarland.de/en/footer/dialogue/legal-notice.html
+      url: https://www.uni-saarland.de/en/legal-notice
 
 
 repo_url: https://github.com/AnyDSL
 
-github_edit_me_url: https://github.com/AnyDSL/anydsl.github.io/edit/master/
+github_edit_me_url: https://github.com/AnyDSL/anydsl.github.io/edit/master
 
 defaults:
   -
