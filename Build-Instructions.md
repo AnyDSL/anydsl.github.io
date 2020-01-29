@@ -14,6 +14,28 @@ weight: 1
 ```
 You may also want to fine-tune ```config.sh```.
 
+On __Windows__ you may prefer the setup completely based on CMake
+```Batchfile
+...> git clone https://github.com/AnyDSL/anydsl.git -b cmake-based-setup
+...> cd anydsl
+...\anydsl> mkdir build_msvc-x64 && cd build_msvc-x64
+...\anydsl\build_msvc-x64> cmake -G "Visual Studio 15 2017" -A x64 -Thost=x64 ..
+```
+With an pre-existing build of LLVM that matches AnyDSL's requirements, you can insert ```-DLLVM_DIR=<path to LLVMConfig.cmake>``` as first argument to cmake.
+This will skip the download/configure of LLVM.
+Otherwise LLVM is build on-demand as dependency of thorin.
+
+You can fine-tune dependencies and options using ```cmake-gui```
+
+```Batchfile
+...\anydsl> cmake-gui build_msvc-x64
+```
+
+You'll find the generated AnyDSL.sln inside the build folder or use CMake to build AnyDSL.
+```Batchfile
+...\anydsl> cmake --build build_msvc-x64 --config Release
+```
+
 ## Verify your Installation
 
 As pointed out by the build script, ensure that ```impala``` and your build of ```clang``` is in your path:
