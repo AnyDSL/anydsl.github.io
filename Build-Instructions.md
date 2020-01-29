@@ -15,7 +15,7 @@ weight: 1
 You may also want to fine-tune ```config.sh```.
 
 On __Windows__ you may prefer the setup completely based on CMake
-```Batchfile
+```powershell
 ...> git clone https://github.com/AnyDSL/anydsl.git -b cmake-based-setup
 ...> cd anydsl
 ...\anydsl> mkdir build_msvc-x64 && cd build_msvc-x64
@@ -27,12 +27,12 @@ Otherwise LLVM is build on-demand as dependency of thorin.
 
 You can fine-tune dependencies and options using ```cmake-gui```
 
-```Batchfile
+```powershell
 ...\anydsl> cmake-gui build_msvc-x64
 ```
 
 You'll find the generated AnyDSL.sln inside the build folder or use CMake to build AnyDSL.
-```Batchfile
+```powershell
 ...\anydsl> cmake --build build_msvc-x64 --config Release
 ```
 
