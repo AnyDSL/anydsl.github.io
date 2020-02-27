@@ -9,7 +9,6 @@ The runtime provides support for jit-compilation of Impala code from within C++.
 
 By default, the AnyDSL runtime is built without jit support.
 To enable jit, enable the CMake option ```RUNTIME_JIT``` of the runtime.
-Similarly, in C++ ```RUNTIME_ENABLE_JIT``` needs to be defined before including the AnyDSL runtime header.
 
 The following example shows how a simple function is jit-compiled and executed using ```anydsl_compile()``` and ```anydsl_lookup_function()```.
 ```anydsl_compile()``` will load all Impala files of the runtime and add the user-provided Impala code, ```anydsl_lookup_function()``` will return the pointer to a given function:
@@ -17,7 +16,6 @@ The following example shows how a simple function is jit-compiled and executed u
 #include <iostream>
 #include <string>
 
-#define RUNTIME_ENABLE_JIT
 #include <anydsl_runtime.h>
 
 typedef int(*exec_fn)();
