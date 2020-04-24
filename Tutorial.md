@@ -2,12 +2,12 @@
 title: Tutorial
 parent: Impala.md
 weight: 1
-excerpt: "Impala is an imperative language with functional flavoured constructs. This document is a user guide for the Impala language: it features a step by step introduction to Impala, with a lot of examples."
+excerpt: "Impala is an imperative language with functional flavored constructs. This document is a user guide for the Impala language: it features a step by step introduction to Impala, with a lot of examples."
 ---
 
 ## Basics
 
-Impala is a language that is designed to write DSLs.
+Impala is a language that is designed to write domain-specific libraries.
 As such, it comes with no standard library.
 You can, however, interface Impala code with C/C++ code easily.
 The first thing you might want to write is a "Hello, world" program:
@@ -425,7 +425,7 @@ See the LLVM and GCC documentation for an explanation of the constraints.
 
 The clobber list declares registers not mentioned as inputs or outputs that are modified in the assembly code, **{memory}** is also possible.
 
-Additionaly the options **volatile**, **alignstack** and **intel** are possible, the latter two only if the LLVM backend is used.
+Additionally the options **volatile**, **alignstack** and **intel** are possible, the latter two only if the LLVM backend is used.
 They should be used if the assembly code has sideeffects, if the function containing it should align its stack or if the assembly code uses the Intel dialect for x86 instead of the default AT&T dialect respectively.
 Note that in the AT&T dialect source and target of an instruction are switched compared to the Intel dialect, i.e. the target is the last operand.
 
