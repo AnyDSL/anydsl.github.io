@@ -7,7 +7,7 @@ weight: 1
 ## Quick Build
 
 ```bash
-~$ git clone git@github.com:AnyDSL/anydsl.git
+~$ git clone https://github.com/AnyDSL/anydsl.git
 ~$ cd anydsl
 ~/anydsl$ cp config.sh.template config.sh
 ~/anydsl$ ./setup.sh
