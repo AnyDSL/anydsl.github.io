@@ -181,6 +181,7 @@ In the previous example, the function "add_two" returns "i + 2".
 
 Anonymous functions (closures) can be declared with the **`||`** symbol.
 The arguments with their respective types must be mentioned between the **`|`**, and an arrow with the return type must follow.
+The body of (anonymous) functions can contain arbitrary code and is not limited to single expressions as in the following example.
 
 ```rust
 fn add_two(i: int) -> int {
