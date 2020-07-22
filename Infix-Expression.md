@@ -28,7 +28,7 @@ Basically, the semantics of all operations are just like in [C](http://www.open-
 
 ### Assignments
 
-* an automatic [[address-of expression|Prefix Expression]] is inserted for ```expr_r``` if ```expr_l``` is a [[Pointer Type]].
+* an automatic [[address-of expression`|`Prefix Expression]] is inserted for ```expr_r``` if ```expr_l``` is a [[Pointer Type]].
 * ```expr_r``` maybe a subtype of ```expr_l```.
 
 ## Examples

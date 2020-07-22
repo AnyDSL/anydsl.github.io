@@ -179,8 +179,8 @@ fn add_two(i: int) -> int {
 In Impala, the last expression of a block is the return value of that block.
 In the previous example, the function "add_two" returns "i + 2".
 
-Anonymous functions (closures) can be declared with the **||** symbol.
-The arguments with their respective types must be mentioned between the **|**, and an arrow with the return type must follow.
+Anonymous functions (closures) can be declared with the **`||`** symbol.
+The arguments with their respective types must be mentioned between the **`|`**, and an arrow with the return type must follow.
 
 ```rust
 fn add_two(i: int) -> int {
