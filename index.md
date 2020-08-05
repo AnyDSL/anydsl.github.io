@@ -12,7 +12,7 @@ Partial evaluation and other optimizations are performed on AnyDSL's intermediat
 
 ## Support
 
-You can ask for support in our [Rocket.Chat channel](https://open.rocket.chat/channel/anydsl).
+You can ask for support on [Discord](https://discord.gg/bRrybbh).
 
 ## AnyDSL Architecture
 
