@@ -1,4 +1,17 @@
 papers:
+ - title: "AnySeq: A High Performance Sequence Alignment Library based on Partial Evaluation"
+   authors:
+    - André Müller
+    - Bertil Schmidt
+    - Andreas Hildebrandt
+    - Richard Membarth
+    - Roland Leißa
+    - Matthis Kruse
+    - Sebastian Hack
+   venue: "Proceedings of the 34th IEEE International Parallel & Distributed Processing Symposium (IPDPS), pp. 1030-1040, New Orleans, LA, USA, May 5-8, 2020."
+   date: "2020-05-21"
+   url: https://arxiv.org/pdf/2002.04561
+
  - title: "Rodent: Generating Renderers without Writing a Generator"
    authors:
     - Arsène Pérard-Gayot
