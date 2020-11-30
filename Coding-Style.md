@@ -6,12 +6,12 @@ weight: 5
 
 ## General Hints
 
-* Avoid [copy & paste](http://en.wikipedia.org/wiki/Copy_and_paste_programming) *at all cost*. Do whatever is necessary to avoid it! The maintainer will ban 'copy & paste' code and will not integrate any patches containing 'copy & paste' code.
+* Avoid [copy & paste](https://en.wikipedia.org/wiki/Copy_and_paste_programming) *at all cost*. Do whatever is necessary to avoid it! The maintainer will ban 'copy & paste' code and will not integrate any patches containing 'copy & paste' code.
 * Small is beautiful. Try to reduce the code size whenever you can.
 * Try to reuse the existing infrastructure whenever possible. Sometimes you can reuse the infrastructure by slightly enhancing it. Always prefer this approach instead of coding something completely new.
 * In the case you really need something new, try to think how your solution can be made more general. Thus, others with slightly similar goals can reuse your solution.
 * If you feel, that some of the following rules breaks the beauty/formatting of one particular code snippet, feel free to ignore the rule.
-* Do not over-comment your code. See http://blog.codinghorror.com/coding-without-comments/.
+* Do not over-comment your code. See https://blog.codinghorror.com/coding-without-comments.
 * Do not comment the obvious.
 Example:
 
@@ -170,10 +170,10 @@ int Foo::do_somthing_simple() { return ++i_; }
 ### General
 
 * Use Java-style braces except for constructors (due to the weird init-list syntax).
-* Make use of [const correctness](http://en.wikipedia.org/wiki/Const-correctness).
+* Make use of [const correctness](https://en.wikipedia.org/wiki/Const-correctness).
 * One-liners should be one-liners (see `is_zero`/`do_something`). This is also true for cpp files (see `do_somthing_simple`).
 * Use spaces after `//`-style comments.
-* Use C++11's [range-based for](http://en.cppreference.com/w/cpp/language/range-for).
+* Use C++11's [range-based for](https://en.cppreference.com/w/cpp/language/range-for).
 * Use C++11's `auto` if the type can be easily inferred as human or the exact underlying type is not that important (useful when dealing with containters and iterators).
 
 ### Statements
@@ -192,7 +192,7 @@ switch (i_) {
 }
 ```
 
-* If you need unorthodox control-flow (like [multi-level break](http://stackoverflow.com/questions/5670051/java-multi-level-break)) use `goto`. Introducing obscure boolean flags is harder to read, more code, less efficient, more error-prone and less robust than the goto variant.
+* If you need unorthodox control-flow (like [multi-level break](https://stackoverflow.com/questions/5670051/java-multi-level-break)) use `goto`. Introducing obscure boolean flags is harder to read, more code, less efficient, more error-prone and less robust than the goto variant.
 
 ### Expressions
 

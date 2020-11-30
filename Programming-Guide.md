@@ -97,7 +97,7 @@ next->seal();
 next->jump(main->param(1), {next->get_value(0, world.type_u32()}));
 ```
 
-Please refer to [Braun et al.](http://compilers.cs.uni-saarland.de/papers/bbhlmz13cc.pdf) for details about this algorithm.
+Please refer to [Braun et al.](https://compilers.cs.uni-saarland.de/papers/bbhlmz13cc.pdf) for details about this algorithm.
 
 ## Basics
 
@@ -158,7 +158,7 @@ ArrayRef<int> ref(a);
 
 This is the preferred class when passing a list of things to functions. AnyDSL makes heavy use of this. Remember that `ArrayRef` already _is_ the reference. So pass this class _as value_ to other functions. References to an `ArrayRef` are almost always superfluous.
 
-Note that `ArrayRef` has an constructor for [std::initializer_list](http://en.cppreference.com/w/cpp/utility/initializer_list). Thus, all functions/methods expecting `ArrayRef`s can also use C++11's brace syntax:
+Note that `ArrayRef` has an constructor for [std::initializer_list](https://en.cppreference.com/w/cpp/utility/initializer_list). Thus, all functions/methods expecting `ArrayRef`s can also use C++11's brace syntax:
 
 ```cpp
 // fn(u32, u32, u64)
@@ -168,7 +168,7 @@ auto fn_type = world.fn_type(
 
 ### Ranged-based `for`
 
-We highly encourage to use C++11's [range-based `for` loop](http://en.wikipedia.org/wiki/C%2B%2B11#Range-based_for_loop) whenever possible.
+We highly encourage to use C++11's [range-based `for` loop](https://en.wikipedia.org/wiki/C%2B%2B11#Range-based_for_loop) whenever possible.
 Note that the aforementioned `Array` and `ArrayRef` classes work just fine with range-based `for`.
 
 ## Definitions

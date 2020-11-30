@@ -6,9 +6,9 @@ parent: Thorin.md
 ## Abstract
 
 Thorin is an intermediate representation based on continuation-passing style (CPS). 
-For an introduction to CPS please refer to [Wikipedia](http://en.wikipedia.org/wiki/Continuation_passing_style). 
-This article also suggests [further reading](http://en.wikipedia.org/wiki/Continuation_passing_style#References) about CPS.
-Please refer to [A Graph-Based Higher-Order Intermediate Representation](http://compilers.cs.uni-saarland.de/papers/lkh15_cgo.pdf) for a more scientific introduction to Thorin.
+For an introduction to CPS please refer to [Wikipedia](https://en.wikipedia.org/wiki/Continuation_passing_style). 
+This article also suggests [further reading](https://en.wikipedia.org/wiki/Continuation_passing_style#References) about CPS.
+Please refer to [A Graph-Based Higher-Order Intermediate Representation](https://compilers.cs.uni-saarland.de/papers/lkh15_cgo.pdf) for a more scientific introduction to Thorin.
 
 ## Definitions
 
@@ -88,7 +88,7 @@ The type of a stack frame `frame` is created by `enter` or destroyed by escaping
 
 #### Memory monad type
 
-Thorin uses a memory [monad](http://en.wikipedia.org/wiki/Monad*28functional_programming29) to capture changes in memory and side effects. 
+Thorin uses a memory [monad](https://en.wikipedia.org/wiki/Monad*28functional_programming29) to capture changes in memory and side effects. 
 The type of this monad is `mem`.
 
 #### Pointer type
@@ -97,7 +97,7 @@ A pointer of type `T` is referred to as `T*`.
 
 ### Generics
 
-Thorin features [impredicative polymorphism](http://en.wikipedia.org/wiki/Parametric_polymorphism#Impredicative_polymorphism) based on [System F](http://en.wikipedia.org/wiki/System_F). 
+Thorin features [impredicative polymorphism](https://en.wikipedia.org/wiki/Parametric_polymorphism#Impredicative_polymorphism) based on [System F](https://en.wikipedia.org/wiki/System_F). 
 Programmers not familiar with System F can think of function templates in C++ while type checking is performed on the templated version of a function (as opposed to type checking just each template instantiation as in C++).
 Generic types (or just *generics*) are Thorin's vehicle to express this parametric polymorphism. 
 <!--A generic `generic(f, i)` references its function `f`, which introduces the implicit for-all quantifier, and a number `i` in order to distinguish two or more generics introduces by the same function `f`.-->
@@ -177,7 +177,7 @@ This is what we see.
 
 ## Primops
 
-Thorin's primops are by design very similar to [LLVM's instructions](http://llvm.org/docs/LangRef.html).
+Thorin's primops are by design very similar to [LLVM's instructions](https://llvm.org/docs/LangRef.html).
 The reason for this is twofold: 
 First, AnyDSL uses LLVM under the hood to generate code. 
 Similar design allows us to simplify our backend. 
@@ -196,7 +196,7 @@ Primitive literals exist for all primitive types.
 #### Bottom
 
 A value which is not a value. 
-Sounds contradictory but useful for [data-flow analysis](http://en.wikipedia.org/wiki/Data_flow_analysis).
+Sounds contradictory but useful for [data-flow analysis](https://en.wikipedia.org/wiki/Data_flow_analysis).
 
 ### Arithmetic Primops
 

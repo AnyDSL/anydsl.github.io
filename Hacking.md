@@ -10,7 +10,7 @@ Here, you'll find some information about hacking on and debugging AnyDSL.
 
 ### yComp
 
-Install the [yComp](http://pp.ipd.kit.edu/firm/yComp) graph viewer to visualize Thorin graphs:
+Install the [yComp](https://pp.ipd.kit.edu/firm/yComp) graph viewer to visualize Thorin graphs:
 ```bash
 ./scripts/install_ycomp.sh <install_dir>
 ```
@@ -18,7 +18,7 @@ Install the [yComp](http://pp.ipd.kit.edu/firm/yComp) graph viewer to visualize 
 
 #### Setting the ```make``` Variable
 
-If you like [Vim](http://www.vim.org/), you might also like:
+If you like [Vim](https://www.vim.org), you might also like:
 ```bash
 ./scripts/setup_vim_projects.sh
 ```

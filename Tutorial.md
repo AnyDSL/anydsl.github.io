@@ -417,7 +417,7 @@ fn mov_and_add(a: int) -> int {
 
 In the assembly template **$i** is substituted by the i-th output or input operand, counting first the outputs and then the inputs.
 **%eax** references the **eax** register in x86 and **$$4** emits 4 as a constant.
-The strings in the assembly statement get passed through to the backend so the syntax used is either that of [LLVM](http://llvm.org/docs/LangRef.html#inline-assembler-expressions) or [GCC](https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html), depending on which backend is used.
+The strings in the assembly statement get passed through to the backend so the syntax used is either that of [LLVM](https://llvm.org/docs/LangRef.html#inline-assembler-expressions) or [GCC](https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html), depending on which backend is used.
 The most important difference is that in GCC-syntax **%i** references the i-th operand, **%%reg** references a certain register and **$c** emits the constant c.
 
 The inputs and outputs are comma-separated lists of **"constraint"(expression)**.

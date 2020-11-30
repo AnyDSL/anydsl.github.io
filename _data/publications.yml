@@ -36,7 +36,7 @@ papers:
    venue: "Proceedings of the ACM on Programming Languages (PACMPL), 2(OOPSLA): 119:1-119:30, 2018."
    awarding: HiPEAC 2018 Paper Award
    date: "2018-11-07"
-   url: http://compilers.cs.uni-saarland.de/papers/anydsl.pdf
+   url: https://compilers.cs.uni-saarland.de/papers/anydsl.pdf
 
  - title: "A Data Layout Transformation for Vectorizing Compilers"
    authors:
@@ -72,7 +72,7 @@ papers:
    venue: "Proceedings of the 14th International Conference on Generative Programming: Concepts & Experiences (GPCE), pp. 11-20, Pittsburgh, PA, USA, October 26-27, 2015."
    awarding: Best Paper Award
    date: "2015-10-26"
-   url: http://compilers.cs.uni-saarland.de/papers/gpce15.pdf
+   url: https://compilers.cs.uni-saarland.de/papers/gpce15.pdf
 
  - title: A Graph-Based Higher-Order Intermediate Representation
    authors:
@@ -82,7 +82,7 @@ papers:
    venue: "Proceedings of the 2015 International Symposium on Code Generation and Optimization (CGO), pp. 202-212, San Francisco, CA, USA, February 7-11, 2015."
    awarding: "2nd prize: Artifact Evaluation for CGO/PPoPP'15"
    date: "2015-02-07"
-   url: http://compilers.cs.uni-saarland.de/papers/lkh15_cgo.pdf
+   url: https://compilers.cs.uni-saarland.de/papers/lkh15_cgo.pdf
 
  - title: Target-Specific Refinement of Multigrid Codes
    authors:
@@ -104,7 +104,7 @@ papers:
     - Philipp Slusallek
    venue: "Parallel Processing Letters (PPL), 24 (3): 1–16, 2014."
    date: "2014"
-   url: http://compilers.cs.uni-saarland.de/papers/ppl14_web.pdf
+   url: https://compilers.cs.uni-saarland.de/papers/ppl14_web.pdf
 
  - title: Platform-Specific Optimization and Mapping of Stencil Codes through Refinement
    authors:
@@ -115,7 +115,7 @@ papers:
     - Philipp Slusallek
    venue: "Proceedings of the 1st International Workshop on High-Performance Stencil Computations (HiStencils), 2014."
    date: "2014"
-   url: http://compilers.cs.uni-saarland.de/papers/klhms14.pdf
+   url: https://compilers.cs.uni-saarland.de/papers/klhms14.pdf
 
 posters:
  - title: High-Performance Domain-Specific Languages for GPU Computing
@@ -127,5 +127,5 @@ posters:
     - Sebastian Hack
    venue: "Poster Presentation at the GPU Technology Conference (GTC), San Jose, CA, USA, March 24-27, 2014."
    date: "2014-03-24"
-   url: http://on-demand.gputechconf.com/gtc/2014/poster/pdf/P4165_domain_languages_NVVM_LLVM.pdf
+   url: https://on-demand.gputechconf.com/gtc/2014/poster/pdf/P4165_domain_languages_NVVM_LLVM.pdf
 
