@@ -55,7 +55,7 @@ extern fn sum_blob(blob: &Blob) -> float {
 The result of running the command:
 
 ```shell
-$ impala blob.impala -emit-c-interface -o blob
+$ impala blob.impala --emit-c-interface -o blob
 ```
 
 Is the file `blob.h` containing:

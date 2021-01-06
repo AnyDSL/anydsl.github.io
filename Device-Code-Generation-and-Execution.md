@@ -31,7 +31,7 @@ For example, properly configured system with a NVIDIA GPU A will result in the f
 
 Calling runtime functions for a platform or device that is not present terminates the program.
 
-Note: HSA platform is tested on a system using the [ROCm](https://github.com/RadeonOpenCompute/ROCm) 3.3 software stack provided by AMD.
+Note: The AnyDSL meta project provides a [config-rocm.sh.template](https://github.com/AnyDSL/anydsl/blob/master/config-rocm.sh.template) to build all dependencies for the HSA platform using the [ROCm](https://github.com/RadeonOpenCompute/ROCm) software stack provided by AMD.
 
 ## Memory Management
 
@@ -47,15 +47,15 @@ struct Buffer {
 Convenience functions are provided to allocate, copy, and release memory. These work on Buffers and the platform will be implicitly injected and derived when needed.
 
 ```rust
-fn alloc_cpu(size: i32) -> Buffer;
-fn alloc_cuda(dev: i32, size: i32) -> Buffer;
-fn alloc_opencl(dev: i32, size: i32) -> Buffer;
-fn alloc_hsa(dev: i32, size: i32) -> Buffer;
+fn alloc_cpu(size: i64) -> Buffer;
+fn alloc_cuda(dev: i32, size: i64) -> Buffer;
+fn alloc_opencl(dev: i32, size: i64) -> Buffer;
+fn alloc_hsa(dev: i32, size: i64) -> Buffer;
 
 fn release(buf: Buffer) -> ();
 
 fn copy(src: Buffer, dst: Buffer) -> ();
-fn copy_offset(src: Buffer, off_src: i32, dst: Buffer, off_dst: i32, size: i32) -> ();
+fn copy_offset(src: Buffer, off_src: i64, dst: Buffer, off_dst: i64, size: i64) -> ();
 ```
 
 ## Code Generation and Execution
@@ -104,8 +104,8 @@ struct Accelerator {
                        (i32, i32, i32), // block
                        fn(WorkItem) -> ()) -> (),
     sync          : fn() -> (),
-    alloc         : fn(i32) -> Buffer,
-    alloc_unified : fn(i32) -> Buffer,
+    alloc         : fn(i64) -> Buffer,
+    alloc_unified : fn(i64) -> Buffer,
     barrier       : fn() -> ()
 }
 ```
@@ -254,3 +254,5 @@ In addition, individual target features can be enabled/disabled by specifying th
 ANYDSL_TARGET_FEATURES="+armv8-a,+crc,+crypto,+dsp,+fp-armv8,+hwdiv,+hwdiv-arm,+neon,-thumb-mode"
 ```
 Target features are only considered if the target triple and target cpu are also specified.
+
+Usings the CMake support from AnyDSL, the ```TARGET_TRIPLE```, ```TARGET_CPU```, and ```TARGET_FEATURES``` keywords can be passed to the ```anydsl_runtime_wrap``` function to set those environment variables.

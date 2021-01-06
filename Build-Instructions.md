@@ -54,7 +54,7 @@ We link via ```clang``` small C-wrappers to communicate with the outside world a
 ~/anydsl/impala/test$ clang lib.c -O2 -c                                # compile wrappers
 ~/anydsl/impala/test$ impala --emit-llvm -O2 codegen/hello_world.impala # produce hello_world.bc
 # link wrapper and hello_world.ll to executable
-~/anydsl/impala/test$ clang hello_world.ll lib.o       
+~/anydsl/impala/test$ clang hello_world.ll lib.o
 ~/anydsl/impala/test$ ./a.out
 ```
 
@@ -70,4 +70,5 @@ If you used too many threads (see your ```config.sh```), you may run out of memo
     : ${LLVM:=false}
     ``` 
     in your ```config.sh``` to disable LLVM support.
-
+* To disable a particular runtime component, disable it using CMake's ```CMAKE_DISABLE_FIND_PACKAGE_<PackageName>``` variable.
+    For example, pass ```-DCMAKE_DISABLE_FIND_PACKAGE_OpenCL=TRUE``` to cmake to disable the OpenCL runtime component.

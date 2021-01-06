@@ -16,7 +16,7 @@ The following example shows how a simple function is jit-compiled and executed u
 #include <iostream>
 #include <string>
 
-#include <anydsl_runtime.h>
+#include <anydsl_jit.h>
 
 typedef int(*exec_fn)();
 
@@ -42,4 +42,4 @@ anydsl_link("libcustom.so");
 anydsl_compile(...);
 ```
 
-```anydsl_compile()```, ```anydsl_link()```, and ```anydsl_lookup_function()``` are provided by the AnyDSL runtime library, which needs to be linked when compiling.
+```anydsl_compile()```, ```anydsl_link()```, and ```anydsl_lookup_function()``` are provided by the AnyDSL runtime jit library, which needs to be linked when compiling.

@@ -51,7 +51,7 @@ int main(int arc, char** argv) {
 Now, to compile and run this code, you can type in a console:
 
 ```shell
-$ impala hello.impala -emit-llvm
+$ impala hello.impala --emit-llvm
 $ llvm-as hello.ll
 $ clang hello.c hello.bc -o hello
 ```
@@ -77,7 +77,7 @@ int main(int arc, char** argv) {
 The compilation works as before:
 
 ```shell
-$ impala hello.impala -emit-llvm
+$ impala hello.impala --emit-llvm
 $ llvm-as hello.ll
 $ clang hello.cpp hello.bc -o hello
 ```
@@ -94,7 +94,7 @@ You can use either of these files to link the impala code with the C program usi
 
 In case you want to compile your C/C++ using gcc, you need to generate an object file from the .ll:
 ```shell
-$ impala hello.impala -emit-llvm
+$ impala hello.impala --emit-llvm
 $ llc -filetype=obj hello.ll
 $ gcc hello.c hello.o -o hello
 ```
