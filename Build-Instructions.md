@@ -51,10 +51,10 @@ As impala currently does not ship with a standard library, ```impala``` emits LL
 We link via ```clang``` small C-wrappers to communicate with the outside world and to build the final executable. So let's compile ```hello_world.impala```:
 ```bash
 ~/anydsl$ cd impala/test
-~/anydsl/impala/test$ clang lib.c -O2 -c                                # compile wrappers
-~/anydsl/impala/test$ impala --emit-llvm -O2 codegen/hello_world.impala # produce hello_world.bc
+~/anydsl/impala/test$ clang rtmock.cpp -O2 -c                           # compile wrappers
+~/anydsl/impala/test$ impala --emit-llvm -O2 codegen/hello_world.impala # produce hello_world.ll
 # link wrapper and hello_world.ll to executable
-~/anydsl/impala/test$ clang hello_world.ll lib.o
+~/anydsl/impala/test$ clang hello_world.ll rtmock.o
 ~/anydsl/impala/test$ ./a.out
 ```
 
