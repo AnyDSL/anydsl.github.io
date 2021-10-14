@@ -1,7 +1,7 @@
 ---
 title: Expressions
 parent: Impala.md
-weight: 5
+weight: 7
 ---
 
 Impala is an expression-oriented language.

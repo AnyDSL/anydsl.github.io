@@ -240,19 +240,3 @@ ANYDSL_LLVM_ARGS="-amdgpu-sroa -amdgpu-load-store-vectorizer -amdgpu-scalarize-g
 ## Example
 
 A simple example that shows how to generate code for different GPUs can be found in [Stincilla](https://github.com/AnyDSL/stincilla/blob/master/test/alloc_gpu.impala).
-
-
-## Cross Compilation
-
-For cross compilation, the target triple and target cpu can be set via the environment variables ```ANYDSL_TARGET_TRIPLE``` and ```ANYDSL_TARGET_CPU```:
-```
-ANYDSL_TARGET_TRIPLE=aarch64-unknown-linux-gnu
-ANYDSL_TARGET_CPU=cortex-a53
-```
-In addition, individual target features can be enabled/disabled by specifying the environment variable ```ANYDSL_TARGET_FEATURES```:
-```
-ANYDSL_TARGET_FEATURES="+armv8-a,+crc,+crypto,+dsp,+fp-armv8,+hwdiv,+hwdiv-arm,+neon,-thumb-mode"
-```
-Target features are only considered if the target triple and target cpu are also specified.
-
-Usings the CMake support from AnyDSL, the ```TARGET_TRIPLE```, ```TARGET_CPU```, and ```TARGET_FEATURES``` keywords can be passed to the ```anydsl_runtime_wrap``` function to set those environment variables.

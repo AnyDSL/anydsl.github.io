@@ -1,7 +1,7 @@
 ---
 title: Lexical Elements
 parent: Impala.md
-weight: 2
+weight: 4
 ---
 
 ```

@@ -1,7 +1,7 @@
 ---
 title: Statements
 parent: Impala.md
-weight: 4
+weight: 6
 show_toc: false
 ---
 
