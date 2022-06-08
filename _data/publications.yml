@@ -10,6 +10,18 @@ papers:
    date: "2022-06-29"
    url: https://arxiv.org/pdf/2205.07610
 
+ - title: "FLOWER: A Comprehensive Dataflow Compiler for High-Level Synthesis"
+   authors:
+    - Puya Amiri
+    - Arsène Pérard-Gayot
+    - Richard Membarth
+    - Philipp Slusallek
+    - Roland Leißa
+    - Sebastian Hack
+   venue: "Proceedings of the 2021 International Conference on Field-Programmable Technology (FPT), pp. 1-9, Auckland, New Zealand, December 6-10, 2021."
+   date: "2021-12-08"
+   url: https://graphics.cg.uni-saarland.de/papers/amiri-2021-flower.pdf
+
  - title: "AnySeq: A High Performance Sequence Alignment Library based on Partial Evaluation"
    authors:
     - André Müller
