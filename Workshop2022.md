@@ -24,10 +24,10 @@ In particular, we show how AnyDSL can be used to productively implement high-per
 
 ## Agenda
 
-14:00 – 14:05: Welcome 
-14:05 – 14:35: Introduction to the AnyDSL Framework (Roland Leissa (Uni Mannheim), Sebastian Hack (Uni Saarland)) 
-14:35 – 15:00: Automatic Differentiation Library for Machine Learning Learning (Sebastian Hack (Uni Saarland) 
-15:00 – 15:25: Denoising for Ray Tracing with AnyDSL (Richard Membarth (TH Ingolstadt)) 
-15:25 – 15:50: Bioinformatics with AnyDSL (Andre Müller, Bertil Schmidt, (Uni Mainz)) 
-15:50 – 17:00: Q&A and Discussion 
+14:00 – 14:05: Welcome  
+14:05 – 14:35: Introduction to the AnyDSL Framework (Roland Leissa (Uni Mannheim), Sebastian Hack (Uni Saarland))  
+14:35 – 15:00: Automatic Differentiation Library for Machine Learning Learning (Sebastian Hack (Uni Saarland)  
+15:00 – 15:25: Denoising for Ray Tracing with AnyDSL (Richard Membarth (TH Ingolstadt))  
+15:25 – 15:50: Bioinformatics with AnyDSL (Andre Müller, Bertil Schmidt, (Uni Mainz))  
+15:50 – 17:00: Q&A and Discussion  
 
