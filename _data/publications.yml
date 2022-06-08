@@ -1,4 +1,15 @@
 papers:
+ - title: "AnySeq/GPU: A Novel Approach for Faster Sequence Alignment on GPUs"
+   authors:
+    - André Müller
+    - Bertil Schmidt
+    - Richard Membarth
+    - Roland Leißa
+    - Sebastian Hack
+   venue: "Proceedings of the 2022 International Conference on Supercomputing (ICS), pp. 1030-1040, Virtual Event, June 28-30, 2022."
+   date: "2022-06-29"
+   url: https://arxiv.org/pdf/2205.07610
+
  - title: "AnySeq: A High Performance Sequence Alignment Library based on Partial Evaluation"
    authors:
     - André Müller
