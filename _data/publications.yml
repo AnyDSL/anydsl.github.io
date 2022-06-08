@@ -22,6 +22,20 @@ papers:
    date: "2021-12-08"
    url: https://graphics.cg.uni-saarland.de/papers/amiri-2021-flower.pdf
 
+ - title: "AnyHLS: High-Level Synthesis with Partial Evaluation"
+   authors:
+    - M. Akif Özkan
+    - Arsène Pérard-Gayot
+    - Richard Membarth
+    - Philipp Slusallek
+    - Roland Leißa
+    - Sebastian Hack
+    - Jürgen Teich
+    - Frank Hannig
+   venue: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD) (Proceedings of CODES+ISSS 2020), 39(11): 3202-3214, 2020."
+   date: "2020-09-22"
+   url: https://arxiv.org/pdf/2002.05796
+
  - title: "AnySeq: A High Performance Sequence Alignment Library based on Partial Evaluation"
    authors:
     - André Müller
