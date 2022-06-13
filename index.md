@@ -14,6 +14,10 @@ Partial evaluation and other optimizations are performed on AnyDSL's intermediat
 
 You can ask for support on [Discord](https://discord.gg/bRrybbh).
 
+## Current Dates
+
+Join the [AnyDSL Workshop](Workshop2022.md) on July 21, 2022!
+
 ## AnyDSL Architecture
 
 ![AnyDSL Architecture](images/anydsl-architecture.svg)

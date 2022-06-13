@@ -3,31 +3,47 @@ title: Workshop 2022
 menu: Workshop 2022
 weight: 1 # [optional] may define the order of entries in the navigation tree
 ---
+# AnyDSL Workshop 2022
 
-## AnyDSL Workshop 2022
+[AnyDSL](https://anydsl.github.io) is a framework to develop high-performance code for heterogeneous systems (CPUs with vector instructions, GPUs, FPGAs).
+The DSL in AnyDSL stands for **domain-specific langauge** or **library**.
+This is because AnyDSL facilitates an approach to DSL embedding called **shallow embedding** using **partial evaluation**.
 
-Writing performance-critical software productively is still a challenging task because performance is usually hard to reconcile with genericity.
-Genericity makes programmers productive as it allows them to separate their software into components that can be exchanged and reused.
-To achieve performance however, it is mandatory to instantiate code with algorithmic variants and parameters that stem from the application domain, and tailor the code towards target architectures.
-This often requires pervasive changes to the code that impede genericity.
+Shallow embeddings allow the programmer to create domain-specific languages **as libraries** in AnyDSL's host language Impala.
+This means that you can harvest the performance that a custom domain-specific language and compiler would give you without actually having to implement that compiler.
+Since DSLs are essentially implemented in Impala, all DSLs benefit from new features in the AnyDSL compiler infrastructure.
 
-AnyDSL is a programming framework that allows to write generic high-performance code for modern heterogeneous systems (CPUs, GPUs, FPGAs).
-It is based on multi-target code generation and leverages partial evaluation to enable genericity.
+In the recent years we have developed a wide range of high-performance codes using AnyDSL (from image processing and [ray tracing](https://graphics.cg.uni-saarland.de/papers/perard-2019-siggraph-rodent.pdf) to [genome sequence alignment](https://arxiv.org/pdf/2002.04561.pdf)) and have demonstrated that using AnyDSL, we can:
 
-In this workshop, we give an introduction on how to program high-performance code with AnyDSL and present our latest research on AnyDSL.
-In particular, we show how AnyDSL can be used to productively implement high-performance codes from various domains in a generic way map them to different target architectures (e.g. Multi-core CPUs with SIMD units, GPUs, FPGAs) for several applications from the areas of Machine Learning, Denoising for Ray Tracing, and Bioinformatics (DNA Sequence Alignment).
+* compile these applications from a shared code base to heterogeneous systems including CPUs, AMD and NVIDIA GPUs, and Xilinx and Altera FPGAs.
+* achieve similar, sometimes even better performance than manually-tuned expert codes that belong to the best performing codes available
+* create these codes with less effort because AnyDSL allows for factoring out architecture-dependent code using standard abstraction techniques whose overhead can be succinctly removed using AnyDSL's partial evaluator.
+
+In this workshop, we will:
+
+* give an overview of AnyDSL and demonstrate how DSLs can be implemented in AnyDSL by means of a simple example.
+* give an overview of our recent work including a [novel record-setting sequence alignment DSL](https://arxiv.org/abs/2205.07610) specifically targeted at GPUs, integration of automatic differentiation into the AnyDSL tool chain, and denoising in Rodent, a high-performance ray tracer written in AnyDSL.
+
+## Speakers
+
+* [Sebastian Hack](https://compilers.cs.uni-saarland.de/people/hack/) (Uni Saarland)
+* [Roland Leißa](https://www.wim.uni-mannheim.de/leissa/) (Uni Mannheim)
+* [Richard Membarth](https://www.thi.de/suche/mitarbeiter/prof-dr-richard-membarth/) (Technische Hochschule Ingolstadt)
+* [André Müller](https://www.hpc.informatik.uni-mainz.de/people/andre-mueller/) (Uni Mainz)
+* [Bertil Schmidt](https://www.hpc.informatik.uni-mainz.de/people/bertil-schmidt/) (Uni Mainz)
 
 ## Where and When
 
-* July, 21st 14:00-17:00
-* Where: Zoom link is available on request
+* 21 July 2022 14:00-17:00 CEST
+* Via [Zoom](https://cs-uni-saarland-de.zoom.us/j/88467388643?pwd=OExnaldrR0NlU3haMTNKQ0xraXVkQT09)
 
 ## Agenda
 
 14:00 – 14:05: Welcome  
-14:05 – 14:35: Introduction to the AnyDSL Framework (Roland Leissa (Uni Mannheim), Sebastian Hack (Uni Saarland))  
-14:35 – 15:00: Automatic Differentiation Library for Machine Learning Learning (Sebastian Hack (Uni Saarland)  
-15:00 – 15:25: Denoising for Ray Tracing with AnyDSL (Richard Membarth (TH Ingolstadt))  
-15:25 – 15:50: Bioinformatics with AnyDSL (Andre Müller, Bertil Schmidt, (Uni Mainz))  
-15:50 – 17:00: Q&A and Discussion  
+14:05 – 15:00: Introduction to the AnyDSL Framework (Roland & Sebastian)  
+15:00 – 15:30: Automatic Differentiation Library for Machine Learning Learning (Sebastian)  
+15:30 – 16:00: Denoising for Ray Tracing with AnyDSL (Richard)  
+16:00 – 16:30: Bioinformatics with AnyDSL (André & Bertil)  
+16:30 – 17:00: Q&A and Discussion  
+
 
