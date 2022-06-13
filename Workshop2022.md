@@ -1,10 +1,8 @@
 ---
-title: Workshop 2022
+title: AnyDSL Workshop 2022
 menu: Workshop 2022
 weight: 1 # [optional] may define the order of entries in the navigation tree
 ---
-# AnyDSL Workshop 2022
-
 [AnyDSL](https://anydsl.github.io) is a framework to develop high-performance code for heterogeneous systems (CPUs with vector instructions, GPUs, FPGAs).
 The DSL in AnyDSL stands for **domain-specific langauge** or **library**.
 This is because AnyDSL facilitates an approach to DSL embedding called **shallow embedding** using **partial evaluation**.
