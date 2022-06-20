@@ -39,7 +39,7 @@ In this workshop, we will:
 
 14:00 – 14:05: Welcome  
 14:05 – 15:00: Introduction to the AnyDSL Framework (Roland & Sebastian)  
-15:00 – 15:30: Automatic Differentiation Library for Machine Learning Learning (Sebastian)  
+15:00 – 15:30: Automatic Differentiation for Machine Learning (Sebastian)  
 15:30 – 16:00: Denoising for Ray Tracing with AnyDSL (Richard)  
 16:00 – 16:30: Bioinformatics with AnyDSL (André & Bertil)  
 16:30 – 17:00: Q&A and Discussion  
