@@ -25,11 +25,11 @@ In this workshop, we will:
 ## Speakers
 
 * [Sebastian Hack](https://compilers.cs.uni-saarland.de/people/hack/) (Uni Saarland)
-* [Marcel Ullrich](https://compilers.cs.uni-saarland.de/people/ullrich/) (Uni Saarland)
 * [Roland Leißa](https://www.wim.uni-mannheim.de/leissa/) (Uni Mannheim)
 * [Richard Membarth](https://www.thi.de/suche/mitarbeiter/prof-dr-richard-membarth/) (Technische Hochschule Ingolstadt)
 * [André Müller](https://www.hpc.informatik.uni-mainz.de/people/andre-mueller/) (Uni Mainz)
 * [Bertil Schmidt](https://www.hpc.informatik.uni-mainz.de/people/bertil-schmidt/) (Uni Mainz)
+* [Marcel Ullrich](https://compilers.cs.uni-saarland.de/people/ullrich/) (Uni Saarland)
 
 ## Where and When
 
