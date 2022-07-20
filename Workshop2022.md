@@ -25,6 +25,7 @@ In this workshop, we will:
 ## Speakers
 
 * [Sebastian Hack](https://compilers.cs.uni-saarland.de/people/hack/) (Uni Saarland)
+* [Marcel Ullrich](https://compilers.cs.uni-saarland.de/people/ullrich/) (Uni Saarland)
 * [Roland Leißa](https://www.wim.uni-mannheim.de/leissa/) (Uni Mannheim)
 * [Richard Membarth](https://www.thi.de/suche/mitarbeiter/prof-dr-richard-membarth/) (Technische Hochschule Ingolstadt)
 * [André Müller](https://www.hpc.informatik.uni-mainz.de/people/andre-mueller/) (Uni Mainz)
@@ -39,7 +40,7 @@ In this workshop, we will:
 
 14:00 – 14:05: Welcome  
 14:05 – 15:00: Introduction to the AnyDSL Framework (Roland & Sebastian)  
-15:00 – 15:30: Automatic Differentiation for Machine Learning (Sebastian)  
+15:00 – 15:30: Automatic Differentiation for Machine Learning (Marcel & Sebastian)  
 15:30 – 16:00: Denoising for Ray Tracing with AnyDSL (Richard)  
 16:00 – 16:30: Bioinformatics with AnyDSL (André & Bertil)  
 16:30 – 17:00: Q&A and Discussion  
