@@ -19,9 +19,9 @@ sass:
   style: compressed
 
 toolbar:
-  - Thorin.md
-  - Impala.md
   - Publications.md
+  - Impala.md
+  - Thorin.md
 
 footer:
   logos:
