@@ -1,4 +1,17 @@
 papers:
+ - title: "AnyQ: An Evaluation Framework for Massively-Parallel Queue Algorithms"
+   authors:
+    - Michael Kenzel
+    - Stefan Lemme
+    - Richard Membarth
+    - Matthias Kurtenacker
+    - Hugo Devillers
+    - Markus Steinberger
+    - Philipp Slusallek
+   venue: "Proceedings of the 37th IEEE International Parallel & Distributed Processing Symposium (IPDPS), pp. 736-745, St. Petersburg, FL, USA, May 15-19, 2023."
+   date: "2023-05-18"
+   url: https://graphics.cg.uni-saarland.de/papers/kenzel-2023-anyq.pdf
+
  - title: "AnySeq/GPU: A Novel Approach for Faster Sequence Alignment on GPUs"
    authors:
     - André Müller
